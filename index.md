@@ -14,6 +14,9 @@ https://mp.weixin.qq.com/s/0YtZWgy2oqZJ_EZH0xBX5Q
 
 https://zhuanlan.zhihu.com/p/54717779
 
+Jekyll + Github Pages搭建个人博客
+https://mp.weixin.qq.com/s/ZqIE42Chj16guSUBYa0nKQ
+
 沐茶庄园 | 生态之星（何家寨）
 ## Welcome to GitHub Pages
 
