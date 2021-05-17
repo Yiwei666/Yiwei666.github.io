@@ -175,70 +175,9 @@
 <h3 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h3><p>您可以使用 type() 函数获取任何对象的数据类型：<br>实例<br>打印变量 x 的数据类型：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure>
 
-
-<table>
-<thead>
-<tr>
-<th align="center">实例</th>
-<th align="center">数据类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">x = “Hello World”</td>
-<td align="center">str</td>
-</tr>
-<tr>
-<td align="center">x = 29</td>
-<td align="center">int</td>
-</tr>
-<tr>
-<td align="center">x = 29.5</td>
-<td align="center">float</td>
-</tr>
-<tr>
-<td align="center">x = 1j</td>
-<td align="center">complex</td>
-</tr>
-<tr>
-<td align="center">x = [“apple”, “banana”, “cherry”]</td>
-<td align="center">list</td>
-</tr>
-<tr>
-<td align="center">x = (“apple”, “banana”, “cherry”)</td>
-<td align="center">tuple</td>
-</tr>
-<tr>
-<td align="center">x = range(6)</td>
-<td align="center">range</td>
-</tr>
-<tr>
-<td align="center">x = {“name” : “Bill”, “age” : 63}</td>
-<td align="center">dict</td>
-</tr>
-<tr>
-<td align="center">x = {“apple”, “banana”, “cherry”}</td>
-<td align="center">set</td>
-</tr>
-<tr>
-<td align="center">x = frozenset({“apple”, “banana”, “cherry”})</td>
-<td align="center">frozenset</td>
-</tr>
-<tr>
-<td align="center">x = True</td>
-<td align="center">bool</td>
-</tr>
-<tr>
-<td align="center">x = b”Hello”</td>
-<td align="center">bytes</td>
-</tr>
-<tr>
-<td align="center">x = bytearray(5)</td>
-<td align="center">bytearray</td>
-</tr>
-</tbody></table>
-<h3 id="设置数据类型"><a href="#设置数据类型" class="headerlink" title="设置数据类型"></a>设置数据类型</h3><p>在 Python 中，当您为变量赋值时，会设置数据类型：<br>| 实例 | 数据类型 |<br>| :——: | :——: |<br>| x=”Hello World” | str |<br>| x=29 | int |<br>| x=29.5 | float |<br>| x=1j | complex |<br>| x=[“apple”, “banana”, “cherry”] | list |<br>| x=(“apple”, “banana”, “cherry”) | tuple |<br>| x=range(6) | range |<br>| x={“name” : “Bill”, “age” : 63} | dict |<br>| x={“apple”, “banana”, “cherry”} | set |<br>| x=frozenset({“apple”, “banana”, “cherry”}) | frozenset |<br>| x=True | bool |<br>| x=b”Hello” | bytes |<br>| x=bytearray(5) | bytearray |<br>| x=memoryview(bytes(5)) | memoryview |</p>
-<h3 id="设定特定的数据类型"><a href="#设定特定的数据类型" class="headerlink" title="设定特定的数据类型"></a>设定特定的数据类型</h3><p>如果希望指定数据类型，则您可以使用以下构造函数：<br>| 实例 | 数据类型 |<br>| :——: | :——: |<br>| x = str(“Hello World”) | str |<br>| x = int(29) | int |<br>| x = float(29.5) | float | </p>
-<p>| x = complex(1j) | complex |<br>| x = list((“apple”, “banana”, “cherry”)) | list |<br>| x = tuple((“apple”, “banana”, “cherry”)) | tuple |<br>| x = range(6) | range |<br>| x = dict(name=”Bill”, age=36) | dict |<br>| x = set((“apple”, “banana”, “cherry”)) | set |<br>| x = frozenset((“apple”, “banana”, “cherry”)) | frozenset |<br>| x = bool(5) | bool |<br>| x = bytes(5) | bytes |<br>| x = bytearray(5) | bytearray |<br>| x = memoryview(bytes(5)) | memoryview | </p>
+<h3 id="设置数据类型"><a href="#设置数据类型" class="headerlink" title="设置数据类型"></a>设置数据类型</h3><p>在 Python 中，当您为变量赋值时，会设置数据类型：<br>| 实例 | 数据类型 |<br>| :——: | :——: |<br>| x = “Hello World” | str |<br>| x = 29 | int |<br>| x = 29.5 | float |<br>| x = 1j | complex |<br>| x = [“apple”, “banana”, “cherry”] | list |<br>| x = (“apple”, “banana”, “cherry”) | tuple |<br>| x = range(6) | range |<br>| x = {“name” : “Bill”, “age” : 63} | dict |<br>| x = {“apple”, “banana”, “cherry”} | set |<br>| x = frozenset({“apple”, “banana”, “cherry”}) | frozenset |<br>| x = True | bool |<br>| x = b”Hello” | bytes |<br>| x = bytearray(5) | bytearray |<br>| x = memoryview(bytes(5)) | memoryview |</p>
+<h3 id="设定特定的数据类型"><a href="#设定特定的数据类型" class="headerlink" title="设定特定的数据类型"></a>设定特定的数据类型</h3><p>如果希望指定数据类型，则您可以使用以下构造函数：<br>| 实例 | 数据类型 |<br>| :——: | :——: |<br>| x = str(“Hello World”) | str | </p>
+<p>| x = int(29) | int |<br>| x = float(29.5) | float |<br>| x = complex(1j) | complex |<br>| x = list((“apple”, “banana”, “cherry”)) | list |<br>| x = tuple((“apple”, “banana”, “cherry”)) | tuple |<br>| x = range(6) | range |<br>| x = dict(name=”Bill”, age=36) | dict |<br>| x = set((“apple”, “banana”, “cherry”)) | set |<br>| x = frozenset((“apple”, “banana”, “cherry”)) | frozenset |<br>| x = bool(5) | bool |<br>| x = bytes(5) | bytes |<br>| x = bytearray(5) | bytearray |<br>| x = memoryview(bytes(5)) | memoryview | </p>
 <p><strong><a name="3">Python 数字</a></strong></p>
 <h3 id="Python-数字"><a href="#Python-数字" class="headerlink" title="Python 数字"></a>Python 数字</h3><p>Python 中有三种数字类型：<br>int<br>float<br>complex<br>为变量赋值时，将创建数值类型的变量：<br>实例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10    # int</span><br><span class="line">y &#x3D; 6.3  # float</span><br><span class="line">z &#x3D; 2j   # complex</span><br></pre></td></tr></table></figure>
