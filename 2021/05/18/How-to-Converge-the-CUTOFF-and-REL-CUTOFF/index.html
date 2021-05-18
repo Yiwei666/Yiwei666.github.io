@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: cp2k思维导图 | I晓宇</title>
+  <title>How to Converge the CUTOFF and REL_CUTOFF | I晓宇</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I晓宇">
-<meta property="og:url" content="https://example.com/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/index.html">
+  <meta name="description" content="How to Converge the CUTOFF and REL_CUTOFF Introduction QUICKSTEP, as with nearly all ab initio Density Functional Theory simulation packages, requires the use of a real-space (RS) integration grid to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Converge the CUTOFF and REL_CUTOFF">
+<meta property="og:url" content="https://example.com/2021/05/18/How-to-Converge-the-CUTOFF-and-REL-CUTOFF/index.html">
 <meta property="og:site_name" content="I晓宇">
+<meta property="og:description" content="How to Converge the CUTOFF and REL_CUTOFF Introduction QUICKSTEP, as with nearly all ab initio Density Functional Theory simulation packages, requires the use of a real-space (RS) integration grid to">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-18T09:06:49.000Z">
+<meta property="article:modified_time" content="2021-05-18T09:09:25.398Z">
 <meta property="article:author" content="Yiwei Sun">
+<meta property="article:tag" content="CUTOFF and REL_CUTOFF">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="I晓宇" type="application/atom+xml">
@@ -69,39 +74,86 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/28/cp2k%E5%85%B3%E9%94%AE%E8%AF%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-04-28T07:05:35.000Z" itemprop="datePublished">Apr 28</time>
+        <section id="main"><article id="post-How-to-Converge-the-CUTOFF-and-REL-CUTOFF" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/18/How-to-Converge-the-CUTOFF-and-REL-CUTOFF/" class="article-date">
+  <time class="dt-published" datetime="2021-05-18T09:06:49.000Z" itemprop="datePublished">2021-05-18</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CP2K/">CP2K</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/28/cp2k%E5%85%B3%E9%94%AE%E8%AF%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">cp2k关键词思维导图</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      How to Converge the CUTOFF and REL_CUTOFF
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>How to Converge the CUTOFF and REL_CUTOFF</p>
+<p>Introduction</p>
+<p>QUICKSTEP, as with nearly all ab initio Density Functional Theory simulation packages, requires the use of a real-space (RS) integration grid to represent certain functions, such as the electron density and the product Gaussian functions. </p>
+<p>QUICKSTEP uses a multi-grid system for mapping the product Gaussians onto the RS grid(s), so that wide and smooth Gaussian functions are mapped onto a coarser grid than narrow and sharp Gaussians. </p>
+<p>The electron density is always mapped onto the finest grid.</p>
+<p>Choosing a fine enough integration grid for a calculation is crucial in obtaining meaningful and accurate results. </p>
+<p>In this tutorial, we will show the reader how to systematically find the correct settings for obtaining a sufficiently fine integration grid for his/her calculation.</p>
+<p>This tutorial assumes the reader already has some knowledge of how to perform a simple energy calculation using QUICKSTEP (this can be found in tutorial: Calculating Energy and Forces using Quickstep).</p>
+<p>A completed example from an earlier calculation can be obtained from the file converging_grid.tgz that comes with this tutorial. </p>
+<p>The calculations were carried out using CP2K version 2.4.</p>
+<p>‘’QUICKSTEP’’ Multi-Grid</p>
+<p>Before we go through the input file, it is worthwhile to explain how the multi-grid is constructed in QUICKSTEP, and how the Gaussians are mapped onto the different grid levels. </p>
+<p>Hopefully this will offer the reader a clear picture of how the key control parameters affect the grids, and thus the overall accuracy of a calculation.</p>
+<p>All multi-grid related settings for a calculation is controlled via keywords in MULTIGRID subsection of DFT subsection in FORCE_EVAL. </p>
+<p>The number of levels for the multi-grid is defined by NGRIDS, and by default this is set to 4. </p>
+<p>The keyword CUTOFF defines the planewave cutoff (default unit is in Ry) for the finest level of the multi-grid. </p>
+<p>The higher the planewave cutoff, the finer the grid. </p>
+<p>The corresponding planewave cutoffs for the subsequent grid levels (from finer to coarser) are defined by the formula:</p>
+<p>Eicut=E1cutα(i−1)</p>
+<p>where α has a default value of 3.0, and since CP2K versions 2.0, can be configured by the keyword PROGRESSION_FACTOR. </p>
+<p>Therefore, the higher the value of CUTOFF the finer grid for all multi-grid levels.</p>
+<p>Having constructed the multi-grid, QUICKSTEP then needs to map the Gaussians onto the grids. </p>
+<p>The keyword REL_CUTOFF controls which product Gaussians are mapped onto which level of the multi-grid. </p>
+<p>CP2K tries to map each Gaussian onto a grid such that the number of grid points covered by the Gaussian—no matter how wide or narrow—are roughly the same. </p>
+<p>REL_CUTOFF defines the planewave cutoff of a reference grid covered by a Gaussian with unit standard deviation (e|→r|2).</p>
+<p> A Gaussian is mapped onto the coarsest level of the multi-grid, on which the function will cover number of grid points greater than or equal to the number of grid points e|→r|2 will cover on a reference grid defined by REL_CUTOFF.</p>
+<p>Therefore, the two most important keywords effecting the integration grid and the accuracy of a calculation are CUTOFF and REL_CUTOFF. </p>
+<p>If CUTOFF is too low, then all grids will be coarse and the calculation may become inaccurate; and if REL_CUTOFF is too low, then even if you have a high CUTOFF, all Gaussians will be mapped onto the coarsest level of the multi-grid, and thus the effective integration grid for the calculation may still be too coarse.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/05/18/How-to-Converge-the-CUTOFF-and-REL-CUTOFF/" data-id="ckottet9d00007stj09rdhhit" data-title="How to Converge the CUTOFF and REL_CUTOFF" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/15/python-exercises/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python exercises</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
