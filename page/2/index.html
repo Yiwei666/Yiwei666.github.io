@@ -71,6 +71,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-32-H2O-water-molecules" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/27/32-H2O-water-molecules/" class="article-date">
+  <time class="dt-published" datetime="2021-04-27T12:52:55.000Z" itemprop="datePublished">2021-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CP2K/">CP2K</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/27/32-H2O-water-molecules/">32 H2O water molecules</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong><a target="_blank" rel="noopener" href="https://manual.cp2k.org/cp2k-8_1-branch/CP2K_INPUT.html">cp2k keywords</a></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&amp;GLOBAL</span><br><span class="line">  PRINT_LEVEL MEDIUM</span><br><span class="line">  PROJECT cuttoff-test</span><br><span class="line">  RUN_TYPE ENERGY_FORCE</span><br><span class="line">&amp;END GLOBAL</span><br><span class="line">  </span><br><span class="line">&amp;FORCE_EVAL</span><br><span class="line">  METHOD Quickstep</span><br><span class="line">  &amp;DFT</span><br><span class="line">    BASIS_SET_FILE_NAME BASIS_MOLOPT</span><br><span class="line">    POTENTIAL_FILE_NAME GTH_POTENTIALS</span><br><span class="line">    WFN_RESTART_FILE_NAME ..&#x2F;cuttoff-test-RESTART.wfn</span><br><span class="line">    CHARGE 0</span><br><span class="line">    MULTIPLICITY 1</span><br></pre></td></tr></table></figure>
+<p><strong><a target="_blank" rel="noopener" href="https://manual.cp2k.org/cp2k-8_1-branch/CP2K_INPUT/FORCE_EVAL/DFT.html#WFN_RESTART_FILE_NAME">WFN_RESTART_FILE_NAME</a> #读取波函数文件，需要同时在DFT/&amp;SCF中开启SCF_GUESS RESTART<br><a target="_blank" rel="noopener" href="https://manual.cp2k.org/cp2k-8_1-branch/CP2K_INPUT/FORCE_EVAL/DFT.html#CHARGE">CHARGE</a> #体系整体电荷<br><a target="_blank" rel="noopener" href="https://manual.cp2k.org/cp2k-8_1-branch/CP2K_INPUT/FORCE_EVAL/DFT.html#MULTIPLICITY">MULTIPLICITY</a> #体系的整体自旋多重度，2n+1</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&amp;MGRID</span><br><span class="line">  NGRIDS 4</span><br><span class="line">  CUTOFF LT_cutoff</span><br><span class="line">  REL_CUTOFF LT_rel_cutoff</span><br><span class="line">&amp;END</span><br><span class="line">&amp;QS</span><br><span class="line">  EPS_DEFAULT 1.0E-12</span><br><span class="line">  METHOD GPW</span><br><span class="line">&amp;END</span><br><span class="line"> </span><br><span class="line">&amp;SCF</span><br><span class="line">  SCF_GUESS RESTART</span><br><span class="line">  EPS_SCF 5.e-7</span><br><span class="line">  MAX_SCF 15</span><br><span class="line">  &amp;OT</span><br><span class="line">    PRECONDITIONER FULL_ALL</span><br><span class="line">    MINIMIZER DIIS</span><br><span class="line">  &amp;END OT</span><br><span class="line">  &amp;OUTER_SCF</span><br><span class="line">    EPS_SCF 5.0E-7</span><br><span class="line">    MAX_SCF 1</span><br><span class="line">  &amp;END OUTER_SCF</span><br><span class="line">&amp;END SCF</span><br></pre></td></tr></table></figure>
+<p><strong><a target="_blank" rel="noopener" href="https://manual.cp2k.org/cp2k-8_1-branch/CP2K_INPUT/FORCE_EVAL/DFT/SCF/OT.html">OT</a> #OT算法<br><a href="">PRECONDITIONER</a> #<br><a href="">MINIMIZER</a> #<br><a href="">OUTER_SCF</a> #<br><a href="">EPS_SCF</a> #<br><a href="">MAX_SCF</a> #</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">    &amp;XC</span><br><span class="line">      &amp;XC_FUNCTIONAL PBE</span><br><span class="line">      &amp;END XC_FUNCTIONAL</span><br><span class="line">      &amp;XC_GRID</span><br><span class="line">        ! defaults</span><br><span class="line">        XC_SMOOTH_RHO NONE</span><br><span class="line">        XC_DERIV PW</span><br><span class="line">      &amp;END XC_GRID</span><br><span class="line">    &amp;END XC</span><br><span class="line"> </span><br><span class="line">  &amp;END DFT</span><br><span class="line">  &amp;SUBSYS</span><br><span class="line">    &amp;CELL</span><br><span class="line">      ABC 9.8528 9.8528 9.8528</span><br><span class="line">      PERIODIC XYZ</span><br><span class="line">    &amp;END CELL</span><br><span class="line"> </span><br><span class="line">    &amp;KIND H</span><br><span class="line">      BASIS_SET DZVP-MOLOPT-SR-GTH-q1</span><br><span class="line">      POTENTIAL GTH-PBE-q1</span><br><span class="line">    &amp;END</span><br><span class="line"> </span><br><span class="line">    &amp;KIND O</span><br><span class="line">      BASIS_SET DZVP-MOLOPT-SR-GTH-q6</span><br><span class="line">      POTENTIAL GTH-PBE-q6</span><br><span class="line">    &amp;END KIND</span><br><span class="line"> </span><br><span class="line">    &amp;TOPOLOGY</span><br><span class="line">      COORDINATE XYZ</span><br><span class="line">      COORD_FILE_NAME ..&#x2F;structure.xyz</span><br><span class="line">      CONNECTIVITY OFF</span><br><span class="line">    &amp;END TOPOLOGY</span><br><span class="line">  &amp;END SUBSYS</span><br><span class="line"> </span><br><span class="line">  &amp;PRINT</span><br><span class="line">    &amp;FORCES</span><br><span class="line">    &amp;END</span><br><span class="line">  &amp;END</span><br><span class="line">&amp;END FORCE_EVAL</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/04/27/32-H2O-water-molecules/" data-id="ckoqy52vm0000s0tjeb0w27yd" data-title="32 H2O water molecules" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-important-paper-online" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/27/important-paper-online/" class="article-date">
@@ -1335,139 +1390,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
 
 
   
-    <article id="post-从 Python 入门编程_2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_2/" class="article-date">
-  <time class="dt-published" datetime="2021-04-14T07:37:12.205Z" itemprop="datePublished">2021-04-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_2/">在开发环境进行学习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="在开发环境进行学习"><a href="#在开发环境进行学习" class="headerlink" title="在开发环境进行学习"></a>在开发环境进行学习</h1><p>在本节中，我们搭建自己的开发环境，并在其中编写、运行我们的代码。</p>
-<p>在本章节中，我们在“文本编辑器 + 终端”的开发环境下进行代码的编写和运行。你可能听说过使用 Windows 系统自带的记事本来编写代码的说法。</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg34urs30j30j607yh1f.jpg" alt="img"></p>
-<p>记事本几乎成了江湖传说</p>
-<p>实际上，记事本会在文件开始的地方标注 <code>UTF-8 BOM</code> 信息，导致程序运行出现某些错误，请不要使用记事本编写代码；更不要用 Word，它甚至保存的不是纯文本。</p>
-<h2 id="华山论剑"><a href="#华山论剑" class="headerlink" title="华山论剑"></a>华山论剑</h2><p>工欲善其事，必先利其器，推荐几款文本编辑器：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a>，简称 VScode 或 VSC，跨平台。</li>
-<li><a target="_blank" rel="noopener" href="https://atom.io/">Atom</a>，GitHub 出品的文本编辑器，跨平台。</li>
-<li><a target="_blank" rel="noopener" href="http://www.sublimetext.com/">Sublime Text</a>，曾经占有率很高，跨平台。</li>
-<li><a target="_blank" rel="noopener" href="http://www.vim.org/">Vim</a>，编辑器之神，Linux 平台。</li>
-<li><a target="_blank" rel="noopener" href="https://www.gnu.org/s/emacs/">GNU Emacs</a>，神的编辑器，Linux 平台。</li>
-</ol>
-<p>你可以自行选择自己平台的编辑器，本教程基于 VScode。VScode 由微软出品，作为现代化的文本（代码）编辑器，为几乎所有的主流开发语言提供支持，性能极其出色，完备易用的扩展，美观现代的外观，出色的本地化服务，值得每一个开发者尝试。</p>
-<h2 id="配置-VScode"><a href="#配置-VScode" class="headerlink" title="配置 VScode"></a>配置 VScode</h2><h3 id="安装汉化"><a href="#安装汉化" class="headerlink" title="安装汉化"></a>安装汉化</h3><p>VScode 有优秀的本地化支持，通过安装 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans">Chinese (Simplified) Language Pack for Visual Studio Code</a> 拓展实现。</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcgu0l6ijtj31jy103hdz.jpg" alt="img"></p>
-<p>安装完毕后，按提示在 <code>locale.json</code> 文件中添加 <code>&quot;locale&quot;: &quot;zh-cn&quot;</code> 以加载语言包。</p>
-<h3 id="安装-Python-调试功能"><a href="#安装-Python-调试功能" class="headerlink" title="安装 Python 调试功能"></a>安装 Python 调试功能</h3><p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg3m574kuj31jy126x6v.jpg" alt="img"></p>
-<p>安装 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> 拓展，打开需要调试的页面，按下键盘上的 <code>F5</code> ，按提示自动生成 <code>launch.json</code> 文件，即可在 VScode 内运行 Python 文件。</p>
-<h2 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h2><p>一切就绪，现在我们正式开始 Python 的学习，方便起见，直接在桌面创建一个名为 <code>hello.py</code> 的文件，对于 Windows 平台，你可以用新建文本文档并重命名的方式。用 VScode 将其打开，输入我们熟悉的 ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;hello, world&quot;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Print-函数"><a href="#Print-函数" class="headerlink" title="Print 函数"></a>Print 函数</h3><p><code>print()</code> 是我们学习到的第一个函数（Function），它的作用是在屏幕上打印（这听起来可能有点奇怪）字符，<code>print</code> 是”函数名“，括号 <code>()</code> 里面是它的”参数“，一个完整的语句，都由这样的结构构成。</p>
-<p>用成对的引号扩起表示这是一个”字符串“数据类型，可以是单引号或者双引号，但是不要混用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;hello, world!&quot;) # ✔</span><br><span class="line">print(&#39;hello, world!&#39;) # ✔</span><br><span class="line"></span><br><span class="line">print(&#39;hello, world!&quot;) # ❌</span><br><span class="line">print(&quot;hello, world!&#39;) # ❌</span><br></pre></td></tr></table></figure>
-
-<p>尝试输入其它的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;我不想做个平庸的人类</span><br><span class="line">我不想囿于双手，双脚和双眼</span><br><span class="line"></span><br><span class="line">我想要了解</span><br><span class="line">我想要操纵</span><br><span class="line"></span><br><span class="line">我想要创造</span><br><span class="line"></span><br><span class="line">我相信逻辑</span><br><span class="line">我相信机器</span><br><span class="line">我相信代码</span><br><span class="line"></span><br><span class="line">我知道他们是熔炉，是铁锤，是建造世界的砖瓦</span><br><span class="line">我知道他们是法杖，是咒语，拥有改变世界的魔法</span><br><span class="line"></span><br><span class="line">我不关心是谁创造了这个世界</span><br><span class="line">我只关心我们正在创造的世界&quot;)</span><br><span class="line"># 摘自知乎@tefx</span><br></pre></td></tr></table></figure>
-
-<p>会发现程序会报错：</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg3hxwzewj31jy126x6v.jpg" alt="img"></p>
-<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>这是因为我们直接在字符串中输入了换行，在代码中，应用 <code>\n</code> 实现换行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;我不想做个平庸的人类\n我不想囿于双手，双脚和双眼\n\n我想要了解\n我想要操纵\n我想要创造\n\n我相信逻辑\n我相信机器\n我相信代码\n\n我知道他们是熔炉，是铁锤，是建造世界的砖瓦\n我知道他们是法杖，是咒语，拥有改变世界的魔法\n\n我不关心是谁创造了这个世界\n我只关心我们正在创造的世界&quot;)</span><br><span class="line"># 摘自知乎@tefx</span><br></pre></td></tr></table></figure>
-
-<p>如同 <code>\n</code> 这样反斜杠加字符的被称为”转义字符“。</p>
-<h3 id="三引号"><a href="#三引号" class="headerlink" title="三引号"></a>三引号</h3><p>当然，这很麻烦，我们还可以这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;&quot;&quot;我不想做个平庸的人类</span><br><span class="line">我不想囿于双手，双脚和双眼</span><br><span class="line"></span><br><span class="line">我想要了解</span><br><span class="line">我想要操纵</span><br><span class="line">我想要创造</span><br><span class="line"></span><br><span class="line">我相信逻辑</span><br><span class="line">我相信机器</span><br><span class="line">我相信代码</span><br><span class="line"></span><br><span class="line">我知道他们是熔炉，是铁锤，是建造世界的砖瓦</span><br><span class="line">我知道他们是法杖，是咒语，拥有改变世界的魔法</span><br><span class="line"></span><br><span class="line">我不关心是谁创造了这个世界</span><br><span class="line">我只关心我们正在创造的世界&quot;&quot;&quot;)</span><br><span class="line"># 摘自知乎@tefx</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg3raiw32j31jy126x6v.jpg" alt="img"></p>
-<p>是的，输入三对引号即可保留所有格式，这是 Python 非常方便的一点。</p>
-<h3 id="input-函数"><a href="#input-函数" class="headerlink" title="input 函数"></a>input 函数</h3><p><code>print()</code> 函数用于输出，<code>input()</code> 函数则用于输入，它的作用是获取用户输入的内容，它的参数用于提示用户，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input(&quot;请输入你的名字：&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>可以结合 <code>input()</code> 函数嵌套使用，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;你的名字是：&quot;, input(&quot;请输入你的名字：&quot;))</span><br></pre></td></tr></table></figure>
-
-<p>越内部的小括号优先级越高，程序将先执行 <code>input()</code> 语句并将结果作用于 <code>print()</code> 语句，效果如图：</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg4bp1k0aj315z0huqv6.jpg" alt="img"></p>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>我们还可以用“变量”来保存数据，在 Python 中，定义和调用变量非常容易：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name &#x3D; &quot;谭小蝶&quot;</span><br></pre></td></tr></table></figure>
-
-<p>变量的概念，简单来说，基本上和数学中方程的未知数是一致的。只是在计算机程序中，变量不仅可以是数字，还可以是任意的数据类型，自然也包括上述的字符串。</p>
-<p>为了便于理解，你还可以把变量想象成一个可以装物品的盒子，这个盒子有它本身的名字，即“变量名”；里面装的物品，就是它的“值”。</p>
-<p>一个等号 <code>=</code> 是赋值诗句，等号左边的为变量名，右边为其值，程序会执行等号右边的语句并将结果赋给变量，包括且不限于以下形式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name &#x3D; &quot;谭小蝶&quot; # 为 &quot;谭小蝶&quot;</span><br><span class="line">age &#x3D; 18 # 为 18</span><br><span class="line">number &#x3D; 5 + 3 # 为 8</span><br><span class="line">string &#x3D; &quot;hello,&quot; + &quot;world&quot; # 为 &quot;hello, world&quot;</span><br><span class="line">copy_name &#x3D; name # 为 &quot;谭小蝶&quot;</span><br></pre></td></tr></table></figure>
-
-<p>我们用 <code>print()</code> 函数打印出来看看：</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gcg50em29uj31670sbe84.jpg" alt="img"></p>
-<p>需要注意，变量名可以是大小写字母、数字和<code>_</code>的组合，但不能用数字开头。作为一种好的编程习惯，你应该尽可能取有意义、便于分辩的变量名。</p>
-<p><img src="http://biaoqingbao.xin/wp-content/uploads/2016/11/1041.png" alt="img"></p>
-<p>糟糕的变量名使代码难以阅读</p>
-<p>运用我们新学的变量，将之前的程序改进一下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name &#x3D; input(&quot;请输入你的名字：&quot;)</span><br><span class="line">age &#x3D; input(&quot;请输入你的年龄：&quot;)</span><br><span class="line">print(&quot;你好，&quot;,age, &quot;岁的&quot;, name, &quot;!&quot;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p><code>print(&quot;你好，&quot;,age, &quot;岁的&quot;, name, &quot;!&quot;)</code> 的书写可能并不方便，我们可以用“格式化字符串”的方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name &#x3D; input(&quot;请输入你的名字：&quot;)</span><br><span class="line">age &#x3D; input(&quot;请输入你的年龄：&quot;)</span><br><span class="line">print(&quot;你好，%s 岁的%s!&quot; % (age, name))</span><br></pre></td></tr></table></figure>
-
-<p>效果当然是一样的，而我们编写代码时应该选择更简洁优雅的方式，这也正契合 Python 的精神。</p>
-<p>形如 <code>%s</code> ，这种一个 <code>%</code> 加一个字母的被称为占位符，<code>%s</code> 表示一个字符串，用 <code>input()</code> 获取的默认是字符串类型。</p>
-<table>
-<thead>
-<tr>
-<th>占位符</th>
-<th>替换内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>%s</td>
-<td>字符串</td>
-</tr>
-<tr>
-<td>%d</td>
-<td>整数</td>
-</tr>
-<tr>
-<td>%f</td>
-<td>浮点数</td>
-</tr>
-<tr>
-<td>%x</td>
-<td>十六进制整数</td>
-</tr>
-</tbody></table>
-<p>占位符还有更多，以上是比较常用的几种。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>通过本教课程，你已经学会了基本的输入输出语句，了解了字符串相关内容，并且开始使用变量。在入门编程的道路上，又迈出了坚实的一步， 继续加油！ 👏 </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_2/" data-id="ckotp9tu10002nctjbuqq4aho" data-title="在开发环境进行学习" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -1512,7 +1434,7 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
     </div>
   </div>
 
@@ -1523,6 +1445,10 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/06/02/Summary-of-Potential/">Summary of Potential</a>
+          </li>
         
           <li>
             <a href="/2021/05/26/email-reply/">email reply</a>
@@ -1538,10 +1464,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
         
           <li>
             <a href="/2021/05/15/python-exercises/">python exercises</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/11/sobereva/">思想家公社的门口</a>
           </li>
         
       </ul>
