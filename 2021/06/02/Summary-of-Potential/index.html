@@ -14,7 +14,7 @@
 <meta property="og:description" content="分子动力学模拟这种方法最大的缺陷在于必须知道模拟体系中每对原子之间的势参数才能够精确模拟整个体系的结构和性质，而对于复杂的多元体系，往往缺少势参数。Kejiang Li001等人讨论了CMAS(CaO-MgO-Al2O3-SiO2)体系四种势参数的可移植性问题，论文中对比了Matsui007, Kawamura3, Miyake015, Guillot011等人提出的势函数，其中Matsui最早于">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-02T11:08:21.000Z">
-<meta property="article:modified_time" content="2021-06-03T12:06:30.764Z">
+<meta property="article:modified_time" content="2021-06-03T13:45:02.334Z">
 <meta property="article:author" content="Yiwei Sun">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary">
@@ -104,14 +104,18 @@
 <p>2017年Mitchell Leibowitz创建的<a target="_blank" rel="noopener" href="https://interatomic-potentials.readthedocs.io/en/latest/">interatomic-potentials</a>这个网站介绍了Born Mayer Huggins、Tersoff、Stilinger-Weber、Lennard Jones、Morse、Buckingham等在内的各种势函数。</p>
 <p>年份和姓名(能够避免重复)，链接，拟合方法，体系，势函数，特征成分，研究内容，特点</p>
 <p>1990年van Beest BW<a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/Force-fields-for-silicas-and-aluminophosphates-on-vanBeest-Kramer/933fa5b33c8584bcaf64a1346dbf75127cde8f10">023</a>基于实验数据和从头算分子模拟拟合了SiO2-Al2O3-P2O5体系的BMH势参数，O的原子电荷为-1.2。</p>
-<p>1997年</p>
+<p>1997年J.M Delaye<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309396006047">000</a>使用BMH势函数模拟氧化物玻璃组分对结构的影响，体系为SiO2-B2O3-Na2O-Al2O3-ZrO2。</p>
 <p>2001年A.N.Cormack<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309301008316">014</a>基于BMH势函数模拟了Na2O–CaO–SiO2玻璃体系。</p>
+<p>2009年Rodolphe Vuilleumier<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703709004530#bib71">000</a>分别采用从头算和经验力场模拟了K2O–Na2O–CaO–MgO–Al2O3–SiO2体系，经验力场参数源于Guillot的论文。</p>
 <p>2011年Le-HaiKieu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931100384X">012</a>发展了SiO2–B2O3–Na2O玻璃体系中的BMH势参数，首次引入了B2O3这一组元。<br>2013年M. Bouhadja<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.4809523">020</a> 等人基于从头算针对CaO–Al2O3–SiO2 (CAS)熔体提出了更加精确的BMH势参数。</p>
-<p>2014年MahaRai<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309313006558#bb0045">013</a>使用BMH势模拟了BaO–SiO2玻璃的结构。<br>2015年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931400670X#bb0090">021</a>使用BMH势函数分别研究了CaO–SiO2和CaO–Al2O3体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。</p>
-<p>2015年Pawel Stoch<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314006693#bb0200">022</a>研究了加入Cs的硼硅酸盐体系玻璃，使用的是BMH势，研究体系为SiO2–B2O3–Al2O3–CaO–Na2O–Cs2O，势参数源于</p>
-<p>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316302885">010</a>使用LJ势和BMH势模拟了CaO-SiO2-Al2O3-FeO熔渣体系的结构和粘度。<br>2018年Mengyi Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318302643">017</a>在Guilliot提出的K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2体系BMH势参数的基础上拟合了B2O3这一组元势参数，并重点考察了Na2O–CaO–SiO2-B2O3这一四元玻璃体系的结构和性质。</p>
+<p>2014年重庆大学的Shengfu Zhang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314002725#!">000</a> 基于简化的BMH势函数研究了CaO–SiO2–Al2O3–MgO–TiO2体系结构和粘度间的关系。</p>
+<p>2014年MahaRai<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309313006558#bb0045">013</a>使用BMH势模拟了BaO–SiO2玻璃的结构。<br>2015年重庆大学的Yanhui Liu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2214785315001327#!">000</a> 基于BMH势函数研究了CaO-SiO2-MgO-Al2O3体系中Al2O3对熔渣结构的影响。<br>2015年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931400670X#bb0090">021</a>使用BMH势函数分别研究了CaO–SiO2和CaO–Al2O3体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。</p>
+<p>2015年Pawel Stoch<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314006693#bb0200">022</a>研究了加入Cs的硼硅酸盐体系玻璃，使用的是BMH势，研究体系为SiO2–B2O3–Al2O3–CaO–Na2O–Cs2O。</p>
+<p>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316302885">010</a>使用LJ势和BMH势模拟了CaO-SiO2-Al2O3-FeO熔渣体系的结构和粘度。<br>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931530301X#!">000</a> 使用BMH势函数分别研究了 Na2O–Al2O3, K2O–Al2O3, MgO–Al2O3, and CaO–Al2O3， Al2O3基二元体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。</p>
+<p>2016年Lehlohonolo Mongalo<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316303751">000</a> 使用BMH+Morse势研究了CaO–MgO–Al2O3–SiO2体系的熔体结构和导电性。</p>
+<p>2018年Mengyi Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318302643">017</a>在Guilliot提出的K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2体系BMH势参数的基础上拟合了B2O3这一组元势参数，并重点考察了Na2O–CaO–SiO2-B2O3这一四元玻璃体系的结构和性质。</p>
 <p>2021年Young jae Kim<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304890#!">019</a>基于BMH势函数模拟了MgF2-LiF-MgO体系的粘度和结构。</p>
-<p><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a></p>
+<p><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a><br><a href=""></a></p>
 <p><a href=""></a><br><a href=""></a></p>
 <h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p>2019年Kai Yang等人<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41598-019-45344-3">000</a>通过高通量分子动力模拟和机器学习来预测硅酸盐玻璃的杨氏模量，论文发表在nature旗下的science reports期刊上，论文通讯作者为Mathieu Bauchy，除此之外，其在2019年还发表了一篇机器学习的综述<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2590159119300494">000</a></p>
 <p><a href=""></a></p>
