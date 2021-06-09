@@ -71,6 +71,105 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-电子结构方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2021-06-09T11:30:50.000Z" itemprop="datePublished">2021-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/">电子结构方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>探索化学的奥秘：电子结构方法 第三版 许雪飞 译<br>分子模拟基础 李永健 著</p>
+<p>什么是色散？</p>
+<p>Hartree-Fock方法的特点和问题是什么？<br>Hartree-Fock：最经济/最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献</p>
+<p>什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？<br>基于数学物理被称为多体微扰理论的分支，该方法通过在Hartree-Fock理论的基础上引入校正，从而对电子相关效应重要的体系计算达到更好的精度，也相应需要更高的计算成本。</p>
+<p>不同DFT方法的区别在哪里？<br>DFT：该方法包含大部分的电子相关效应。DFT方法有很多种，主要的不同在于该方法是纯的还是杂化的形式。一个纯的DFT方法由一对描述能量表达式里不同的两项的泛函构成，分别是交换和相关项。杂化泛函在能量表达式里含包含一定量的Hartree-Fock交换项。近期的DFT进展包括对色散效应的处理和对长程相互作用（在远离核的位置处的电子-电子的相互作用，例如电子激发到更高的轨道的过程中电子-电子的相互作用）的处理。</p>
+<p>把分子中的原子核当作被移动的电子包围的固定粒子的方法。因为电子移动的比原子核快得多，所以这是一个很合理的近似。由于这类方法关注电子，它们被叫做电子结构方法。</p>
+<p>薛定谔方程是常见电子结构方法的基础。在这个非含时的形式中，是一个分子的波函数。它是构成分子的原子的电子和核的位置的函数。方程表明，将哈密顿算符H作用到波函数上等同于分子的能量E和波函数的乘积。</p>
+<p>电子结构软件经常提供另外一类方法，即分子力学（MM）方法。MM方法应用由参数和特定的函数形式构成的力场将分子势能模拟为原子对间的相互作用，在电子结构计算里，这些方法主要用于应用量子力学-分子力学（QM:MM）组合方法模拟非常大的分子。<br>模型化学的最简单定义是一个理论方法和一个基组的结合。如果想比较不同分子/反应的性质，那么必须用相同的模型化学方法来预测这些性质。<br>不同的理论方法对应于对薛定谔方程的人不同近似，每一种方法都有它们自己的精度，计算成本和资源的需求。</p>
+<p>````</p>
+<p>初级量子化学培训自测题</p>
+<p>基函数在量子化学计算中起到什么作用？</p>
+<p>答：基函数也称为基组，基组是用来构建一个分子体系的量子力学波函数的数学函数集合。指定一个基组</p>
+<p>CBS的全称是什么？含义是什么？</p>
+<p>基组不完备性误差指什么？</p>
+<p>Gaussian、GAMESS-US等常用量子化学程序用的基函数的数学形式是什么样的？是以原子为中心的么？</p>
+<p>S型高斯函数有几种？P型高斯函数有几种？</p>
+<p>什么叫收缩型高斯基函数？为什么要做收缩？</p>
+<p>判断此话的正误：收缩系数和基函数的线性组合系数在SCF过程中都会发生改变，后者的初值是在所用基组中定义的。</p>
+<p>壳层是什么意思？</p>
+<p>每种基组都定义了哪些信息？</p>
+<p>写出至少一种极小基基组的名字。</p>
+<p>STO-nG系列的STO的含义是什么？n和G代表什么意思？</p>
+<p>什么叫扩展基？</p>
+<p>双分裂价基组的含义是什么？</p>
+<p>写出至少三种双分裂价基组</p>
+<p>写出DZ、TZ的全称</p>
+<p>Pople系列基组指哪些基组？</p>
+<p>对6-311+G(2d,p)这个基组的特征进行说明，解释此基组符号中每一项的含义。</p>
+<p>什么是极化函数？</p>
+<p>什么是弥散函数？</p>
+<p>判断这句话的正误，如果不对，指出错在哪里：只要计算条件不是太差，否则绝对不应当使用6-31G基组，因为这个基组连极化函数都没有，结果往往很烂。使用6-31G的人大多都是连最基本的基组常识都没有的菜鸟。</p>
+<p>判断这句话的正误：后HF对基组的要求比HF、DFT更高，特别是需要有大量的弥散函数，否则不能充分描述电子相关作用。</p>
+<p>判断这句话的正误：对分子体系除非很高精度计算，否则没必要引入极化函数。因为对于孤立原子，比占据轨道角动量更高的原子轨道是非占据的，因此对于分子体系也没太大必要通过引入极化函数来描述它们。</p>
+<p>计算研究中性分子发生的化学反应，6-31++G和6-31G**那个结果会更好？</p>
+<p>指出以下哪些问题在计算时是必须有弥散函数的，否则结果会很离谱；哪些是用了弥散函数后对结果有明显改善的，哪些是没有特殊前提条件的情况下没必要加弥散函数的：<br>计算极化率<br>计算超极化率<br>计算偶极矩<br>计算势垒<br>计算里德堡激发<br>计算价层激发<br>计算电离能<br>计算色散主导的分子间相互作用<br>优化势能面极小点<br>找过渡态结构<br>振动分析获得红外光谱<br>计算HOMO-LUMO gap<br>计算电子亲和能<br>计算IRC<br>计算阳离子<br>计算原子化能<br>计算原子电荷<br>计算NMR<br>势能面扫描<br>计算带有孤对电子原子的体系<br>计算带有pi电子的体系</p>
+<p>滥用弥散函数是初学者的最常见问题之一，会带来很多坏处。指出以下哪些是瞎编的坏处：<br>使得SCF收敛往往困难许多<br>使得体系能量整体偏高<br>使得一些波函数分析方法结果变得不合理（如Mayer键级、Mulliken分析）<br>计算红外光谱时可能导致一些本应很明显的峰消失<br>导致gap显著加大</p>
+<p>写出与此描述相对应的pople基组：TZ级别，给重原子加两层d极化函数，一层f极化函数；给轻原子加两层p极化函数。给重原子加一层弥散函数。</p>
+<p>为什么说在需要用弥散函数的时候，一般没必要给氢加弥散函数？</p>
+<p>Dunning相关一致性基组的基组名通式是什么？</p>
+<p>Dunning相关一致性基组最适合用于哪种计算？HF计算、后HF计算、杂化泛函计算、纯泛函计算、半经验计算</p>
+<p>cc-pVQZ、cc-pV6Z、6-311G(3df,2pd)其中哪个最大？哪个最小？</p>
+<p>cc-pVTZ的标准的带弥散函数的版本的名字怎么写？其赝势基组版本的名字怎么写？</p>
+<p>对以下基组尺寸从小到大排序（对主族来说）：<br>STO-3G、def2-TZVP、def-TZVP、6-311G**、def2-SVP、3-21G、def2-QZVP、cc-pV5Z、6-31G、cc-pVTZ</p>
+<p>def2系列基组从第几周期开始是赝势基组？</p>
+<p>6-31G*基组能直接被用于计算四羰基镍、溴化碘么？cc-pVDZ能计算氯化钠、氟化钾、二茂铁么？如果不能，说出原因。</p>
+<p>计算一般化学问题，以下哪些组合明显不合理，为什么？<br>CCSD(T)/cc-pVDZ、B3LYP/def2-TZVP、HF/cc-pVQZ、B2PLYP/6-311G(2df,2p)、MP2/6-31+G、MP4/cc-pVTZ</p>
+<p>对于普通有机体系，判断这些说法的正误：<br>用6-31+G<em>算得动的体系，用6-311G</em>一定算得动<br>用cc-pVTZ算得动的体系，用aug-cc-pVTZ一定算得动<br>用def2-TZVP算得动的体系，用def2-QZVPP一定算得动<br>用def2-SVP算得动的体系，用6-31G**一定算得动</p>
+<p>判断以下说法的正误，如果错误，指出错在哪里：<br>(1)基组越大结果总是越好<br>(2)为了能得到较准确结果，绝对不能用极小基级别的基组<br>(3)Dunning相关一致性基组是给后HF计算优化的，因此用于DFT计算结果将极为糟糕<br>(4)Pople系列基组是给HF计算优化的，因此用于DFT计算结果将极为糟糕<br>(5)在基组尺寸相近的情况下，用def2系列基组比用pople系列基组往往能获得更好的结果，比如def2-TZVPP通常结果好于6-311G(2df,2pd)、def2-SVP通常结果好于6-311G**</p>
+<p>什么叫混合基组？什么场合需要用到混合基组？</p>
+<p>什么是赝势？什么是赝势基组？什么情况用得着？</p>
+<p>写出至少5种赝势基组的名字</p>
+<p>使用赝势基组的好处和坏处都有哪些？</p>
+<p>判断说法正误：<br>(1)Lanl赝势绝对不应搭配SDD赝势基组使用<br>(2)赝势基组必须搭配赝势使用才能用于实际问题研究<br>(3)使用lanl2DZ计算氧化亚铁时可以等效地考虑标量相对论效应<br>(4)lanl2对过渡金属是大核赝势<br>(5)lanl2对碘是小核赝势<br>(6)lanl1对碘是大核赝势<br>(7)cc-pVTZ-PP也可以给DFT计算使用<br>(8)SDD赝势基组对于镧系、锕系有定义，而def2系列、lanl2DZ对镧系锕系都没有定义<br>(9)计算配合物时，给过渡金属用lanl2DZ，给配体用def2-TZVP是合理的搭配<br>(10)对于第四周期原子，lanl2DZ和6-31G*耗时相近，前者精度更高<br>(11)计算配合物时，给过渡金属用了赝势基组时，可以照样计算配体原子的NMR<br>(12)从第四周期开始，相对论效应已变得非常显著，实际计算时总要考虑相对论效应<br>(13)lanl08比lanl2DZ更大<br>(14)lanl08、lanl08(d)、lanl2TZ、lanl2TZ(f)赝势基组对应的赝势定义都一样<br>(15)使用赝势基组也可以做后HF计算</p>
+<p>对过渡金属，将以下赝势基组大小进行排序<br>lanl2MB、lanl2DZ、SDD、cc-pVTZ-PP</p>
+<p>```</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/" data-id="ckppfxuha0000astjbx6f03dv" data-title="电子结构方法" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Gaussian-Summary" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/06/09/Gaussian-Summary/" class="article-date">
@@ -1402,221 +1501,6 @@
 
 
   
-    <article id="post-Paper-sentence-accumulation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/08/Paper-sentence-accumulation/" class="article-date">
-  <time class="dt-published" datetime="2021-05-08T04:50:37.000Z" itemprop="datePublished">2021-05-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Paper/">Paper</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/08/Paper-sentence-accumulation/">Paper sentences accumulation</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="2021-06-07"><a href="#2021-06-07" class="headerlink" title="2021/06/07"></a>2021/06/07</h3><ul>
-<li><p><strong>Molecular dynamics (MD) simulations were carried out to determine the influence of alkalis (K2O and Na2O; up to 10%) on the local structural order, bonding networks and fluidity of molten Al2O3-CaO-SiO2 system (2223 K).</strong></p>
-</li>
-<li><p><strong>Experimental results on the system indicate an increasing viscosity in the presence of K2O and a decreasing trend for Na2O.</strong></p>
-</li>
-<li><p><strong>Attributing these differences to local distortions and the sizes of K+ and Na+ ions, theoretical investigations on these systems have predicted a reduction in viscosity for both alkalis.</strong></p>
-</li>
-<li><p><strong>The literature is rich in potentials configured for the simulation of silicate systems, for example the Vessal potential [14], [15], [16], [17], [18], the Matsui potential [19], [20], [21], or the Guillot–Sator (GS) potential [22]. None of these potentials take boron into account.</strong></p>
-</li>
-<li><p><strong>New parameter values are proposed for the empirical potentials used to describe SiO2–B2O3–Na2O alkali borosilicate glass systems. They are based on Buckingham potentials, but include dependence between the fitting parameters and the glass chemical composition to improve the representation of the complex environment around the boron atoms.</strong></p>
-</li>
-<li><p><strong>This tutorial is designed to illustrate how to relax the structure of a system (without changing the cell dimensions) using CP2K. We use the relaxation of a water (H2O) molecule as an example.</strong></p>
-</li>
-</ul>
-<h3 id="Stabilization-mechanism-of-arsenic-sulfide-slag-by-density-functional-theory-calculation-of-arsenic-sulfide-clusters"><a href="#Stabilization-mechanism-of-arsenic-sulfide-slag-by-density-functional-theory-calculation-of-arsenic-sulfide-clusters" class="headerlink" title="Stabilization mechanism of arsenic-sulfide slag by density functional theory calculation of arsenic-sulfide clusters"></a>Stabilization mechanism of arsenic-sulfide slag by density functional theory calculation of arsenic-sulfide clusters</h3><p><a href="#1">Abstract</a><br><a href="#2">Introduction</a><br><a href="#3">Computational details</a><br><a href="#4">Results and discussion</a><br><a href="#5">Conclusion</a></p>
-<p>Highlights</p>
-<ul>
-<li>A systematic DFT study was carried out to analyze the various … cluster.</li>
-<li>The … structure possesses the highest stability.</li>
-<li>The relationship between … structure and stability of … slag was confirmed.</li>
-<li>The consumption of 4p-orbital in … by … atoms could further improve the stability of … slag.</li>
-<li>The stabilized experiment was a good agreement with DFT results.</li>
-</ul>
-<ol start="0">
-<li><a name="1">Abstract</a></li>
-</ol>
-<ul>
-<li>Stabilization of … slag is of high importance to … </li>
-<li>However, the molecular understanding on the stability of … is missing, which in turn restricts the development of robust approach to solve the challenge. </li>
-<li>In this work, we investigated the structure-stability relationship of … with adopting various … clusters as prototypes by density functional theory (DFT). </li>
-<li>Results showed that the configuration of … is the most stable structure amongst the candidates by the analysis of energies and bonding characteristics. </li>
-<li>The high stability is explained by orbital composition that the 4p-orbital (As) binding with 3p-orbital (S) decreases energy level of highest occupied molecular orbital (HOMO). </li>
-<li>Inspired from the calculations, an … method was successfully proposed and achieved to promote the stabilization of … </li>
-<li>Typically, the … concentration from the leaching test of … is only … mg/L, which is much lower than the value from …</li>
-</ul>
-<ol>
-<li><a name="2">Introduction</a></li>
-</ol>
-<ul>
-<li>… is a typical deadly pollutant in the … of … industries, which is normally detoxified by chemical precipitation. </li>
-<li>As such, more than … tons of … could be produced annually.</li>
-<li>However, the relatively weak stability of … slag in ambient conditions would allow … release again into …, causing severely …</li>
-<li>To stabilize …, solidification methods have been developed, but they suffer from relatively high enlargement ratio(放大倍数) and cost, and complicated process. </li>
-<li>Most recently, hydrothermal treatment（水热处理） was proposed to dispose … by creating necessary conditions to re-build the structure of … </li>
-<li>As a consequence, the structure of … was modified with improved stability towards the harsh environment. </li>
-<li>However, the understanding of relationship between … structure and stability of … is missing, which in turn hampers a further development of … stabilization.</li>
-<li>In recent years, the rapid development of clusters science boosts the fundamental research of materials since clusters structure can be regarded as a basis to understand physicochemical properties. </li>
-<li>Currently, limited examples are emerging on the cluster structure of … compounds. </li>
-<li>For instance, based on Gaussian-03 scheme calculation, Yang et al. investigated the structure of … clusters and predicted that the clusters are stable. </li>
-<li>Guillermo et al. revealed the geometrical structure of … clusters with combination of results and analysis of mass spectroscopy. </li>
-<li>Although great progress has been made, these researches are irrelevant with stabilization of … </li>
-<li>As revealed, the … structure is an important factor to the stability of … and the clusters can be regarded as basic molecular skeleton in … </li>
-<li>Therefore, the structure of … clusters and further the correlation of cluster structure with its properties, typically the bonding behavior and electronic information, are very important for a rational design of stabilization strategy. </li>
-<li>However, seldom effort has been paid to figuring out how the S-to-As molar ratio influences the clusters structure and why specific structure could increase the slag stability.</li>
-<li>Here we investigated the geometric structure of various As‒S clusters based on density functional theory to simulate their structures. </li>
-<li>Typically, the cluster energy, and electron and orbital characteristics were analyzed, and the As‒S interaction behavior was revealed. </li>
-<li>The bonding characteristics and energy analysis demonstrate the structure of … is of the highest stability. </li>
-<li>Furthermore, the orbital composition indicates that the stability of this structure is stemmed from the 4p-orbital in As atom binding with 3p-orbital of S atom, which brings down the HOMO energy level. </li>
-<li>Motivated by this theoretical result, rational design was conducted on hydrothermal treatment of As‒S slag by adding pure S powders. </li>
-<li>Such a hydrothermally treated slag possesses a very high stability as revealed by leaching experiment that the As concentration in the leaching solution is only 0.8 mg/L.</li>
-</ul>
-<ol start="2">
-<li><a name="3">Computational details</a></li>
-</ol>
-<ul>
-<li>The initial configuration searches for the … clusters were based on two steps. </li>
-<li>Firstly, By the ABCluster 2.0 global search technique combined with the GFN1-xTB, more than 5000 isomers(异构体) structure for (As2S2)n, (As2S3)n and (As2S5)n (n = 1–8) clusters were predicted.</li>
-<li>Secondly, the first three minimum structure were optimized using B3LYP functional with the all-electron small basis sets (def2SVP) by Gaussian 09 package. </li>
-<li>Vibrational frequency calculations were carried out at the same level to check the local minima structure on the potential energy surface else. </li>
-<li>Meanwhile, spin multiplicity is fully considered during the geometric optimization process. </li>
-<li>After completion of initial configuration searches work, we selected B3LYP functional with the all-electron def2TZVP basis sets to refine the single-point energy calculation. </li>
-<li>Implicit solvent model is assessed to correct potential energy surface and all-electron properties caused by solvent effect in all process. </li>
-<li>Thirdly, the wave function analysis including the structural parameter was carried out by Multiwfn 3.5 to realize orbital information and electronic properties, and the Raman spectrum was calculated. </li>
-<li>To verify the accuracy of the optimization method, we employed different functionals and basic sets (e.g., the theoretical binding energy, bond length and vibration frequency of As2 dimer(二聚物) and S2 dimer), and the results were compared to the measured experiments data, as shown in Table S1. </li>
-<li>Electron Localization Function (ELF) was calculated while we choose the isosurface value is 0.7 for As16S16 cluster, As16S24 cluster and As16S40 cluster.</li>
-</ul>
-<ol start="3">
-<li><a name="4">Results and discussion</a></li>
-</ol>
-<ul>
-<li>In this research, (As2S2)n, (As2S3)n and (As2S5)n (n = 1–8) were adopted in the calculation. </li>
-<li>The neutral (As2S2)n and (As2S3)n (n = 1–8) clusters were typical As‒S compounds according to the phase diagram. </li>
-<li>The metastable compound As2S5 was also taken to investigate the effect of S-to-As molar ratio of on the cluster properties. </li>
-<li>The local minima structure of As‒S clusters was regarded as the stable state to exhibit chemical properties.</li>
-<li>The effect of S-to-As molar ratio on the clusters structure was analyzed by the optimized geometrical structures of (As2S2)n, (As2S3)n, and (As2S5)n (n = 1–8) by taking n = 8 as the representatives (Fig. 1). </li>
-<li>The structure evolution for these clusters with different size was systematically illustrated in Figs. S2–S4. </li>
-<li>Typically, the symmetry of (As2S2)n, (As2S3)n, and (As2S5)n (n = 2–8) belonged to C1, all of which were of irregular structures (Figs. 1a–c and S2–S4), this structural evolution is similar to the previous work (Yang et al., 2013, Hou et al., 2014). </li>
-<li>On the other hand, the voluminosity of the clusters tends to decrease with the increase of molar ratio of S (Fig. 1d) (Lu and Chen, 2012). </li>
-<li>This may be caused by the relatively small atomic radii of S. </li>
-<li>Moreover, the S multimers were found distributing on the exterior of (As2S5)n cluster (n = 1–8), which looks like S multimers covering (As2S3)n cluster (n = 1–8). </li>
-<li>As mentioned, the As2S5 is a metastable structure (Hansen et al., 1958), and thus, it is easy to understand the formation of S multimers-covering-(As2S3)n structure. </li>
-<li>Further evidences on forming this structure will be presented below. </li>
-<li>Here for the convenience of depiction, As2S5 and (As2S5)n (n = 1–8) were still used in the following content.</li>
-</ul>
-<ol>
-<li>Bonding characteristics of the clusters</li>
-</ol>
-<ul>
-<li><p>To understand the differences of structure, As‒S bonding characteristics are detailly analyzed. </p>
-</li>
-<li><p>The average distance of As and S to the cluster center (in brief: As-c distance/S-c distance) was measured (Lu and Chen, 2012b). </p>
-</li>
-<li><p>As seen in Fig. 2a, there is no obvious difference between As-c distance and S-c distance for (As2S2)n and (As2S3)n (n = 1–8). </p>
-</li>
-<li><p>However, S-c distance turns into much larger than As-c distance for (As2S5)n when n &gt; 3. </p>
-</li>
-<li><p>Typically, when n = 8, the distance difference of S-c to As-c reaches as high as ~3 Å. </p>
-</li>
-<li><p>That is to say, in the case of (As2S5)n, the S multimers get rid of cluster confinement and stably occupies the exterior shell of the cluster, which is in line with the observation of the structure in Fig.1.</p>
-</li>
-<li><p>Electronic state of the atoms in the clusters was investigated by Hirshfeld charge (Lu and Chen, 2012b). </p>
-</li>
-<li><p>As shown in Fig. 2b, the Hirshfeld charge of As increases slightly, which reveals that the metallic nature of As gradually increases. </p>
-</li>
-<li><p>As seen in Fig. 2c, more and more S atoms present positive charge with the increase of S-to-As ratio. </p>
-</li>
-<li><p>It suggests that S atoms have a tendency to aggregate around As atoms and form S multimer. </p>
-</li>
-<li><p>This could possibly be explained by the S multimers distributing on the outer shell of the (As2S5)n and the (As2S3)n acting as the core of (As2S5)n. </p>
-</li>
-<li><p>Noticeably, it has been verified that the (As2S5)n is metastable compound. </p>
-</li>
-<li><p>Therefore, based on the analysis of calculation data, the (As2S5)n is most possibly composed of (As2S3)n clusters covered with S dimers on the exterior shell. </p>
-</li>
-<li><p>This is due to the excess S present in the chemical formula of As2S5.</p>
-</li>
-<li><p>Further bonding information on (As2S5)n clusters were studied by measuring their average length of As‒As, As‒S and S‒S bonds as well as the Mayer bond order (Lu and Chen, 2018). </p>
-</li>
-<li><p>In Fig. 2c, the results show the bond length is irrelevant to the cluster size n, and the order of bond length follows LAs‒As (&gt;2.5 Å) &gt; LAs‒S (2.18 Å) &gt; LS‒S (2.07 Å). </p>
-</li>
-<li><p>Specifically, the Mayer bond order of As‒As is nearly 0, which proves that the As‒As bond has totally broken up. </p>
-</li>
-<li><p>In addition, the Mayer bond order of As‒S and S‒S are nearly 1, which suggests that the strength of S‒S bond is close to the As‒S bond. </p>
-</li>
-<li><p>This indirectly proves the co-presence of S multimers and As‒S clusters in (As2S5)n, which is corresponding to the analysis of Hirshfeld charge and As/S-c distance.</p>
-</li>
-<li><p>Building on the discussion of the bonding features of various clusters, the increase of S molar ratio would induce the formation of S multimers exteriorly interacting with the As‒S clusters. </p>
-</li>
-<li><p>This sufficiently verifies the above opinion on which the stable structure of (As2S5)n (n = 1–8) is S multimers-covering-(As2S3)n (n = 1–8) structure. </p>
-</li>
-<li><p>The effect of this configuration on the stability of As compound has also been investigated.</p>
-</li>
-</ul>
-<ol start="2">
-<li>Energy analysis of the clusters</li>
-</ol>
-<ul>
-<li>Here we defined various energies to measure the cluster stability. </li>
-<li>The formation energy (Ef), the average binding energies per atom (Eb), the fragmentation energies (∆E), and the second order energy differences (∆2E) (Fig. S5) are used to study the stability of various clusters (Li et al., 2018, Li et al., 2017, Song et al., 2017). The definition formula of these energies was present in Text S1.</li>
-</ul>
-<p>The formation energy was shown in Fig. 3a that the energy value has no intensive variation with the increase of n for different clusters. The formation energy per monomer is the 26.0 eV (As2S5), 18.0 eV (As2S3), and 14.5 eV (As2S2). This implies that the formation energy of As2S5 is among the largest in these clusters and thus, it is the most stable compound among them. In fact, according to the above analysis of bonding characteristics, (As2S5)n (n = 1–8) most possibly consists of S multimers connecting with the shell of (As2S3)n (n = 1–8) clusters. That means the stability of purely (As2S3)n (n = 1–8) could be marvelously enhanced by the interaction of excess S atoms, which is interesting for the stabilization of As‒S compounds. In addition, the binding energy was calculated. As seen in Fig. 3b, the binding energy of As‒S bond for these three kinds of clusters has no obvious difference. The high-to-low sequence is 3.74 eV [(As2S5)n] &gt; 3.70 eV [(As2S3)n] &gt; 3.66 eV [(As2S2)n]. Moreover, fragmentation energy of various clusters was measured. As shown in Fig. 3c, the (As2S5)n (n = 1–8) cluster is of the highest fragmentation energy (&gt;27 eV). Thus, it is too stable to dissociate into monomer As2S5. This is in good agreement with the results of formation energy. This sufficiently demonstrates the high stability of (As2S5)n (n = 1–8), which should be resulted from their unique structure S multimers-covering-(As2S3)n.</p>
-<ol start="3">
-<li>Orbital composition of the clusters<br>To explain the formation energy differences, electronic information and orbital composition were employed to seize the degree of stability in electron level. ELF and corresponding S‒As‒S plane projection maps were acquired based on Atoms-In-Molecules theory (Fig. 4). (As2S2)8, (As2S3)8, and (As2S5)8 were applied as typical examples (Lu and Chen, 2011a). Noticeably, isosurface with larger area represents a higher degree of electron localization, which means electron in this area would be difficult to exchange. From Fig. 4a–c, the lone pair electrons in green color has an obviously high area and hence, the localization degree for such type of electrons is high. The S‒As‒S plane projection maps in Fig. 4d–f reveal that the lone pair electrons (green) are originated from S. Moreover, with the increase of S molar ratio, the green area increases accordingly, which mainly distributes on the exterior section of clusters. As a result, the (As2S5)8 could be regarded as an As‒S cluster [smaller than (As2S5)8] being protected by a very stable S shell. More importantly, this could explain very well the results of energy analysis above that the (As2S5)8 possesses the highest stability among the three types of clusters.</li>
-</ol>
-<p>Partial density of states (PDOS) map and corresponding composition analysis of atomic orbitals were taken to further understand the mechanism of high stability of (As2S5)n clusters (Lu and Chen, 2011b). The As16S16, As16S24, and As16S40 [(As2Sx)n, n = 8)] were adopted as typical examples. As seen in Fig. 5a, the Fermi level decreases when promoting the S molar ratio. Interestingly, the HOMO correspondingly decreases with the Fermi level while the LUMO stays still. In addition, the p orbital of S contributes most in the molecular orbitals in these three clusters. Fig. 5b presents atomic orbitals composition. Based on Fig. 5b, the energy gap (the differences of HOMO and LUMO/EH-Lgap) was calculated that As16S40 (2.269 eV) &gt; As16S24 (2.165 eV) ≫ As16S16 (1.559 eV).</p>
-<p>Basically, the configuration of valence electrons for As and S atoms are 4s24p3 (3 half-full p orbitals) and 3s24p4 (1 full p orbital and 2 half-full p orbitals), respectively. When the atomic ratio of S to As reached 3:2, all the half-full p orbitals of As and S atoms participated in the formation of As‒S bonding. In this case, the HOMO was composed of the remaining full 3p orbital of S atom. When the atomic ratio is less than 3:2, there remains half-full 4p orbitals for As atom, which forms HOMO with the full p orbital of S atom. No wondering, this process promotes the energy level of HOMO, which is not conducive to stabilize the As‒S compounds. In turn, when the atomic ratio is larger than 3:2, the HOMO dominantly consisted of half-full 3p orbitals, which has a relatively low energy level.</p>
-<p>That is to say, the stability of As‒S compound in this high atomic ratio increases. Briefly speaking, the analysis of orbital composition can elucidate very well the above results on the high stability of the As‒S compounds with S multimers-covering-(As2S3)n structure [chemical formula: (As2S5)n (n = 1–8)].</p>
-<ol start="4">
-<li>A batch of stabilized treatment</li>
-</ol>
-<p>The high chemical stability of the S multimers-covering-(As2S3)n structure inspires the development of stabilization of As‒S slag. In general, the As‒S slag mainly consists of As2S3 structure, which is not stable when exposing to outer environment. Incorporation of excess S to interact with the As‒S slag would possibly produce S multimers-covering-(As2S3)n structure to increase the stability.</p>
-<p>In this context, we designed experiments to verify the prospect of As‒S compound stabilization by using the reaction between S and the raw As2S3 powders as a prototype. In brief, powder mixture of S and As2S3 was treated in hydrothermal conditions (Scheme 1 and Text S2). Control experiment was also carried out by hydrothermal treatment of the powders mixture of S and As2S3, and stabilized As‒S compounds was obtained, named for SA. The pictures of the raw materials and the product were given in Scheme 1 that the final product became shinning bulk from the coarse powders. Moreover, Toxicity Characteristic Leaching Procedure (TCLP) based on USEPA Method 1311 was used to examine the stability of these compounds (USEPA, 1992). The leaching concentration of As from the As2S3 raw materials reached as high as 139.4 mg/L while the value from the hydrothermally treated As2S3 decreased to 54.5 mg/L. However, the product obtained by the reaction of S with As2S3 exhibited a low leaching capability of 0.8 mg/L. According to the identification standards for hazardous wastes of China (GB5080.3-2007), the upper limit for the As leaching concentration is 5 mg/L. Apparently, the As‒S compound has been stabilized by the chemical interaction with the excess S, which is in line with the results of DFT calculation analysis. The materials were characterized by the XRD and Raman techniques (Fig. 6). The XRD results illustrate non-crystal S have transformed into sample SA from S raw materials in Fig. 6a. The Raman spectrum is fitted to overlapping peaks between 300 and 400 cm−1, which are mainly contributed to As‒S bond in As2S3 state (Kovalskiy et al., 2017, Mochalov et al., 2018) from Fig. 6b–d. Based on energy-dispersive spectroscopy (EDS) (Fig. S6), the atomic ratio of As and S is 16.8% and 83.2%, respectively. It is noticed that the sulfur is mainly consisting of S2 and S8 ring (Fig. 6b), which is a good agreement in the previous work (Kovalskiy et al., 2017, Mochalov et al., 2018). From these characterizations, the S multimers-covering-As2S3 structure were found in the final product. Consider that the calculated Raman activity of As16S40 cluster (Fig. S7), this is corresponding to the discovery from the results that the S multimers-covering-As2S3 is of the highest stability.</p>
-<ul>
-<li>In summary, DFT calculations were applied to investigate the structural stability of various As‒S clusters. </li>
-<li>The analysis of structural character suggest the S multimers-covering-As2S3 configuration possessed the highest stability amongst the candidates. </li>
-<li>The binding energy and formation energy of S multimers-covering-As2S3 is 3.74 and 26.0 eV, respectively. </li>
-<li>In typical, the electronic information confirms the stabilized mechanism is contributed to the 4p-orbital (As) binding with 3p-orbital (S) decreases energy level of HOMO. </li>
-<li>Motivated by the calculation results, a rational design was proposed by adding additional S into the As2S3 powders in the hydrothermal reaction to produce a chemically stable compound. </li>
-<li>Based on the standard toxicity leaching experiments, the As concentration in the leachate is only 0.8 mg/L, which is far lower than the As‒S compounds without interaction with S. </li>
-<li>The theoretical understanding on the structure-stability relationship of As‒S clusters and the inspired treatment method open a hopeful window for large-scale stabilization treatment of As‒S slag.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/05/08/Paper-sentence-accumulation/" data-id="ckoqy52w9001ps0tjdxwz68xn" data-title="Paper sentences accumulation" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -1632,7 +1516,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
     </div>
   </div>
 
@@ -1642,7 +1526,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
     </div>
   </div>
 
@@ -1652,7 +1536,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
+      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
     </div>
   </div>
 
@@ -1674,6 +1558,10 @@
       <ul>
         
           <li>
+            <a href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/">电子结构方法</a>
+          </li>
+        
+          <li>
             <a href="/2021/06/09/Gaussian-Summary/">Gaussian Summary</a>
           </li>
         
@@ -1687,10 +1575,6 @@
         
           <li>
             <a href="/2021/06/02/Summary-of-Potential/">Summary of  Emperical Potential</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/26/email-reply/">email reply</a>
           </li>
         
       </ul>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>电子结构方法 | IXY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="探索化学的奥秘：电子结构方法 第三版 许雪飞 译分子模拟基础 李永健 著 什么是色散？ Hartree-Fock方法的特点和问题是什么？Hartree-Fock：最经济&#x2F;最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献 什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？基于数学物理被称为多体微扰理论的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电子结构方法">
+<meta property="og:url" content="https://example.com/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="IXY">
+<meta property="og:description" content="探索化学的奥秘：电子结构方法 第三版 许雪飞 译分子模拟基础 李永健 著 什么是色散？ Hartree-Fock方法的特点和问题是什么？Hartree-Fock：最经济&#x2F;最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献 什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？基于数学物理被称为多体微扰理论的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-09T11:30:50.000Z">
+<meta property="article:modified_time" content="2021-06-09T12:20:57.055Z">
+<meta property="article:author" content="YIWEI">
+<meta property="article:tag" content="Note5">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="IXY" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">IXY</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-电子结构方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2021-06-09T11:30:50.000Z" itemprop="datePublished">2021-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      电子结构方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>探索化学的奥秘：电子结构方法 第三版 许雪飞 译<br>分子模拟基础 李永健 著</p>
+<p>什么是色散？</p>
+<p>Hartree-Fock方法的特点和问题是什么？<br>Hartree-Fock：最经济/最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献</p>
+<p>什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？<br>基于数学物理被称为多体微扰理论的分支，该方法通过在Hartree-Fock理论的基础上引入校正，从而对电子相关效应重要的体系计算达到更好的精度，也相应需要更高的计算成本。</p>
+<p>不同DFT方法的区别在哪里？<br>DFT：该方法包含大部分的电子相关效应。DFT方法有很多种，主要的不同在于该方法是纯的还是杂化的形式。一个纯的DFT方法由一对描述能量表达式里不同的两项的泛函构成，分别是交换和相关项。杂化泛函在能量表达式里含包含一定量的Hartree-Fock交换项。近期的DFT进展包括对色散效应的处理和对长程相互作用（在远离核的位置处的电子-电子的相互作用，例如电子激发到更高的轨道的过程中电子-电子的相互作用）的处理。</p>
+<p>把分子中的原子核当作被移动的电子包围的固定粒子的方法。因为电子移动的比原子核快得多，所以这是一个很合理的近似。由于这类方法关注电子，它们被叫做电子结构方法。</p>
+<p>薛定谔方程是常见电子结构方法的基础。在这个非含时的形式中，是一个分子的波函数。它是构成分子的原子的电子和核的位置的函数。方程表明，将哈密顿算符H作用到波函数上等同于分子的能量E和波函数的乘积。</p>
+<p>电子结构软件经常提供另外一类方法，即分子力学（MM）方法。MM方法应用由参数和特定的函数形式构成的力场将分子势能模拟为原子对间的相互作用，在电子结构计算里，这些方法主要用于应用量子力学-分子力学（QM:MM）组合方法模拟非常大的分子。<br>模型化学的最简单定义是一个理论方法和一个基组的结合。如果想比较不同分子/反应的性质，那么必须用相同的模型化学方法来预测这些性质。<br>不同的理论方法对应于对薛定谔方程的人不同近似，每一种方法都有它们自己的精度，计算成本和资源的需求。</p>
+<p>````</p>
+<p>初级量子化学培训自测题</p>
+<p>基函数在量子化学计算中起到什么作用？</p>
+<p>答：基函数也称为基组，基组是用来构建一个分子体系的量子力学波函数的数学函数集合。指定一个基组</p>
+<p>CBS的全称是什么？含义是什么？</p>
+<p>基组不完备性误差指什么？</p>
+<p>Gaussian、GAMESS-US等常用量子化学程序用的基函数的数学形式是什么样的？是以原子为中心的么？</p>
+<p>S型高斯函数有几种？P型高斯函数有几种？</p>
+<p>什么叫收缩型高斯基函数？为什么要做收缩？</p>
+<p>判断此话的正误：收缩系数和基函数的线性组合系数在SCF过程中都会发生改变，后者的初值是在所用基组中定义的。</p>
+<p>壳层是什么意思？</p>
+<p>每种基组都定义了哪些信息？</p>
+<p>写出至少一种极小基基组的名字。</p>
+<p>STO-nG系列的STO的含义是什么？n和G代表什么意思？</p>
+<p>什么叫扩展基？</p>
+<p>双分裂价基组的含义是什么？</p>
+<p>写出至少三种双分裂价基组</p>
+<p>写出DZ、TZ的全称</p>
+<p>Pople系列基组指哪些基组？</p>
+<p>对6-311+G(2d,p)这个基组的特征进行说明，解释此基组符号中每一项的含义。</p>
+<p>什么是极化函数？</p>
+<p>什么是弥散函数？</p>
+<p>判断这句话的正误，如果不对，指出错在哪里：只要计算条件不是太差，否则绝对不应当使用6-31G基组，因为这个基组连极化函数都没有，结果往往很烂。使用6-31G的人大多都是连最基本的基组常识都没有的菜鸟。</p>
+<p>判断这句话的正误：后HF对基组的要求比HF、DFT更高，特别是需要有大量的弥散函数，否则不能充分描述电子相关作用。</p>
+<p>判断这句话的正误：对分子体系除非很高精度计算，否则没必要引入极化函数。因为对于孤立原子，比占据轨道角动量更高的原子轨道是非占据的，因此对于分子体系也没太大必要通过引入极化函数来描述它们。</p>
+<p>计算研究中性分子发生的化学反应，6-31++G和6-31G**那个结果会更好？</p>
+<p>指出以下哪些问题在计算时是必须有弥散函数的，否则结果会很离谱；哪些是用了弥散函数后对结果有明显改善的，哪些是没有特殊前提条件的情况下没必要加弥散函数的：<br>计算极化率<br>计算超极化率<br>计算偶极矩<br>计算势垒<br>计算里德堡激发<br>计算价层激发<br>计算电离能<br>计算色散主导的分子间相互作用<br>优化势能面极小点<br>找过渡态结构<br>振动分析获得红外光谱<br>计算HOMO-LUMO gap<br>计算电子亲和能<br>计算IRC<br>计算阳离子<br>计算原子化能<br>计算原子电荷<br>计算NMR<br>势能面扫描<br>计算带有孤对电子原子的体系<br>计算带有pi电子的体系</p>
+<p>滥用弥散函数是初学者的最常见问题之一，会带来很多坏处。指出以下哪些是瞎编的坏处：<br>使得SCF收敛往往困难许多<br>使得体系能量整体偏高<br>使得一些波函数分析方法结果变得不合理（如Mayer键级、Mulliken分析）<br>计算红外光谱时可能导致一些本应很明显的峰消失<br>导致gap显著加大</p>
+<p>写出与此描述相对应的pople基组：TZ级别，给重原子加两层d极化函数，一层f极化函数；给轻原子加两层p极化函数。给重原子加一层弥散函数。</p>
+<p>为什么说在需要用弥散函数的时候，一般没必要给氢加弥散函数？</p>
+<p>Dunning相关一致性基组的基组名通式是什么？</p>
+<p>Dunning相关一致性基组最适合用于哪种计算？HF计算、后HF计算、杂化泛函计算、纯泛函计算、半经验计算</p>
+<p>cc-pVQZ、cc-pV6Z、6-311G(3df,2pd)其中哪个最大？哪个最小？</p>
+<p>cc-pVTZ的标准的带弥散函数的版本的名字怎么写？其赝势基组版本的名字怎么写？</p>
+<p>对以下基组尺寸从小到大排序（对主族来说）：<br>STO-3G、def2-TZVP、def-TZVP、6-311G**、def2-SVP、3-21G、def2-QZVP、cc-pV5Z、6-31G、cc-pVTZ</p>
+<p>def2系列基组从第几周期开始是赝势基组？</p>
+<p>6-31G*基组能直接被用于计算四羰基镍、溴化碘么？cc-pVDZ能计算氯化钠、氟化钾、二茂铁么？如果不能，说出原因。</p>
+<p>计算一般化学问题，以下哪些组合明显不合理，为什么？<br>CCSD(T)/cc-pVDZ、B3LYP/def2-TZVP、HF/cc-pVQZ、B2PLYP/6-311G(2df,2p)、MP2/6-31+G、MP4/cc-pVTZ</p>
+<p>对于普通有机体系，判断这些说法的正误：<br>用6-31+G<em>算得动的体系，用6-311G</em>一定算得动<br>用cc-pVTZ算得动的体系，用aug-cc-pVTZ一定算得动<br>用def2-TZVP算得动的体系，用def2-QZVPP一定算得动<br>用def2-SVP算得动的体系，用6-31G**一定算得动</p>
+<p>判断以下说法的正误，如果错误，指出错在哪里：<br>(1)基组越大结果总是越好<br>(2)为了能得到较准确结果，绝对不能用极小基级别的基组<br>(3)Dunning相关一致性基组是给后HF计算优化的，因此用于DFT计算结果将极为糟糕<br>(4)Pople系列基组是给HF计算优化的，因此用于DFT计算结果将极为糟糕<br>(5)在基组尺寸相近的情况下，用def2系列基组比用pople系列基组往往能获得更好的结果，比如def2-TZVPP通常结果好于6-311G(2df,2pd)、def2-SVP通常结果好于6-311G**</p>
+<p>什么叫混合基组？什么场合需要用到混合基组？</p>
+<p>什么是赝势？什么是赝势基组？什么情况用得着？</p>
+<p>写出至少5种赝势基组的名字</p>
+<p>使用赝势基组的好处和坏处都有哪些？</p>
+<p>判断说法正误：<br>(1)Lanl赝势绝对不应搭配SDD赝势基组使用<br>(2)赝势基组必须搭配赝势使用才能用于实际问题研究<br>(3)使用lanl2DZ计算氧化亚铁时可以等效地考虑标量相对论效应<br>(4)lanl2对过渡金属是大核赝势<br>(5)lanl2对碘是小核赝势<br>(6)lanl1对碘是大核赝势<br>(7)cc-pVTZ-PP也可以给DFT计算使用<br>(8)SDD赝势基组对于镧系、锕系有定义，而def2系列、lanl2DZ对镧系锕系都没有定义<br>(9)计算配合物时，给过渡金属用lanl2DZ，给配体用def2-TZVP是合理的搭配<br>(10)对于第四周期原子，lanl2DZ和6-31G*耗时相近，前者精度更高<br>(11)计算配合物时，给过渡金属用了赝势基组时，可以照样计算配体原子的NMR<br>(12)从第四周期开始，相对论效应已变得非常显著，实际计算时总要考虑相对论效应<br>(13)lanl08比lanl2DZ更大<br>(14)lanl08、lanl08(d)、lanl2TZ、lanl2TZ(f)赝势基组对应的赝势定义都一样<br>(15)使用赝势基组也可以做后HF计算</p>
+<p>对过渡金属，将以下赝势基组大小进行排序<br>lanl2MB、lanl2DZ、SDD、cc-pVTZ-PP</p>
+<p>```</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/" data-id="ckppfxuha0000astjbx6f03dv" data-title="电子结构方法" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/09/Gaussian-Summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Gaussian Summary</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/">电子结构方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/09/Gaussian-Summary/">Gaussian Summary</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/Machine-Learning-Summary/">Machine Learning Summary</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/AIMD-Summary/">AIMD Summary</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/02/Summary-of-Potential/">Summary of  Emperical Potential</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 YIWEI<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
