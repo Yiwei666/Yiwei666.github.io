@@ -14,7 +14,7 @@
 <meta property="og:description" content="Gaussian泛函和基组000 等人000在团队000在 2010年德国的Stefan Grimme等人000在JCP上发表论文：A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu，提出DFT">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-09T01:04:03.000Z">
-<meta property="article:modified_time" content="2021-06-09T06:39:28.115Z">
+<meta property="article:modified_time" content="2021-06-09T06:51:26.818Z">
 <meta property="article:author" content="YIWEI">
 <meta property="article:tag" content="Note4">
 <meta name="twitter:card" content="summary">
@@ -103,6 +103,8 @@
         <h3 id="Gaussian泛函和基组"><a href="#Gaussian泛函和基组" class="headerlink" title="Gaussian泛函和基组"></a>Gaussian泛函和基组</h3><p><a href="">000</a><br><a href=""></a><br><a href=""></a></p>
 <p>等人<a href="">000</a>在<br>团队<a href="">000</a>在</p>
 <p>2010年德国的Stefan Grimme等人<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.3382344">000</a>在JCP上发表论文：A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu，提出DFT-D3色散校正。</p>
+<p>2011年德国的Stefan Grimme<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/wcms.30">000</a>在Computational Molecular Science上发表综述“Density functional theory with London dispersion corrections”，对于色散作用本质没写清楚，分析目前DFT泛函对弱相互作用之差的原因倒是挺明白，很自然地引出了要进行校正的必要。谈了四种将色散校正纳入泛函的做法，进行了比较，写得不错，着重说了DFT-D的巨大好处。然后简要比较了下各种泛函的性能，不过不很系统。</p>
+<p>2011年德国的Stefan Grimme团队<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/Content/ArticleLanding/2011/CP/c0cp02984j#!divAbstract">000</a>在PPCP上发表论文“A thorough benchmark of density functional methods for general main group thermochemistry, kinetics, and noncovalent interactions”，文中用GMTKN30测试集（含30个子集，原子化能、反应热、势垒、弱相互作用等等体系大全），号称是thorough比较泛函的性能。</p>
 <p>2013年北科大的Tian Lu<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s00894-013-2034-2">001</a>在Journal of Molecular Modeling发表论文：Revealing the nature of intermolecular interaction and configurational preference of the nonpolar molecular dimers (H2)2, (N2)2, and (H2)(N2)。文中比较了B3LYP加和不加DFT-D3校正时对氢气、氮气二聚体的计算结果，数据表明B3LYP根本没法得到二聚体稳定构型，或者说实际存在的构型下算得的二聚体相互作用能都是正的。而加上DFT-D3修正后，即B3LYP-D3，对这些二聚体的相互作用能计算结果则与金标准CCSD(T)起码定性一致。即便是静电主导的弱相互作用，诸如氢键、卤键，尽管传统泛函也能勉强凑合用，经过DFT-D校正后也能令计算精度显著提高。由于DFT-D同时也改进了中程的相关作用的描述，因此顺便对DFT泛函的热力学性质的计算精度也带来少许改进。目前来看可以说加入DFT-D校正有益无害，建议总加上DFT-D。</p>
 <p>2016年德国的Stefan  Grimme等人<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.chemrev.5b00533">000</a>在Chemical Reviews上发表论文：Dispersion-Corrected Mean-Field Electronic Structure Methods。</p>
 <p><a href=""></a><br><a href=""></a></p>
