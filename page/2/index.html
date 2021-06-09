@@ -71,6 +71,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vasp-Si" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/28/vasp-Si/" class="article-date">
+  <time class="dt-published" datetime="2021-04-28T09:19:02.000Z" itemprop="datePublished">2021-04-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/VASP/">VASP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/28/vasp-Si/">vasp_Si</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Liquid-Si-Standard-MD"><a href="#Liquid-Si-Standard-MD" class="headerlink" title="Liquid Si - Standard MD"></a><a target="_blank" rel="noopener" href="https://www.vasp.at/wiki/index.php/Liquid_Si_-_Standard_MD">Liquid Si - Standard MD</a></h2><h2 id="POSCAR"><a href="#POSCAR" class="headerlink" title="POSCAR"></a>POSCAR</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Si cubic diamond conventional cell</span><br><span class="line">  5.43100000000000</span><br><span class="line"> 1.00000000 0.00000000 0.00000000</span><br><span class="line"> 0.00000000 1.00000000 0.00000000</span><br><span class="line"> 0.00000000 0.00000000 1.00000000</span><br><span class="line">  Si</span><br><span class="line">  8</span><br><span class="line">Direct</span><br><span class="line">  0.00000000 0.00000000 0.00000000</span><br><span class="line">  0.75000000 0.25000000 0.75000000</span><br><span class="line">  0.00000000 0.50000000 0.50000000</span><br><span class="line">  0.75000000 0.75000000 0.25000000</span><br><span class="line">  0.50000000 0.00000000 0.50000000</span><br><span class="line">  0.25000000 0.25000000 0.25000000</span><br><span class="line">  0.50000000 0.50000000 0.00000000</span><br><span class="line">  0.25000000 0.75000000 0.75000000</span><br></pre></td></tr></table></figure>
+
+<h2 id="KPOINTS"><a href="#KPOINTS" class="headerlink" title="KPOINTS"></a>KPOINTS</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">K-Points</span><br><span class="line"> 0</span><br><span class="line">Gamma</span><br><span class="line"> 1  1  1</span><br><span class="line"> 0  0  0</span><br></pre></td></tr></table></figure>
+
+<h2 id="INCAR"><a href="#INCAR" class="headerlink" title="INCAR"></a>INCAR</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ISMEAR &#x3D; 0</span><br><span class="line">IBRION &#x3D; 0</span><br><span class="line">MDALGO &#x3D; 2</span><br><span class="line">ISIF &#x3D; 2</span><br><span class="line">SMASS &#x3D; 1.0</span><br><span class="line">SIGMA &#x3D; 0.1</span><br><span class="line">LREAL &#x3D; Auto</span><br><span class="line">ALGO &#x3D; VeryFast</span><br><span class="line">PREC &#x3D; Low</span><br><span class="line">ISYM &#x3D; 0</span><br><span class="line">TEBEG &#x3D; 2000</span><br><span class="line">NSW &#x3D; 50</span><br><span class="line">POTIM &#x3D; 3.0</span><br><span class="line">NCORE &#x3D; 2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>To select a molecular dynamics calculation set IBRION=0.</li>
+<li>By selecting MDALGO=2 and ISIF=2 we select the NVT ensemble using the Nose-Hoover thermostat.</li>
+<li>The tag SMASS specifies the Nose mass, which is a ficitional mass for the fictional coordinate of the heat bath. The choice of SMASS=1.0 should work well for this tutorial.</li>
+<li>Since we are dealing with a super cell, we set LREAL=Auto. In this mode the projection operators are evaluated in real space. This should speed up the calculation while being slightly less accurate then the evaluation of the operators in reciprocal space.</li>
+<li>To significantly speed up the calculations we use ALGO=VeryFast and PREC=Low. This is ok for this tutorial example but for more precise results these flags should be used with caution!</li>
+<li>A time step of 3 femtoseconds (POTIM=3.0) is employed in this example, which should be ok for many applications of Si.</li>
+<li>The tag NCORE=2 specifies that the parallelization is done such that 2 cores share the work on one orbital. This means that for e.g. 8 cores 4 different orbitals would be treated simultaneously, where for each orbital two plane-wave coefficients would be calculated simultaneously.</li>
+</ul>
+<h2 id="POTCAR"><a href="#POTCAR" class="headerlink" title="POTCAR"></a>POTCAR</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/04/28/vasp-Si/" data-id="ckoqy52w0000ps0tj4l5xfzd4" data-title="vasp_Si" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-cp2k关键词思维导图" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/28/cp2k%E5%85%B3%E9%94%AE%E8%AF%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="article-date">
@@ -1240,100 +1298,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
 
 
   
-    <article id="post-从 Python 入门编程_4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_4/" class="article-date">
-  <time class="dt-published" datetime="2021-04-14T07:37:12.220Z" itemprop="datePublished">2021-04-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_4/">用新知识解决旧问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="用新知识解决旧问题"><a href="#用新知识解决旧问题" class="headerlink" title="用新知识解决旧问题"></a>用新知识解决旧问题</h1><p>在上一章节中，我们编写的程序还有很大的改进空间，在这一章节中，我们将逐一解决这些问题。</p>
-<p>首先，之前的程序永远只会执行一次判断，如果用户输错了格式，也没有机会修正。我们应该要让程序不断的尝试获取输入，直到输入格式确实符合要求为止。我们在编写时并不知道何时输入值是合法的，这时就需要循环语句了。</p>
-<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><p>先来看一个最简单的 while 循环示例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span> <span class="comment"># 初始化申明一个变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(i &lt;= <span class="number">3</span>): <span class="comment"># 当 i 的值小于等于 3 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;这是第 %d 次打印&quot;</span> % i)</span><br><span class="line">    i = i + <span class="number">1</span> <span class="comment"># 让 i 增加，如果没有这一句，将成为死循环</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;循环已完毕！&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>程序的运行结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这是第 1 次打印</span><br><span class="line">这是第 2 次打印</span><br><span class="line">这是第 3 次打印</span><br><span class="line">循环已完毕！</span><br></pre></td></tr></table></figure>
-
-<p>为了便于理解 <code>while</code> 循环，我做了个图解：</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gctp9mz5fxj30fn0ak7lg.jpg"></p>
-<p>利用循环语句，我们将之前的程序改写为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> age.isdigit(): <span class="comment"># 当 age 不为纯数字时</span></span><br><span class="line">    age = <span class="built_in">input</span>(<span class="string">&quot;输入有误，请重新输入你的年龄：&quot;</span>) <span class="comment"># 重新获取 age 的值</span></span><br><span class="line"></span><br><span class="line">age = <span class="built_in">int</span>(age)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> name == <span class="string">&quot;莉莉&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小姐里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt; <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;大爷先回家歇歇吧！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age == <span class="number">40</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;贡献您，今日消费全免，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">18</span>:  <span class="comment"># 当 age 小于等于 60 并且 大于等于 18 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 其余情况</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p><code>while not age.isdigit():</code> 语句表示当 <code>age</code> 不为纯数字时循环。</p>
-<p>在编程语言中，通常用 <code>!</code> 表示”否“，如用 <code>!=</code> 表示“不等于”，相应的，上面的语句则要用 <code>while (!age.isdigit())</code> 表示；而 Python 则支持用 <code>not</code> 关键字表示“否”，这非常直观并且人性化，同时体现了 Python 的优雅之处。</p>
-<p>除了 <code>not</code> 外，Python 中还有“并”： <code>and</code> 、“或”： <code>or</code>，分别对应 <code>&amp;&amp;</code> 和 <code>||</code>，这些被称为逻辑运算符。</p>
-<p>经过循环语句后，我们可以确保 <code>age</code> 的值已为纯数字，可以放心的使用 <code>int()</code> 函数将其转换为整数类型；原本用于处理格式不正确的 <code>else</code> 语句也要去掉。</p>
-<p>解决了上面的问题，我们再来看如何更严谨的确定年龄。</p>
-<p>直接让用户输入年龄的形式并不合适，一种更好的方法是从身份证号中确定年龄。我们知道，身份证号由确定的格式组成，从身份证号中我们可以获取很多信息。具体来说，身份证号前六位表示地址，接下来的八位表示出生日期，再接下来三位为顺序码，最后一位为校验码。</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gctrnqqc4vj30ko08hasa.jpg"></p>
-<p>身份证的最后一位是根据前 17 位通过校验算法计算出来的，改变原本的任何一位都会导致校验码不符。通过身份证号，我们就可以较严谨的确定年龄了。</p>
-<p>程序处理时间和日期，可能会比大多数人想象的要复杂，为了降低学习的心智负担，这里我们会尽可能简化从身份证号中获取年龄的算法。</p>
-<p>假定现在获取的身份证号为 <code>510101200106180395</code>，我们只提取 <code>2001</code> 这个年份，直接与当前的年份 <code>2020</code> 相减计算出年龄。</p>
-<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><p>该如何获取 <code>&quot;510101200106180395&quot;</code> 中的字符呢，其实“字符串”顾名思义就是由“字符”连成的串，我们直接通过位次就可以获取到其中的字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">word = <span class="string">&quot;hello&quot;</span></span><br><span class="line"><span class="built_in">print</span>(word[<span class="number">0</span>]) <span class="comment"># h</span></span><br><span class="line"><span class="built_in">print</span>(word[<span class="number">1</span>]) <span class="comment"># e</span></span><br><span class="line"><span class="built_in">print</span>(word[<span class="number">2</span>]) <span class="comment"># l</span></span><br><span class="line"><span class="built_in">print</span>(word[<span class="number">3</span>]) <span class="comment"># l</span></span><br><span class="line"><span class="built_in">print</span>(word[<span class="number">4</span>]) <span class="comment"># o</span></span><br></pre></td></tr></table></figure>
-
-<p>没错，程序员就是从 0 开始数数的 😅</p>
-<p>可以看到，上面的代码非常繁琐，而且假如需要提取 1000 位，难道还写 1000 行吗？这显然是不可能的，我们可以借助刚学的循环来完成：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">word = <span class="string">&quot;hello&quot;</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="built_in">len</span>(word):</span><br><span class="line">    <span class="built_in">print</span>(word[i])</span><br><span class="line">    i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>len()</code> 函数用于获取数据长度，<code>len(&quot;hello&quot;)</code> 的结果自然是 <code>5</code>。</li>
-<li><code>i += 1</code> 是 <code>i = i + 1</code> 的简写，二者等价。</li>
-</ul>
-<p>那么，结合之前所学的条件语句，提取出生年份的代码就可以这样写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">id</span> = <span class="string">&quot;510101200106180395&quot;</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="built_in">len</span>(<span class="built_in">id</span>):</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> (<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>): <span class="comment"># 当 i 为 6, 7, 8, 9 中的任何一个时</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">id</span>[i])</span><br><span class="line">    i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p><code>if i in (6, 7, 8, 9):</code> 语句用到了 Python 的一些高级特性，我们还没有学，没关系，光这么看就已经非常直观。它和下面的代码等价：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> i == <span class="number">6</span> <span class="keyword">or</span> i == <span class="number">7</span> <span class="keyword">or</span> i == <span class="number">8</span> <span class="keyword">or</span> i == <span class="number">9</span>:</span><br><span class="line">    <span class="keyword">pass</span> <span class="comment"># 表示忽略</span></span><br></pre></td></tr></table></figure>
-
-<p>高下立判， 再一次赞叹 Python 的简洁优雅 👏</p>
-<p>能不能再简洁一点，更优雅一点？</p>
-<p>Python 告诉你：还真能！</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">id</span> = <span class="string">&quot;510101200106180395&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>[<span class="number">6</span>:<span class="number">10</span>]) <span class="comment"># 2001</span></span><br></pre></td></tr></table></figure>
-
-<p><code>id[6:10]</code> 用到了 Python 的“切片”操作符，它可以用于截取字符串。为了便于理解，我又做了个图解：</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gctu44ek6cj30xx0cfkjl.jpg"></p>
-<p>现在，改写之前的程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line"><span class="built_in">id</span> = <span class="built_in">input</span>(<span class="string">&quot;请输入你的身份证号：&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> <span class="built_in">id</span>.isdigit() <span class="keyword">or</span> <span class="built_in">len</span>(<span class="built_in">id</span>) != <span class="number">18</span>: <span class="comment"># 当 id 不为纯数字时或不满 18 位时</span></span><br><span class="line">    <span class="built_in">id</span> = <span class="built_in">input</span>(<span class="string">&quot;输入有误，请重新输入身份证号：&quot;</span>) <span class="comment"># 重新获取 id 的值</span></span><br><span class="line"></span><br><span class="line">birth_year = <span class="built_in">int</span>(<span class="built_in">id</span>[<span class="number">6</span>:<span class="number">10</span>])</span><br><span class="line"></span><br><span class="line">age = <span class="number">2020</span> - birth_year</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> name == <span class="string">&quot;莉莉&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小姐里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt; <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;大爷先回家歇歇吧！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age == <span class="number">40</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;恭喜您，今日消费全免，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">18</span>:  <span class="comment"># 当 age 小于等于 60 并且 大于等于 18 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 其余情况</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 请输入你的姓名：王花花</span><br><span class="line">&gt; 请输入你的身份证号：510101200106180395</span><br><span class="line">欢迎您的到来，里面请！</span><br></pre></td></tr></table></figure>
-
-<p>很好的实现了我们的需求 🥳</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>不要忘了，我们将判断年龄的算法尽可能简化了，如果以后我们想让算法更完善，或是给程序添加更多的功能，就需要不断的在中间新插入代码，其中有实现我们业务逻辑的部分，也有具体算法实现的部分，相互耦合在一起，非常琐碎复杂。</p>
-<p>管理和维护这样的代码，是我们不愿接受的，该如何解决这种问题呢？</p>
-<p>将在下一章节中详细展开 😘</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_4/" data-id="ckotp9tu30004nctj42r09b6y" data-title="用新知识解决旧问题" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -1349,7 +1313,7 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
     </div>
   </div>
 
@@ -1359,7 +1323,7 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
     </div>
   </div>
 
@@ -1369,7 +1333,7 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
+      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
     </div>
   </div>
 
@@ -1391,6 +1355,10 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
       <ul>
         
           <li>
+            <a href="/2021/06/09/Gaussian-Summary/">Gaussian Summary</a>
+          </li>
+        
+          <li>
             <a href="/2021/06/08/Machine-Learning-Summary/">Machine Learning Summary</a>
           </li>
         
@@ -1404,10 +1372,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
         
           <li>
             <a href="/2021/05/26/email-reply/">email reply</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/25/MD-potential-parameters/">MD potential parameters</a>
           </li>
         
       </ul>
