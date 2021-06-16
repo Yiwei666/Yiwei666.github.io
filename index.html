@@ -71,6 +71,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-专业名词" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" class="article-date">
+  <time class="dt-published" datetime="2021-06-16T10:51:43.000Z" itemprop="datePublished">2021-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/basic-concept/">basic concept</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/">专业名词</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Kohn-Sham 方程：利用变分原理，将能量密度针对电子密度进行变分，可以得到Kohn-Sham方程。Kohn-Sham 近似的核心思想：<br>(1) 动能的大部分通过相同电子密度的无相互作用体系来计算<br>(2) 电子相互作用中库仑作用占据了主要部分，而交换相关是相对次要的<br>(3) 非经典的交换和相关作用，动能校正项，自相互作用折入交换相关泛中</p>
+<p>局域密度近似(LDA)：即泛函在空间上的能量密度只和每一点上的电子密度有关。</p>
+<p>广义梯度近似（GGA）泛函：泛函在空间上的能量密度不仅与每一点上的电子密度有关，而且还与电子密度的梯度有关。常用的GGA泛函有BLYP、PBE等。</p>
+<p>杂化泛函: 用HF方法中交换能和DFT方法中交换能做线性组合得到计算体系的交换关联泛函。杂化泛函分为单杂化泛函和双杂化泛函。</p>
+<p>单杂化泛函：单杂化泛函大致分为全局杂化泛函和局域杂化泛函两类。</p>
+<p>全局杂化泛函：以B3LYP为主要代表，其核心思想是在交换泛函部分引入了Hertree-Fock形式的交换能，在分子体系中最为常用的泛函有B3LYP、PBE0、X3LYP、TPSSh、M06等。</p>
+<p>局域杂化泛函：局域杂化泛函是利用分区方案，将电子-电子间的相互作用部分分为短程与长程部分分别处理。分子体系中著名的有wB97X-D泛函，可以均衡的处理价键和能垒等。固体中最成功的为HSE泛函，可以更好地计算固体的带隙。</p>
+<p>双杂化泛函：这一类泛函不仅要包含占据轨道的信息，而且要能恰当地考虑未占据轨道的信息。其核心思想是在交换部分引入部分HF形式交换能的同时，在相干泛函部分引入部分二级微扰形式MP2相关能，使得此类方法描述体系性质的误差有所降低。这一类的代表泛函有B2PLYP，mPW2PLYP和MC3BB等。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" data-id="ckpzdh84m0000f8tj6rgoc7qt" data-title="专业名词" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" rel="tag">专业名词</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Manuscript" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/06/16/Manuscript/" class="article-date">
@@ -115,6 +167,8 @@
 <p>In specific cases, we observe that initial configurations with unrealistic structure tend to“explode”(i.e.,their volume indefinitely increases over time) at high temperature in the NPT ensemble. In such cases, we first create a more realistic structure by melting the initial configuration at 3000K in the NVT ensemble for 100 ps and then cooling the system linearly to 300 K at fixed volume(NVTensemble). The obtained glassy structure is then used as the starting configuration for the melt-quench procedure previously described.</p>
 <p>一系列：a series of<br>研究：investigate<br>做实验：perform/conduct</p>
 <hr>
+<p>2020年法国的François-Xavier Coudert团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jacs.9b12073">001</a>基于cp2k研究了CdSe量子点玻璃，论文发表在JACS上。对于Na，Cd和Se，使用短程分子优化的双-ζ单极化基组(DZVP-MOLOPT-SR-GTH)，对于O和Si，我们使用双-ζ单极化基组(DZVP-MOLOPT-GTH)；平面波截断被设置为600Ry；</p>
+<p>2.3. Ab Initio Molecular Dynamics of a CdSe Quantum Dot in a Glass Matrix<br>After the equilibration of systems using the classical MD simulations described above, we used the resulting configurations as a starting point for ab initio modeling at the density functional theory (DFT) level, using the Kohn–Sham formulation as implemented in the CP2K code.(30) Simulations were run at the generalized gradient approximation level, employing the PBE exchange–correlation functional.(31) The plane wave cutoff was set to 600 Ry. For Na, Cd, and Se, we used short-range molecularly optimized double-ζ single polarized basis sets (DZVP-MOLOPT-SR-GTH), while for O and Si we used a double-ζ single polarized basis set (DZVP-MOLOPT-GTH).(32,33) After an initial geometry optimization with DFT, the resulting relaxed structure (Figure 1c) was used as the initial structure for the AIMD simulations. The structure was quenched from 500 to 300 K in steps of 50 K, with a total 10 ps AIMD run at a time step of 2 fs. The production run was conducted in the NVT ensemble at 300 K for 10 ps.<br>在使用上述经典分子动力学模拟使体系达到平衡后，我们使用最终的构型最为作为密度泛函水平从头算分子模拟的开始点，使用基于科恩-沈吕九方程的cp2k代码进行模拟。模拟在广义梯度水平上执行，使用PBE交换关联泛函。平面波截断被设置为600Ry。对于Na，Cd和Se，我们使用短程分子优化的双-ζ单极化基组(DZVP-MOLOPT-SR-GTH)，对于O和Si，我们使用双-ζ单极化基组(DZVP-MOLOPT-GTH)。在用DFT进行初始几何优化之后，得到的弛豫结构被用于从头算分子动力学模拟的初始结构。结构以50k/步从500k淬冷到300k，共跑了10psAIMD，时间步长为2fs。在300kNVT系综中跑10ps得到最终结构。</p>
 
       
     </div>
@@ -907,588 +961,6 @@
 
 
   
-    <article id="post-python-exercises" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/15/python-exercises/" class="article-date">
-  <time class="dt-published" datetime="2021-05-15T12:27:01.000Z" itemprop="datePublished">2021-05-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/PYTHON/">PYTHON</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/15/python-exercises/">python exercises</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/python/python_strings.asp"><strong>Python 字符串</strong></a><br><a target="_blank" rel="noopener" href="http://blog.sciencenet.cn/home.php?mod=space&uid=3445569&do=blog&classid=178203&view=me&from=space"><strong>科学网博客python</strong></a></p>
-<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><strong><a href="#1">Python 变量</a><br><a href="#2">Python 数据类型</a><br><a href="#3">Python 数字</a><br><a href="#4">Python 字符串</a><br><a href="#5">高被引</a></strong></p>
-<p><strong><a name="1">Python 变量</a></strong></p>
-<h3 id="创建变量"><a href="#创建变量" class="headerlink" title="创建变量"></a>创建变量</h3><p>变量是存放数据值的容器。<br>与其他编程语言不同，Python 没有声明变量的命令。<br>首次为其赋值时，才会创建变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 5 # x is of type int</span><br><span class="line">x &#x3D; &quot;Steve&quot; # x is now of type str</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
-<p>字符串变量可以使用单引号或双引号进行声明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;Bill&quot;</span><br><span class="line"># is the same as</span><br><span class="line">x &#x3D; &#39;Bill&#39;</span><br></pre></td></tr></table></figure>
-
-<h3 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h3><p>变量可以使用短名称（如 x 和 y）或更具描述性的名称（age、carname、total_volume）。<br>Python 变量命名规则：<br>变量名必须以字母或下划线字符开头<br>变量名称不能以数字开头<br>变量名只能包含字母数字字符和下划线(A-z、0-9和_)<br>变量名称区分大小写（age、Age 和 AGE 是三个不同的变量）<br>请记住，变量名称区分大小写</p>
-<h3 id="向多个变量赋值"><a href="#向多个变量赋值" class="headerlink" title="向多个变量赋值"></a>向多个变量赋值</h3><p>Python 允许您在一行中为多个变量赋值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x, y, z &#x3D; &quot;Orange&quot;, &quot;Banana&quot;, &quot;Cherry&quot;</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br><span class="line">print(z)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>您可以在一行中为多个变量分配相同的值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; y &#x3D; z &#x3D; &quot;Orange&quot;</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br><span class="line">print(z)</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出变量"><a href="#输出变量" class="headerlink" title="输出变量"></a>输出变量</h3><p>Python 的 print 语句通常用于输出变量。<br>如需结合文本和变量，Python 使用 + 字符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
-<p>您还可以使用 + 字符将变量与另一个变量相加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;Python is &quot;</span><br><span class="line">y &#x3D; &quot;awesome&quot;</span><br><span class="line">z &#x3D;  x + y</span><br><span class="line">print(z)</span><br></pre></td></tr></table></figure>
-<p>对于数字，+ 字符用作数学运算符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 5</span><br><span class="line">y &#x3D; 10</span><br><span class="line">print(x + y)</span><br></pre></td></tr></table></figure>
-<p>如果您尝试组合字符串和数字，Python 会给出错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">y &#x3D; &quot;Bill&quot;</span><br><span class="line">print(x + y)</span><br></pre></td></tr></table></figure>
-
-<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>在函数外部创建的变量（如上述所有实例所示）称为全局变量。<br>全局变量可以被函数内部和外部的每个人使用。<br>实例<br>在函数外部创建变量，并在函数内部使用它：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  print(&quot;Python is &quot; + x)</span><br><span class="line"></span><br><span class="line">myfunc()</span><br></pre></td></tr></table></figure>
-<p>如果在函数内部创建具有相同名称的变量，则该变量将是局部变量，并且只能在函数内部使用。具有相同名称的全局变量将保留原样，并拥有原始值。<br>实例<br>在函数内部创建一个与全局变量同名的变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line">  print(&quot;Python is &quot; + x)</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="global-关键字"><a href="#global-关键字" class="headerlink" title="global 关键字"></a>global 关键字</h3><p>通常，在函数内部创建变量时，该变量是局部变量，只能在该函数内部使用。<br>要在函数内部创建全局变量，您可以使用 global 关键字。<br>实例<br>如果您用了 global 关键字，则该变量属于全局范围：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def myfunc():</span><br><span class="line">  global x</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
-<p>另外，如果要在函数内部更改全局变量，请使用 global 关键字。<br>实例<br>要在函数内部更改全局变量的值，请使用 global 关键字引用该变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  global x</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
-
-<p><strong><a name="2">Python 数据类型</a></strong></p>
-<h3 id="内置数据类型"><a href="#内置数据类型" class="headerlink" title="内置数据类型"></a>内置数据类型</h3><p>在编程中，数据类型是一个重要的概念。<br>变量可以存储不同类型的数据，并且不同类型可以执行不同的操作。<br>在这些类别中，Python 默认拥有以下内置数据类型：</p>
-<table>
-<thead>
-<tr>
-<th align="center">类型</th>
-<th align="center">type</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">capitalize()</td>
-<td align="center">把首字符转换为大写。</td>
-</tr>
-<tr>
-<td align="center">文本类型</td>
-<td align="center">str</td>
-</tr>
-<tr>
-<td align="center">数值类型</td>
-<td align="center">int, float, complex</td>
-</tr>
-<tr>
-<td align="center">序列类型</td>
-<td align="center">list, tuple, range</td>
-</tr>
-<tr>
-<td align="center">映射类型</td>
-<td align="center">dict</td>
-</tr>
-<tr>
-<td align="center">集合类型</td>
-<td align="center">set, frozenset</td>
-</tr>
-<tr>
-<td align="center">布尔类型</td>
-<td align="center">bool</td>
-</tr>
-<tr>
-<td align="center">二进制类型</td>
-<td align="center">bytes, bytearray, memoryview</td>
-</tr>
-</tbody></table>
-<h3 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h3><p>您可以使用 type() 函数获取任何对象的数据类型：<br>实例<br>打印变量 x 的数据类型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置数据类型"><a href="#设置数据类型" class="headerlink" title="设置数据类型"></a>设置数据类型</h3><p>在 Python 中，当您为变量赋值时，会设置数据类型：</p>
-<table>
-<thead>
-<tr>
-<th align="center">实例</th>
-<th align="center">数据类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">x = “Hello World”</td>
-<td align="center">str</td>
-</tr>
-<tr>
-<td align="center">x = 29</td>
-<td align="center">int</td>
-</tr>
-<tr>
-<td align="center">x = 29.5</td>
-<td align="center">float</td>
-</tr>
-<tr>
-<td align="center">x = 1j</td>
-<td align="center">complex</td>
-</tr>
-<tr>
-<td align="center">x = [“apple”, “banana”, “cherry”]</td>
-<td align="center">list</td>
-</tr>
-<tr>
-<td align="center">x = (“apple”, “banana”, “cherry”)</td>
-<td align="center">tuple</td>
-</tr>
-<tr>
-<td align="center">x = range(6)</td>
-<td align="center">range</td>
-</tr>
-<tr>
-<td align="center">x = {“name” : “Bill”, “age” : 63}</td>
-<td align="center">dict</td>
-</tr>
-<tr>
-<td align="center">x = {“apple”, “banana”, “cherry”}</td>
-<td align="center">set</td>
-</tr>
-<tr>
-<td align="center">x = frozenset({“apple”, “banana”, “cherry”})</td>
-<td align="center">frozenset</td>
-</tr>
-<tr>
-<td align="center">x = True</td>
-<td align="center">bool</td>
-</tr>
-<tr>
-<td align="center">x = b”Hello”</td>
-<td align="center">bytes</td>
-</tr>
-<tr>
-<td align="center">x = bytearray(5)</td>
-<td align="center">bytearray</td>
-</tr>
-<tr>
-<td align="center">x = memoryview(bytes(5))</td>
-<td align="center">memoryview</td>
-</tr>
-</tbody></table>
-<h3 id="设定特定的数据类型"><a href="#设定特定的数据类型" class="headerlink" title="设定特定的数据类型"></a>设定特定的数据类型</h3><p>如果希望指定数据类型，则您可以使用以下构造函数：</p>
-<table>
-<thead>
-<tr>
-<th align="center">实例</th>
-<th align="center">数据类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">x = str(“Hello World”)</td>
-<td align="center">str</td>
-</tr>
-<tr>
-<td align="center">x = int(29)</td>
-<td align="center">int</td>
-</tr>
-<tr>
-<td align="center">x = float(29.5)</td>
-<td align="center">float</td>
-</tr>
-<tr>
-<td align="center">x = complex(1j)</td>
-<td align="center">complex</td>
-</tr>
-<tr>
-<td align="center">x = list((“apple”, “banana”, “cherry”))</td>
-<td align="center">list</td>
-</tr>
-<tr>
-<td align="center">x = tuple((“apple”, “banana”, “cherry”))</td>
-<td align="center">tuple</td>
-</tr>
-<tr>
-<td align="center">x = range(6)</td>
-<td align="center">range</td>
-</tr>
-<tr>
-<td align="center">x = dict(name=”Bill”, age=36)</td>
-<td align="center">dict</td>
-</tr>
-<tr>
-<td align="center">x = set((“apple”, “banana”, “cherry”))</td>
-<td align="center">set</td>
-</tr>
-<tr>
-<td align="center">x = frozenset((“apple”, “banana”, “cherry”))</td>
-<td align="center">frozenset</td>
-</tr>
-<tr>
-<td align="center">x = bool(5)</td>
-<td align="center">bool</td>
-</tr>
-<tr>
-<td align="center">x = bytes(5)</td>
-<td align="center">bytes</td>
-</tr>
-<tr>
-<td align="center">x = bytearray(5)</td>
-<td align="center">bytearray</td>
-</tr>
-<tr>
-<td align="center">x = memoryview(bytes(5))</td>
-<td align="center">memoryview</td>
-</tr>
-</tbody></table>
-<p><strong><a name="3">Python 数字</a></strong></p>
-<h3 id="Python-数字"><a href="#Python-数字" class="headerlink" title="Python 数字"></a>Python 数字</h3><p>Python 中有三种数字类型：<br>int<br>float<br>complex<br>为变量赋值时，将创建数值类型的变量：<br>实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10    # int</span><br><span class="line">y &#x3D; 6.3  # float</span><br><span class="line">z &#x3D; 2j   # complex</span><br></pre></td></tr></table></figure>
-<p>如需验证 Python 中任何对象的类型，请使用 type() 函数：<br>实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
-
-<h3 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h3><p>Int 或整数是完整的数字，正数或负数，没有小数，长度不限。<br>实例<br>整数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">y &#x3D; 37216654545182186317</span><br><span class="line">z &#x3D; -465167846</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
-
-<h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><p>浮动或“浮点数”是包含小数的正数或负数。<br>实例<br>浮点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 3.50</span><br><span class="line">y &#x3D; 2.0</span><br><span class="line">z &#x3D; -63.78</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
-<p>浮点数也可以是带有“e”的科学数字，表示 10 的幂。<br>实例<br>浮点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 27e4</span><br><span class="line">y &#x3D; 15E2</span><br><span class="line">z &#x3D; -49.8e100</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
-
-<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>复数用 “j” 作为虚部编写：<br>实例<br>复数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 2+3j</span><br><span class="line">y &#x3D; 7j</span><br><span class="line">z &#x3D; -7j</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
-
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>您可以使用 int()、float() 和 complex() 方法从一种类型转换为另一种类型：<br>实例<br>从一种类型转换为另一种类型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10 # int</span><br><span class="line">y &#x3D; 6.3 # float</span><br><span class="line">z &#x3D; 1j # complex</span><br><span class="line"></span><br><span class="line"># 把整数转换为浮点数</span><br><span class="line"></span><br><span class="line">a &#x3D; float(x)</span><br><span class="line"></span><br><span class="line"># 把浮点数转换为整数</span><br><span class="line"></span><br><span class="line">b &#x3D; int(y)</span><br><span class="line"></span><br><span class="line"># 把整数转换为复数：</span><br><span class="line"></span><br><span class="line">c &#x3D; complex(x)</span><br><span class="line"></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line">print(type(a))</span><br><span class="line">print(type(b))</span><br><span class="line">print(type(c))</span><br></pre></td></tr></table></figure>
-<p>注释：您无法将复数转换为其他数字类型</p>
-<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><p>Python 没有 random() 函数来创建随机数，但 Python 有一个名为 random 的内置模块，可用于生成随机数：<br>实例<br>导入 random 模块，并显示 1 到 9 之间的随机数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">print(random.randrange(1,10))</span><br></pre></td></tr></table></figure>
-
-<h3 id="指定变量类型"><a href="#指定变量类型" class="headerlink" title="指定变量类型"></a>指定变量类型</h3><p>有时您可能需要为变量指定类型。这可以通过 casting 来完成。 Python 是一门面向对象的语言，因此它使用类来定义数据类型，包括其原始类型。<br>因此，使用构造函数完成在 python 中的转换：<br>int() - 用整数字面量、浮点字面量构造整数（通过对数进行下舍入），或者用表示完整数字的字符串字面量<br>float() - 用整数字面量、浮点字面量，或字符串字面量构造浮点数（提供表示浮点数或整数的字符串）<br>str() - 用各种数据类型构造字符串，包括字符串，整数字面量和浮点字面量<br>实例<br>整数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; int(1)   # x 将是 1</span><br><span class="line">y &#x3D; int(2.5) # y 将是 2</span><br><span class="line">z &#x3D; int(&quot;3&quot;) # z 将是 3</span><br></pre></td></tr></table></figure>
-<p>浮点数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; float(1)     # x 将是 1.0</span><br><span class="line">y &#x3D; float(2.5)   # y 将是 2.5</span><br><span class="line">z &#x3D; float(&quot;3&quot;)   # z 将是 3.0</span><br><span class="line">w &#x3D; float(&quot;4.6&quot;) # w 将是 4.6</span><br></pre></td></tr></table></figure>
-<p>字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; str(&quot;S2&quot;) # x 将是 &#39;S2&#39;</span><br><span class="line">y &#x3D; str(3)    # y 将是 &#39;3&#39;</span><br><span class="line">z &#x3D; str(4.0)  # z 将是 &#39;4.0&#39;</span><br></pre></td></tr></table></figure>
-
-<p><strong><a name="4">Python 字符串</a></strong></p>
-<h3 id="字符串字面量"><a href="#字符串字面量" class="headerlink" title="字符串字面量"></a>字符串字面量</h3><p>python 中的字符串字面量由单引号或双引号括起。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;Hello&quot;)</span><br><span class="line">print(&#39;Hello&#39;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="用字符串向变量赋值"><a href="#用字符串向变量赋值" class="headerlink" title="用字符串向变量赋值"></a>用字符串向变量赋值</h3><p>通过使用变量名称后跟等号和字符串，可以把字符串赋值给变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
-
-<h3 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h3><p>您可以使用三个引号将多行字符串赋值给变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;&quot;&quot;Python is a widely used general-purpose, high level programming language. </span><br><span class="line">It was initially designed by Guido van Rossum in 1991 </span><br><span class="line">and developed by Python Software Foundation. </span><br><span class="line">It was mainly developed for emphasis on code readability, </span><br><span class="line">and its syntax allows programmers to express concepts in fewer lines of code.&quot;&quot;&quot;</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
-<p>或三个单引号：</p>
-<h3 id="字符串是数组"><a href="#字符串是数组" class="headerlink" title="字符串是数组"></a>字符串是数组</h3><p>像许多其他流行的编程语言一样，Python 中的字符串是表示 unicode 字符的字节数组。<br>但是，Python 没有字符数据类型，单个字符就是长度为 1 的字符串。<br>方括号可用于访问字符串的元素。<br>实例<br>获取位置 1 处的字符（请记住第一个字符的位置为 0）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a[1])</span><br></pre></td></tr></table></figure>
-
-<h3 id="裁切"><a href="#裁切" class="headerlink" title="裁切"></a>裁切</h3><p>您可以使用裁切语法返回一定范围的字符。<br>指定开始索引和结束索引，以冒号分隔，以返回字符串的一部分。<br>实例<br>获取从位置 2 到位置 5（不包括）的字符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(b[2:5])</span><br></pre></td></tr></table></figure>
-
-<h3 id="负的索引"><a href="#负的索引" class="headerlink" title="负的索引"></a>负的索引</h3><p>使用负索引从字符串末尾开始切片：<br>实例<br>获取从位置 5 到位置 1 的字符，从字符串末尾开始计数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(b[-5:-2])</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h3><p>如需获取字符串的长度，请使用 len() 函数。<br>实例<br>len() 函数返回字符串的长度：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(len(a))</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><p>Python 有一组可用于字符串的内置方法。<br>实例<br>strip() 方法删除开头和结尾的空白字符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot; Hello, World! &quot;</span><br><span class="line">print(a.strip()) # returns &quot;Hello, World!&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>lower() 返回小写的字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.lower())</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>upper() 方法返回大写的字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.upper())</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>replace() 用另一段字符串来替换字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.replace(&quot;World&quot;, &quot;Kitty&quot;))</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><p>split() 方法在找到分隔符的实例时将字符串拆分为子字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.split(&quot;,&quot;)) # returns [&#39;Hello&#39;, &#39; World!&#39;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="检查字符串"><a href="#检查字符串" class="headerlink" title="检查字符串"></a>检查字符串</h3><p>如需检查字符串中是否存在特定短语或字符，我们可以使用 in 或 not in 关键字。<br>实例<br>检查以下文本中是否存在短语 “ina”：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">txt &#x3D; &quot;China is a great country&quot;</span><br><span class="line">x &#x3D; &quot;ina&quot; in txt</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串级联（串联）"><a href="#字符串级联（串联）" class="headerlink" title="字符串级联（串联）"></a>字符串级联（串联）</h3><p>如需串联或组合两个字符串，您可以使用 + 运算符。<br>实例<br>将变量 a 与变量 b 合并到变量 c 中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">b &#x3D; &quot;World&quot;</span><br><span class="line">c &#x3D; a + b</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
-<p>实例<br>在它们之间添加一个空格：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">b &#x3D; &quot;World&quot;</span><br><span class="line">c &#x3D; a + &quot; &quot; + b</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串格式"><a href="#字符串格式" class="headerlink" title="字符串格式"></a>字符串格式</h3><p>正如在 Python 变量一章中所学到的，我们不能像这样组合字符串和数字：<br>实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age &#x3D; 63</span><br><span class="line">txt &#x3D; &quot;My name is Bill, I am &quot; + age</span><br><span class="line">print(txt)</span><br></pre></td></tr></table></figure>
-<p>但是我们可以使用 format() 方法组合字符串和数字！<br>format() 方法接受传递的参数，格式化它们，并将它们放在占位符 {} 所在的字符串中：<br>实例<br>使用 format() 方法将数字插入字符串：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age &#x3D; 63</span><br><span class="line">txt &#x3D; &quot;My name is Bill, and I am &#123;&#125;&quot;</span><br><span class="line">print(txt.format(age))</span><br></pre></td></tr></table></figure>
-<p>format() 方法接受不限数量的参数，并放在各自的占位符中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">quantity &#x3D; 3</span><br><span class="line">itemno &#x3D; 567</span><br><span class="line">price &#x3D; 49.95</span><br><span class="line">myorder &#x3D; &quot;I want &#123;&#125; pieces of item &#123;&#125; for &#123;&#125; dollars.&quot;</span><br><span class="line">print(myorder.format(quantity, itemno, price))</span><br></pre></td></tr></table></figure>
-<p>您可以使用索引号 {0} 来确保参数被放在正确的占位符中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">quantity &#x3D; 3</span><br><span class="line">itemno &#x3D; 567</span><br><span class="line">price &#x3D; 49.95</span><br><span class="line">myorder &#x3D; &quot;I want to pay &#123;2&#125; dollars for &#123;0&#125; pieces of item &#123;1&#125;.&quot;</span><br><span class="line">print(myorder.format(quantity, itemno, price))</span><br></pre></td></tr></table></figure>
-<h3 id="字符串方法-1"><a href="#字符串方法-1" class="headerlink" title="字符串方法"></a>字符串方法</h3><table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">capitalize()</td>
-<td align="center">把首字符转换为大写。</td>
-</tr>
-<tr>
-<td align="center">casefold()</td>
-<td align="center">把字符串转换为小写。</td>
-</tr>
-<tr>
-<td align="center">center()</td>
-<td align="center">返回居中的字符串。</td>
-</tr>
-<tr>
-<td align="center">count()</td>
-<td align="center">返回指定值在字符串中出现的次数。</td>
-</tr>
-<tr>
-<td align="center">encode()</td>
-<td align="center">返回字符串的编码版本。</td>
-</tr>
-<tr>
-<td align="center">endswith()</td>
-<td align="center">如果字符串以指定值结尾，则返回 true。</td>
-</tr>
-<tr>
-<td align="center">expandtabs()</td>
-<td align="center">设置字符串的 tab 尺寸。</td>
-</tr>
-<tr>
-<td align="center">find()</td>
-<td align="center">在字符串中搜索指定的值并返回它被找到的位置。</td>
-</tr>
-<tr>
-<td align="center">format()</td>
-<td align="center">格式化字符串中的指定值。</td>
-</tr>
-<tr>
-<td align="center">format_map()</td>
-<td align="center">格式化字符串中的指定值。</td>
-</tr>
-<tr>
-<td align="center">index()</td>
-<td align="center">在字符串中搜索指定的值并返回它被找到的位置。</td>
-</tr>
-<tr>
-<td align="center">isalnum()</td>
-<td align="center">如果字符串中的所有字符都是字母数字，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isalpha()</td>
-<td align="center">如果字符串中的所有字符都在字母表中，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isdecimal()</td>
-<td align="center">如果字符串中的所有字符都是小数，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isdigit()</td>
-<td align="center">如果字符串中的所有字符都是数字，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isidentifier()</td>
-<td align="center">如果字符串是标识符，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">islower()</td>
-<td align="center">如果字符串中的所有字符都是小写，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isnumeric()</td>
-<td align="center">如果字符串中的所有字符都是数，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isprintable()</td>
-<td align="center">如果字符串中的所有字符都是可打印的，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isspace()</td>
-<td align="center">如果字符串中的所有字符都是空白字符，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">istitle()</td>
-<td align="center">如果字符串遵循标题规则，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">isupper()</td>
-<td align="center">如果字符串中的所有字符都是大写，则返回 True。</td>
-</tr>
-<tr>
-<td align="center">join()</td>
-<td align="center">把可迭代对象的元素连接到字符串的末尾。</td>
-</tr>
-<tr>
-<td align="center">ljust()</td>
-<td align="center">返回字符串的左对齐版本。</td>
-</tr>
-<tr>
-<td align="center">lower()</td>
-<td align="center">把字符串转换为小写。</td>
-</tr>
-<tr>
-<td align="center">lstrip()</td>
-<td align="center">返回字符串的左修剪版本。</td>
-</tr>
-<tr>
-<td align="center">maketrans()</td>
-<td align="center">返回在转换中使用的转换表。</td>
-</tr>
-<tr>
-<td align="center">partition()</td>
-<td align="center">返回元组，其中的字符串被分为三部分。</td>
-</tr>
-<tr>
-<td align="center">replace()</td>
-<td align="center">返回字符串，其中指定的值被替换为指定的值。</td>
-</tr>
-<tr>
-<td align="center">rfind()</td>
-<td align="center">在字符串中搜索指定的值，并返回它被找到的最后位置。</td>
-</tr>
-<tr>
-<td align="center">rindex()</td>
-<td align="center">在字符串中搜索指定的值，并返回它被找到的最后位置。</td>
-</tr>
-<tr>
-<td align="center">rjust()</td>
-<td align="center">返回字符串的右对齐版本。</td>
-</tr>
-<tr>
-<td align="center">rpartition()</td>
-<td align="center">返回元组，其中字符串分为三部分。</td>
-</tr>
-<tr>
-<td align="center">rsplit()</td>
-<td align="center">在指定的分隔符处拆分字符串，并返回列表。</td>
-</tr>
-<tr>
-<td align="center">rstrip()</td>
-<td align="center">返回字符串的右边修剪版本。</td>
-</tr>
-<tr>
-<td align="center">split()</td>
-<td align="center">在指定的分隔符处拆分字符串，并返回列表。</td>
-</tr>
-<tr>
-<td align="center">splitlines()</td>
-<td align="center">在换行符处拆分字符串并返回列表。</td>
-</tr>
-<tr>
-<td align="center">startswith()</td>
-<td align="center">如果以指定值开头的字符串，则返回 true。</td>
-</tr>
-<tr>
-<td align="center">strip()</td>
-<td align="center">返回字符串的剪裁版本。</td>
-</tr>
-<tr>
-<td align="center">swapcase()</td>
-<td align="center">切换大小写，小写成为大写，反之亦然。</td>
-</tr>
-<tr>
-<td align="center">title()</td>
-<td align="center">把每个单词的首字符转换为大写。</td>
-</tr>
-<tr>
-<td align="center">translate()</td>
-<td align="center">返回被转换的字符串。</td>
-</tr>
-<tr>
-<td align="center">upper()</td>
-<td align="center">把字符串转换为大写。</td>
-</tr>
-<tr>
-<td align="center">zfill()</td>
-<td align="center">在字符串的开头填充指定数量的 0 值。</td>
-</tr>
-</tbody></table>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-3"><a href="#-3" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-4"><a href="#-4" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-5"><a href="#-5" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-6"><a href="#-6" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-7"><a href="#-7" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-8"><a href="#-8" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-9"><a href="#-9" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-10"><a href="#-10" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-11"><a href="#-11" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-12"><a href="#-12" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-13"><a href="#-13" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-14"><a href="#-14" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-15"><a href="#-15" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-16"><a href="#-16" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-17"><a href="#-17" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-18"><a href="#-18" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-19"><a href="#-19" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-20"><a href="#-20" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-21"><a href="#-21" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-22"><a href="#-22" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-23"><a href="#-23" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-24"><a href="#-24" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-25"><a href="#-25" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-26"><a href="#-26" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-27"><a href="#-27" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-28"><a href="#-28" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-29"><a href="#-29" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-30"><a href="#-30" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="-31"><a href="#-31" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/05/15/python-exercises/" data-id="ckoqy52vz000ms0tj1l7of1nh" data-title="python exercises" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -1504,7 +976,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/LAMMPS/">LAMMPS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Manuscript-Review/">Manuscript Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/LAMMPS/">LAMMPS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Manuscript-Review/">Manuscript Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/basic-concept/">basic concept</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li></ul>
     </div>
   </div>
 
@@ -1514,7 +986,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMMPS%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6/" rel="tag">LAMMPS输入文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Manuscript-01/" rel="tag">Manuscript_01</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMMPS%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6/" rel="tag">LAMMPS输入文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Manuscript-01/" rel="tag">Manuscript_01</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" rel="tag">专业名词</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
     </div>
   </div>
 
@@ -1524,7 +996,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/LAMMPS%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6/" style="font-size: 10px;">LAMMPS输入文件</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Manuscript-01/" style="font-size: 10px;">Manuscript_01</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
+      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/LAMMPS%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6/" style="font-size: 10px;">LAMMPS输入文件</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Manuscript-01/" style="font-size: 10px;">Manuscript_01</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" style="font-size: 10px;">专业名词</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a>
     </div>
   </div>
 
@@ -1546,6 +1018,10 @@
       <ul>
         
           <li>
+            <a href="/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/">专业名词</a>
+          </li>
+        
+          <li>
             <a href="/2021/06/16/Manuscript/">Manuscript</a>
           </li>
         
@@ -1559,10 +1035,6 @@
         
           <li>
             <a href="/2021/06/08/Machine-Learning-Summary/">Machine Learning Summary</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/08/AIMD-Summary/">AIMD Summary</a>
           </li>
         
       </ul>
