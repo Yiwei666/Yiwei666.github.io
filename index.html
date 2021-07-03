@@ -459,18 +459,62 @@
       
         <p>探索化学的奥秘：电子结构方法 第三版 许雪飞 译<br>分子模拟基础 李永健 著</p>
 <hr>
-<p>什么是色散？<br>色散是指由于电子的运动导致围绕分子体系的电荷分布波动引起的弱相互作用，考虑两个氩原子，因为这两个原子都不带净电荷，在它们彼此之间没有静电相互作用。然而一个氩原子内的电子运动可能在某些区域造成一个临时的瞬间偶极，这将反过来诱导另一个氩原子内的一个偶极的产生，从而导致彼此间的弱相互作用。很多常用的泛函在设计中没有考虑这种效应。</p>
-<p>Hartree-Fock方法的特点和问题是什么？<br>Hartree-Fock：最经济/最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献</p>
-<p>什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？<br>基于数学物理被称为多体微扰理论的分支，该方法通过在Hartree-Fock理论的基础上引入校正，从而对电子相关效应重要的体系计算达到更好的精度，也相应需要更高的计算成本。</p>
-<p>不同DFT方法的区别在哪里？<br>DFT：该方法包含大部分的电子相关效应。DFT方法有很多种，主要的不同在于该方法是纯的还是杂化的形式。一个纯的DFT方法由一对描述能量表达式里不同的两项的泛函构成，分别是交换和相关项。杂化泛函在能量表达式里含包含一定量的Hartree-Fock交换项。近期的DFT进展包括对色散效应的处理和对长程相互作用（在远离核的位置处的电子-电子的相互作用，例如电子激发到更高的轨道的过程中电子-电子的相互作用）的处理。</p>
-<p>如何看待B3LYP?<br>在很多年里，B3LYP杂化泛函是使用最多的泛函，在文献中被广泛接受，其不足之一是对色散的处理。</p>
-<p>什么是基组？<br>基组是用来构建一个分子体系的量子力学波函数的数学函数集合。指定一个基组可以理解为限制每一个电子在一个指定的空间区域。基组越大，强加在电子上的限制越少，能够更精确地近似真实地分子波函数，也相应地需要更多地计算资源。一般来说，在计算中应该使用实际可用地最大的基组。<br>在量子力学的图像中，电子以有限的概率出现在空间的任何位置。随着基函数的增加，使用基组的理论方法收敛到一个能量极限；此值对应一组无限的、完备的基函集合，被称为基组极限。高斯提供大量的预定义基组，这些基组可以根据它们包含的基函数的个数和类型分类。基组将一组基函数赋给分子内的每一个原子。在目前使用的基组里，每个独立的基函数通常是由几个高斯函数的线性组合构成的；这些高斯函数被称为原函数。一个原子的基函数集合在数学上近似该原子的轨道。<br>早期电子结构的开发者很快意识到，对每一个原子简单使用原子函数的最小集合是不够的，因为分子内原子的电子几率分布严重偏离孤立原子中电子的几率分布。使用多个（个数即zeta值）具有不同高斯指数的函数来描述原子的占据轨道是解决此问题的第一种方法。后来，人们还意识到为了表示轨道的极化（在键的形成中很重要）需要用到比描述孤立原子所需角动量类型更高的角动量类型的基函数。现代基组基于如何最好的确定zeta值得不同理念，对每一类型轨道采用不同数目得基函数。</p>
-<p>什么是劈裂价键基组？<br>每个价轨道由两个或者更多不同大小的基函数表示。例如，碳可以表示成：1s,2s,2s’,2px,2py,2pz,2px’,2py’,2pz’,其中有撇和没撇得轨道基函数大小不同。</p>
-<p>什么是极化基组？<br>劈裂价键基组允许轨道改变大小，但是不改变形状。极化基组是在描述每个原子的基态所需要的轨道基函数基础上添加更高角动量的轨道函数，从而可以改变轨道的形状。例极化基组给碳原子加了d函数。现在的基组经常给每一个原子加多个极化函数。</p>
-<p>什么是弥散函数？<br>弥散函数是s-和p-型函数的大尺寸版本（相比于标准价键函数）。它们允许轨道占据更大的空间区域。加了弥散函数的基组对于电子相对远离原子核的体系至关重要：带孤对电子的分子、阴离子和其他明显带负电荷的系统，激发态、电离能很低的系统，绝对酸度的描述等等。</p>
-<p>一些基组可以明确指定所需极化和弥散函数的数目和类型，如6-311，该基组表示什么？<br>6-311=每个核轨道基函数用6个原函数拟合，每个价轨道用3个基函数表示，这三个基函数分别由3，1和1个原函数拟合。</p>
-<p>6-311+G（2d,p）的构成是什么？<br>6-311+G（2d,p）：在6-311G劈裂价键基组基础上，每一个重原子（非氢原子）附加两个极化函数，对氢原子补充一个极化函数，并且重原子上加弥散函数。如果氢原子也想加弥散函数，那么+应该替换成++。</p>
-<p>什么是aug-cc-pVTZ？<br>aug-cc-pVTZ: Dunning及其合作者的相关一致性三重劈裂价键基组加弥散函数。三-zeta项（TZ）说明每个价轨道有三个基函数；双-zeta项（DZ），四-zeta项（QZ）等的定义类似。这些名称并不严谨，仅是描述性的，因为每个原子并不必须严格地使用三倍于价键基函数定义中最小数目的基函数来描述。</p>
+<ol>
+<li><p>什么是色散？<br>色散是指由于电子的运动导致围绕分子体系的电荷分布波动引起的弱相互作用，考虑两个氩原子，因为这两个原子都不带净电荷，在它们彼此之间没有静电相互作用。然而一个氩原子内的电子运动可能在某些区域造成一个临时的瞬间偶极，这将反过来诱导另一个氩原子内的一个偶极的产生，从而导致彼此间的弱相互作用。很多常用的泛函在设计中没有考虑这种效应。</p>
+</li>
+<li><p>Hartree-Fock方法的特点和问题是什么？<br>Hartree-Fock：最经济/最低精度的从头算方法。Hartree-Fock方法的问题是它没有包含电子相关效应：电子间相互作用的能量贡献</p>
+</li>
+<li><p>什么是Moller-Plesset微扰理论，它与Hartree-Fock方法的区别在哪里？<br>基于数学物理被称为多体微扰理论的分支，该方法通过在Hartree-Fock理论的基础上引入校正，从而对电子相关效应重要的体系计算达到更好的精度，也相应需要更高的计算成本。</p>
+</li>
+<li><p>不同DFT方法的区别在哪里？<br>DFT：该方法包含大部分的电子相关效应。DFT方法有很多种，主要的不同在于该方法是纯的还是杂化的形式。一个纯的DFT方法由一对描述能量表达式里不同的两项的泛函构成，分别是交换和相关项。杂化泛函在能量表达式里含包含一定量的Hartree-Fock交换项。近期的DFT进展包括对色散效应的处理和对长程相互作用（在远离核的位置处的电子-电子的相互作用，例如电子激发到更高的轨道的过程中电子-电子的相互作用）的处理。</p>
+</li>
+<li><p>如何看待B3LYP?<br>在很多年里，B3LYP杂化泛函是使用最多的泛函，在文献中被广泛接受，其不足之一是对色散的处理。</p>
+</li>
+<li><p>什么是基组？<br>基组是用来构建一个分子体系的量子力学波函数的数学函数集合。指定一个基组可以理解为限制每一个电子在一个指定的空间区域。基组越大，强加在电子上的限制越少，能够更精确地近似真实地分子波函数，也相应地需要更多地计算资源。一般来说，在计算中应该使用实际可用地最大的基组。<br>在量子力学的图像中，电子以有限的概率出现在空间的任何位置。随着基函数的增加，使用基组的理论方法收敛到一个能量极限；此值对应一组无限的、完备的基函集合，被称为基组极限。高斯提供大量的预定义基组，这些基组可以根据它们包含的基函数的个数和类型分类。基组将一组基函数赋给分子内的每一个原子。在目前使用的基组里，每个独立的基函数通常是由几个高斯函数的线性组合构成的；这些高斯函数被称为原函数。一个原子的基函数集合在数学上近似该原子的轨道。<br>早期电子结构的开发者很快意识到，对每一个原子简单使用原子函数的最小集合是不够的，因为分子内原子的电子几率分布严重偏离孤立原子中电子的几率分布。使用多个（个数即zeta值）具有不同高斯指数的函数来描述原子的占据轨道是解决此问题的第一种方法。后来，人们还意识到为了表示轨道的极化（在键的形成中很重要）需要用到比描述孤立原子所需角动量类型更高的角动量类型的基函数。现代基组基于如何最好的确定zeta值得不同理念，对每一类型轨道采用不同数目得基函数。</p>
+</li>
+<li><p>什么是劈裂价键基组？<br>每个价轨道由两个或者更多不同大小的基函数表示。例如，碳可以表示成：1s,2s,2s’,2px,2py,2pz,2px’,2py’,2pz’,其中有撇和没撇得轨道基函数大小不同。</p>
+</li>
+<li><p>什么是极化基组？<br>劈裂价键基组允许轨道改变大小，但是不改变形状。极化基组是在描述每个原子的基态所需要的轨道基函数基础上添加更高角动量的轨道函数，从而可以改变轨道的形状。例极化基组给碳原子加了d函数。现在的基组经常给每一个原子加多个极化函数。</p>
+</li>
+<li><p>什么是弥散函数？<br>弥散函数是s-和p-型函数的大尺寸版本（相比于标准价键函数）。它们允许轨道占据更大的空间区域。加了弥散函数的基组对于电子相对远离原子核的体系至关重要：带孤对电子的分子、阴离子和其他明显带负电荷的系统，激发态、电离能很低的系统，绝对酸度的描述等等。</p>
+</li>
+<li><p>一些基组可以明确指定所需极化和弥散函数的数目和类型，如6-311，该基组表示什么？<br>6-311=每个核轨道基函数用6个原函数拟合，每个价轨道用3个基函数表示，这三个基函数分别由3，1和1个原函数拟合。</p>
+</li>
+<li><p>6-311+G（2d,p）的构成是什么？<br>6-311+G（2d,p）：在6-311G劈裂价键基组基础上，每一个重原子（非氢原子）附加两个极化函数，对氢原子补充一个极化函数，并且重原子上加弥散函数。如果氢原子也想加弥散函数，那么+应该替换成++。</p>
+</li>
+<li><p>什么是aug-cc-pVTZ？<br>aug-cc-pVTZ: Dunning及其合作者的相关一致性三重劈裂价键基组加弥散函数。三-zeta项（TZ）说明每个价轨道有三个基函数；双-zeta项（DZ），四-zeta项（QZ）等的定义类似。这些名称并不严谨，仅是描述性的，因为每个原子并不必须严格地使用三倍于价键基函数定义中最小数目的基函数来描述。</p>
+</li>
+<li><p>什么是第一性原理或从头算？<br>如果在求解分子的薛定谔方程的时候，除方程本身之外只采用一些基本物理常数（ e、h、c)而不依赖任何经验参数即可正确预测微观体系的状态和性质，这种方法称为“第一性原理” (First Principle) 计算或 “从头算” (ab initio)。事实上，对于多原子的复杂体系，在目前的硬件条件下进行严格意义上从头算几乎是不可能的。</p>
+</li>
+<li><p>什么是Hartree-Fock理论，其优势和不足是什么？<br>Hartree-Fock方法在非相对论近似、Born-Oppenheimer近似、轨道近似这三个基本近似的基础上利用Planck常数、电子质量和电量三个基本物理常数以及元素的原子序数，对分子的全部积分严格进行计算。此方法不借助任何经验或半经验参数，达到求解量子力学Schrodinger方程的目的，对于一些稳定的分子和一些过渡金属的处理能够得到很好的结果，是一个很好的基本理论方法，但是由于其忽略了电子相关，在一些特殊体系的应用上，就显得不足。</p>
+</li>
+<li><p>电子相关包含哪些作用，在求解薛定谔方程中如何处理？</p>
+</li>
+</ol>
+<ul>
+<li>Fermi(费米)相关——自旋相同的电子由于Pauli不相容原理有相互回避的趋势，使能量降低。</li>
+<li>Couloub(库仑)相关——所有电子由于库仑排斥作用有相互回避的趋势，使能量降低。<br>由于电子相关能一般只占体系电子总能量的0.3%-2%，但是化学反应的反应热及活化能与相关能有相似的数量级，所以Hartree-Fock方法得出的能量差结果并不可靠，特别是电子激发、反应势能面等问题。</li>
+</ul>
+<ol start="16">
+<li>什么是Post-SCF方法？<br>HF方法没有考虑电子相关，考虑到一些电子相关的理论有很多种，一般将这些方法称为Post-SCF方法，因为都是在HF方法上增加了电子相关的因素。</li>
+</ol>
+<ul>
+<li>这些方法有Moller-Plesset微扰，由二级到五级的关键词是MP2, MP3, MP4, MP5。提供优化方法的有MP2, MP3和MP4（不包括MP4SDQ）,频率分析提供MP2.</li>
+<li>Quadratic CI一般包括三重和四重QCISD，其中QCISD(T),QCISD(TQ),QCISD提供优化。</li>
+<li>Coupled Cluster Methods电子相关簇方法包括单重和二重激发算符（能量和优化）以及可选的三重激发算符[CCD,CCSD,CCSD(T)]</li>
+</ul>
+<ol start="17">
+<li>什么是Roothaan方程，其是如何发展来的？</li>
+</ol>
+<ul>
+<li>Roothaan方程是多电子体系Schrodinger方程引人三个基本近似后的基本表达,原则上,只要合适地选择基函数，自洽叠代的次数足够多,Roothaan方程就一定能得到接近自洽场极限的精确解。因此这种计算方法在理论和方法上都是比较严格的，其计算结果的精确性和可靠性都大大优于半经验的一些计算方法。</li>
+<li>从头算法的核心是Hartree-Fock-Roothaan方程,简称 HFR方程,它是由在分子轨道理论发展过程中做出重大贡献的三个人的姓命名的方程。首先Hartree DR提出了一个单电子近似模型,将n个电子体系中的每个电子都看成是在由其余的n一1个电子所提供的平均势场中运动的假设。这样对于体系中的每个电子都得到了一个单电子薛定谔方程,称为Hartree方程。</li>
+<li>使用自洽场叠代方式求解这个方程就可得到体系的电子结构和性质。但Hartree方程未考虑电子自旋相关效应。Fock BA 和 Slater J C 分别提出了考虑Pauli原理的自洽场叠代方程,称为Hartree-Fock方程。它将单电子分子轨道完全波函数取为自旋轨道(即电子的空间函数与自旋函数的乘积)。Pauli原理要求,体系的总电子完全波函数要满足反对称化要求,即对于体系的任何两个粒子坐标的交换完全波函数必须改变正负号,而采用Slater行列式波函数的完全波函数正好满足反对称性要求的波函数。</li>
+<li>为了解决用Hartree-Fock方程用于计算多原子分子所遇到计算上的困难,Roothaan CC J又提出将分子轨道(MO)用原子轨道(AO)展开,这样的分子轨道称为原子轨道的线性组合(简称LCAO)。使用 LCAO-MO后,原来微分形式的 Hartree-Fock方程就变为易于求解的代数方程,称为Hartree-Fock-Roothaan方程,简称HFR方程。</li>
+</ul>
+<ol start="18">
+<li>求解HFR方程过程中为什么要引入基组这一概念？<br>在求解Hartree-Fock-Roothaan方程时,可以把分子轨道向某一“基组”(basis set)展开,从而把非线性的微积分方程转化为一组代数矩阵方程,简化计算过程。但是,完备集基组难以构造,计算不可行,通常采用有限的基组展开项。</li>
+</ol>
 <p>模型化学的命名规则是什么？<br>方法/基组<br>方法/基组/拟合基组<br>能量计算方法/能量计算基组//结构优化方法/结构优化基组<br>第一种形式是最常用的；第二种形式仅用在涉及纯DFT泛函的计算中，使用拟合基组来加速数值积分。<br>在最后的形式里，双斜线左边的模型是用来计算能量的，双斜线右边的模型是用来优化结构的。</p>
 <p>把分子中的原子核当作被移动的电子包围的固定粒子的方法。因为电子移动的比原子核快得多，所以这是一个很合理的近似。由于这类方法关注电子，它们被叫做电子结构方法。</p>
 <p>如何理解薛定谔方程？<br>薛定谔方程是常见电子结构方法的基础。在这个非含时的形式中，是一个分子的波函数。它是构成分子的原子的电子和核的位置的函数。方程表明，将哈密顿算符H作用到波函数上等同于分子的能量E和波函数的乘积。</p>
@@ -831,8 +875,8 @@
 <li>1996_GGA泛函 <a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.3865">Generalized Gradient Approximation Made Simple</a></li>
 <li>1996_GTH赝势 <a target="_blank" rel="noopener" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.54.1703">Separable dual-space Gaussian pseudopotentials</a></li>
 <li>1997_GPW高斯平面波，<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/002689797170220">A hybrid Gaussian and plane wave density functional scheme</a></li>
-<li>2007_BASISI_MOLOPT基组，<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.2770708">Gaussian basis sets for accurate calculations on molecular systems in gas and condensed phases</a></li>
 <li>2005 <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0010465505000615">Quickstep: Fast and accurate density functional calculations using a mixed Gaussian and plane waves approach</a></li>
+<li>2007_BASISI_MOLOPT基组，<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.2770708">Gaussian basis sets for accurate calculations on molecular systems in gas and condensed phases</a></li>
 <li>2007_DZVP <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.2770708">Gaussian basis sets for accurate calculations on molecular systems in gas and condensed phases</a></li>
 <li>2007_CSVR, 瑞士苏黎世联邦理工学院的Michele Parrinello团队<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.2408420">016</a>提出了一个新的分子动力学对正则分布进行采样的算法——CSVR，论文发表在JCP期刊上。论文题目：Canonical sampling through velocity rescaling。引用次数8752。</li>
 <li>2010_DFT-D <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.3382344">A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu</a></li>
@@ -857,7 +901,7 @@
 <p>2020年俄罗斯叶卡捷琳堡高温电化学研究所Irina D. Zakiryanova团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220321498#!">000</a>基于cp2k进行 YbCl3-KCl 和 Yb2O3-YbCl3-KCl 离子熔体的从头算分子动力学模拟和拉曼光谱研究，论文发表在Journal of Molecular Liquids期刊上。论文模拟细节未交代各原子数，初始构型是什么样的，如何获得的，有没有高温弛豫消除初始构型记忆。Simulations were performed under periodic boundary conditions in the cell of a fixed volume. The temperature was 973 K for systems without oxygen and 1073 K for systems with oxygen.The simulation time was 50, 25, 20 and 15 ps for Yb13, Yb13O, Yb50 and Yb50O correspondingly. In our simulations, the total number of electrons vary from 910 for Yb13 to 1103 for Yb50O. This forces us to limit the simulation runs to the lengths of thousands of time steps. Therefore, we will not discuss properties requiring long runs, such as self-diffusion coefficients and bond lifetimes. The MD time step was chosen to be 5 femtoseconds for Yb13O and Yb50O melts and 10 femtoseconds for Yb13 and Yb50 melts, ensuring smooth movement of all kinds of atoms.</p>
 <p>2020年美国橡树岭国家实验室的Santanu Roy<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2020/CP/D0CP03672B#!divAbstract">000</a>基于cp2k的QS模块计算了熔融碱金属氯化物盐的结构和动力学，论文发表在PCCP期刊上。We first equilibrated 149 ion pairs in the NPT ensemble at 1 bar using the PIM classical foecefield to provide the best possible initial configuration for these runs. We then selected an equilibrated configuration from the NPT trajectory for which the density coincided with the experimental one and used it as initial structure for subsequent AIMD.Trajectories were run in the NVT ensemble using the Nosé–Hoover thermostat with a 1 ps time constant, a time step of 0.5 fs was used to generate a 120 ps trajectory and the last 100 ps of that trajectory were used for computing S(q) and D(r).</p>
 <p>2020年俄罗斯叶卡捷琳堡高温电化学研究所Zakiryanov, Dmitry团队<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/00319104.2020.1723095">000</a>基于cp2k的QS模块进行了熔融卤氧化铅 Pb3O2X2 (X = Cl, Br, I) 的从头算分子动力学模拟，论文发表在Physics and Chemistry of Liquids期刊上。 A two-stage AIMD simulation having periodic boundary conditions was carried out to obtain information on the structure of molten lead oxyhalides Pb3O2X2 (X = Cl, Br, I). The distribution of ions in the cell at the end of the preliminary calculation was then used as a starting point in the subsequent calculation having a fixed volume. The first stage was to determine the density of the melts at a constant pressure. The second main stage was to obtain data on the local structure and other characteristics. For the density of melts, AIMD was performed as follows: pressure – 1 bar; temperature – 973 K (NPT ensemble); time step – 5 fs; simulation time – 50 ps. The Nose thermostat was applied, having a time constant of 1500 fs. At the second stage, the calculation was carried out at a constant predetermined equilibrium cell volume and a temperature of 973 K (NVT ensemble). The simulation time was 65 ps, while the timestep was 5 fs. The thermostat time constant was 100 fs. The data from this run were used to determine properties of the melts.We previously showed that for PbX2 melts, an increase in the size of the simulated system from 72 to 108 particles does not significantly affect the results of the calculation of the local structure; thus, 72 was adopted as a sufficient number of ions for the purposes of the experiment.</p>
-<p>2020年法国的François-Xavier Coudert团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jacs.9b12073">001</a>基于cp2k研究了CdSe量子点玻璃，论文发表在JACS上。</p>
+<p>2020年法国的François-Xavier Coudert团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jacs.9b12073">001</a>基于cp2k研究了CdSe量子点玻璃，论文发表在JACS上。（39Na2O–78SiO2–33CdSe体系，GGA，PBE，600Ry； 对于Na、Cd 和Se，DZVP-MOLOPT-SR-GTH基组；对于O和Si，DZVP- MOLOPT-GTH基组）。 After an initial geometry optimization with DFT, the resulting relaxed structure (Figure 1c) was used as the initial structure for the AIMD simulations. The structure was quenched from 500 to 300 K in steps of 50 K, with a total 10 ps AIMD run at a time step of 2 fs. The production run was conducted in the NVT ensemble at 300 K for 10 ps.</p>
 <hr>
 <p>2021年美国普林斯顿大学的Anirban Mondal<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.0c10879">000</a>基于cp2k研究了碳酸盐-氢氧化物电解质中传输机制的第一性原理建模，论文发表在JPCC期刊上。A system originally composed of 120 Li+, 80 K+, 80 CO32–, 40 OH– ions, and 10 CO2 molecules was studied a to investigate the chemical routes for the formation/dissociation of different chemical species and their role in the transport mechanism.  The temperature was set to 923.15 K. The GROMACS simulation program was wsed to performed classical MD simulations in the NPT ensemble at P = 1 bar to obtain a pre-equilibrated configuration at 923.15 K. The equilibrated supercell from the classical MD trajectory was geometry optimized within the density functional theory (DFT) framework at the same level of theory as described below.  Equations of motion were integrated with a time step of 0.5 fs. The system was equilibrated for 8 ps in the isothermal–isobaric (NPT) ensemble at 1 bar by using an isotropic unit cell according to the scheme of Martyna et al., with a time constant of 250 fs. Equilibration was followed by a production simulation in the canonical NVT ensemble for 65 ps. We set the temperature at 923.15 K, controlled by one chain of six Nosé–Hoover thermostats(30) with a time constant of 100 fs. Three-dimensional periodic boundary conditions were employed in all simulations. </p>
 <p>2021年美国西北太平洋国家实验室的Manh-Thuong Nguyen团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220375048#!">000</a>基于cp2k中的QS模块进行了(K,Li)Cl 和 (K, Na)Cl 熔盐混合物中热力学和传输特性的从头算分子动力学评估，论文发表在Journal of Molecular Liquids期刊上。 AIMD simulations were carried out within the NVT ensemble . The temperature was maintained by the canonical sampling through stochastic velocity rescaling thermostat . A time step of 1.5 fs was used. Each initial structure was generated at random, then equilibrated by a 20-ps simulation. Results reported in this work were obtained from 45 ps production AIMD runs. As mentioned above, we investigated two mixtures, (K,Li)Cl and (K,Na)Cl, in which the molar fraction of KCl, xKCl, is 0, 0.25, 0.50, 0.75, and 1. Systems of unit cells of 512 atoms were adopted. At each simulation temperature, we used atomic densities determined with experiments reported by Van Artsdelen and Yaffe. Different simulation temperatures were investigated, 1173, 873, 673 K (for the (K,Li)Cl mixture) and 1173, 1073, and 973 K ((K,Na)Cl).</p>
