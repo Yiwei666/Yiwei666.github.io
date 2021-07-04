@@ -14,7 +14,7 @@
 <meta property="og:description" content="探索化学的奥秘：电子结构方法 第三版 许雪飞 译分子模拟基础 李永健 著   什么是色散？色散是指由于电子的运动导致围绕分子体系的电荷分布波动引起的弱相互作用，考虑两个氩原子，因为这两个原子都不带净电荷，在它们彼此之间没有静电相互作用。然而一个氩原子内的电子运动可能在某些区域造成一个临时的瞬间偶极，这将反过来诱导另一个氩原子内的一个偶极的产生，从而导致彼此间的弱相互作用。很多常用的泛函在设计中没有">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-09T11:30:50.000Z">
-<meta property="article:modified_time" content="2021-07-04T08:31:04.301Z">
+<meta property="article:modified_time" content="2021-07-04T08:32:03.061Z">
 <meta property="article:author" content="YIWEI">
 <meta property="article:tag" content="Note5">
 <meta name="twitter:card" content="summary">
@@ -278,7 +278,7 @@
 <li>Gaussian basis sets for valence electrons，价电子高斯基组</li>
 </ul>
 <ol start="2">
-<li>什么是GAPW方法，用于GAPW方法的全电子基组有哪些？GAPW方法还需要赝势码？cp2k中是如何处理的？<br>GAPW: Gaussian and augmented plane waves method，高斯和增强平面波方法；all electron calculations，全电子计算</li>
+<li>什么是GAPW方法，用于GAPW方法的全电子基组有哪些？GAPW方法还需要赝势吗？cp2k中是如何处理的？<br>GAPW: Gaussian and augmented plane waves method，高斯和增强平面波方法；all electron calculations，全电子计算</li>
 </ol>
 <ul>
 <li>Pople系列基组，Pople style basis sets <code>(e.g. 6-31G*, etc)</code></li>
@@ -286,10 +286,10 @@
 <li>以及其他，and more，可以在这个数据库找到，<a target="_blank" rel="noopener" href="https://www.basissetexchange.org/">https://www.basissetexchange.org/</a><br>Pople系列基组以及相关一致性基组的路径：see $CP2K/cp2k/data, ‘ALL_BASIS_SETS’ and ‘EMSL_BASIS_SETS’<br>Potential needs to be defined in &amp;KIND section for GAPW calculations, see $CP2K/cp2k/data/POTENTIAL, choose “ALL” potential</li>
 </ul>
 <ol start="3">
-<li><p>请分类详细讨论BASIS_MOLOPT基组。<br>分子体系优化的基组，包括H , C , N , O , F , Si , P , S , Cl元素<br>This file contains the molecularly optimised basis sets for the elements H , C , N , O , F , Si , P , S , Cl<br>as discussed in the paper (SZV-MOLOPT-GTH, DZVP-MOLOPT-GTH, TZVP-MOLOPT-GTH, TZV2P-MOLOPT-GTH, TZV2PX-MOLOPT-GTH)<br>SR基组使用更少的变量和更少的弥散基元，这些基组降低了中等尺寸凝聚态体系的成本，而大多数性能仅受到轻微影响。<br>In addition to the basis sets discussed in the paper above, we have generated with the same procedure<br>variants of these basis sets using less and thus less diffuse primitives (based on the atomic code being with 1mHt of the basis set limit)<br>These are the  SZV-MOLOPT-SR-GTH and DZVP-MOLOPT-SR-GTH (Shorter Range) basis sets for most of the periodic table<br>These basis sets reduce the cost for medium size condensed phase systems, while most properties are only slightly affected.<br>如<br>O  SZV-MOLOPT-GTH SZV-MOLOPT-GTH-q6<br>O  DZVP-MOLOPT-GTH DZVP-MOLOPT-GTH-q6<br>O  TZVP-MOLOPT-GTH TZVP-MOLOPT-GTH-q6<br>O  TZV2P-MOLOPT-GTH TZV2P-MOLOPT-GTH-q6<br>O  TZV2PX-MOLOPT-GTH TZV2PX-MOLOPT-GTH-q6<br>以及<br>O  SZV-MOLOPT-SR-GTH SZV-MOLOPT-SR-GTH-q6<br>O  DZVP-MOLOPT-SR-GTH DZVP-MOLOPT-SR-GTH-q6<br>注意SR覆盖元素周期表大多数元素，但是每种元素可选基组只有2个，SR适用于固体（‘DZVP-MOLOPT-SR-GTH’ for solids (‘SR’ denotes shorter range, i.e. less and thus less diffuse primitives)）。</p>
-</li>
-<li><p>GPW选用基组的注意事项。</p>
-</li>
+<li>请分类详细讨论BASIS_MOLOPT基组。<br>分子体系优化的基组，包括H , C , N , O , F , Si , P , S , Cl元素<br>This file contains the molecularly optimised basis sets for the elements H , C , N , O , F , Si , P , S , Cl<br>as discussed in the paper (SZV-MOLOPT-GTH, DZVP-MOLOPT-GTH, TZVP-MOLOPT-GTH, TZV2P-MOLOPT-GTH, TZV2PX-MOLOPT-GTH)<br>SR基组使用更少的变量和更少的弥散基元，这些基组降低了中等尺寸凝聚态体系的成本，而大多数性能仅受到轻微影响。<br>In addition to the basis sets discussed in the paper above, we have generated with the same procedure<br>variants of these basis sets using less and thus less diffuse primitives (based on the atomic code being with 1mHt of the basis set limit)<br>These are the  SZV-MOLOPT-SR-GTH and DZVP-MOLOPT-SR-GTH (Shorter Range) basis sets for most of the periodic table<br>These basis sets reduce the cost for medium size condensed phase systems, while most properties are only slightly affected.<br>如<br>O  SZV-MOLOPT-GTH SZV-MOLOPT-GTH-q6<br>O  DZVP-MOLOPT-GTH DZVP-MOLOPT-GTH-q6<br>O  TZVP-MOLOPT-GTH TZVP-MOLOPT-GTH-q6<br>O  TZV2P-MOLOPT-GTH TZV2P-MOLOPT-GTH-q6<br>O  TZV2PX-MOLOPT-GTH TZV2PX-MOLOPT-GTH-q6<br>以及<br>O  SZV-MOLOPT-SR-GTH SZV-MOLOPT-SR-GTH-q6<br>O  DZVP-MOLOPT-SR-GTH DZVP-MOLOPT-SR-GTH-q6<br>注意SR覆盖元素周期表大多数元素，但是每种元素可选基组只有2个，SR适用于固体（‘DZVP-MOLOPT-SR-GTH’ for solids (‘SR’ denotes shorter range, i.e. less and thus less diffuse primitives)）。</li>
+</ol>
+<ol start="4">
+<li>GPW选用基组的注意事项。</li>
 </ol>
 <ul>
 <li>MOLOPT basis sets: basis sets optimised from molecular calculations, see ‘BASIS_MOLOPT’， MOLOPT基组是由分子优化而来的</li>
