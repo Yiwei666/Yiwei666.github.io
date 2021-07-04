@@ -634,7 +634,7 @@
 <li>Goedecker-Teter-Hutter pseudopotentials，GTH赝势</li>
 <li>Gaussian basis sets for valence electrons，价电子高斯基组</li>
 </ul>
-<ol>
+<ol start="2">
 <li>什么是GAPW方法，用于GAPW方法的全电子基组有哪些？GAPW方法还需要赝势码？cp2k中是如何处理的？<br>GAPW: Gaussian and augmented plane waves method，高斯和增强平面波方法；all electron calculations，全电子计算</li>
 </ol>
 <ul>
@@ -642,16 +642,27 @@
 <li>相关一致性基组，Correlation consistent basis sets (aug-cc-pVDZ, etc)</li>
 <li>以及其他，and more，可以在这个数据库找到，<a target="_blank" rel="noopener" href="https://www.basissetexchange.org/">https://www.basissetexchange.org/</a><br>Pople系列基组以及相关一致性基组的路径：see $CP2K/cp2k/data, ‘ALL_BASIS_SETS’ and ‘EMSL_BASIS_SETS’<br>Potential needs to be defined in &amp;KIND section for GAPW calculations, see $CP2K/cp2k/data/POTENTIAL, choose “ALL” potential</li>
 </ul>
-<ol start="2">
-<li>LCAO: Linear Combination of Atomic Orbitals</li>
+<ol start="3">
+<li><p>请分类详细讨论BASIS_MOLOPT基组。<br>分子体系优化的基组，包括H , C , N , O , F , Si , P , S , Cl元素<br>This file contains the molecularly optimised basis sets for the elements H , C , N , O , F , Si , P , S , Cl<br>as discussed in the paper (SZV-MOLOPT-GTH, DZVP-MOLOPT-GTH, TZVP-MOLOPT-GTH, TZV2P-MOLOPT-GTH, TZV2PX-MOLOPT-GTH)<br>SR基组使用更少的变量和更少的弥散基元，这些基组降低了中等尺寸凝聚态体系的成本，而大多数性能仅受到轻微影响。<br>In addition to the basis sets discussed in the paper above, we have generated with the same procedure<br>variants of these basis sets using less and thus less diffuse primitives (based on the atomic code being with 1mHt of the basis set limit)<br>These are the  SZV-MOLOPT-SR-GTH and DZVP-MOLOPT-SR-GTH (Shorter Range) basis sets for most of the periodic table<br>These basis sets reduce the cost for medium size condensed phase systems, while most properties are only slightly affected.<br>如<br>O  SZV-MOLOPT-GTH SZV-MOLOPT-GTH-q6<br>O  DZVP-MOLOPT-GTH DZVP-MOLOPT-GTH-q6<br>O  TZVP-MOLOPT-GTH TZVP-MOLOPT-GTH-q6<br>O  TZV2P-MOLOPT-GTH TZV2P-MOLOPT-GTH-q6<br>O  TZV2PX-MOLOPT-GTH TZV2PX-MOLOPT-GTH-q6<br>以及<br>O  SZV-MOLOPT-SR-GTH SZV-MOLOPT-SR-GTH-q6<br>O  DZVP-MOLOPT-SR-GTH DZVP-MOLOPT-SR-GTH-q6<br>注意SR覆盖元素周期表大多数元素，但是每种元素可选基组只有2个，SR适用于固体（‘DZVP-MOLOPT-SR-GTH’ for solids (‘SR’ denotes shorter range, i.e. less and thus less diffuse primitives)）。</p>
+</li>
+<li><p>GPW选用基组的注意事项。</p>
+</li>
 </ol>
-<p>3.</p>
-<ol>
-<li>请分类详细讨论BASIS_MOLOPT基组<br>分子体系优化的基组，包括H , C , N , O , F , Si , P , S , Cl元素<br>This file contains the molecularly optimised basis sets for the elements H , C , N , O , F , Si , P , S , Cl<br>as discussed in the paper (SZV-MOLOPT-GTH, DZVP-MOLOPT-GTH, TZVP-MOLOPT-GTH, TZV2P-MOLOPT-GTH, TZV2PX-MOLOPT-GTH)<br>SR基组使用更少的变量和更少的弥散基元，这些基组降低了中等尺寸凝聚态体系的成本，而大多数性能仅受到轻微影响。<br>In addition to the basis sets discussed in the paper above, we have generated with the same procedure<br>variants of these basis sets using less and thus less diffuse primitives (based on the atomic code being with 1mHt of the basis set limit)<br>These are the  SZV-MOLOPT-SR-GTH and DZVP-MOLOPT-SR-GTH (Shorter Range) basis sets for most of the periodic table<br>These basis sets reduce the cost for medium size condensed phase systems, while most properties are only slightly affected.<br>如<br>O  SZV-MOLOPT-GTH SZV-MOLOPT-GTH-q6<br>O  DZVP-MOLOPT-GTH DZVP-MOLOPT-GTH-q6<br>O  TZVP-MOLOPT-GTH TZVP-MOLOPT-GTH-q6<br>O  TZV2P-MOLOPT-GTH TZV2P-MOLOPT-GTH-q6<br>O  TZV2PX-MOLOPT-GTH TZV2PX-MOLOPT-GTH-q6<br>以及<br>O  SZV-MOLOPT-SR-GTH SZV-MOLOPT-SR-GTH-q6<br>O  DZVP-MOLOPT-SR-GTH DZVP-MOLOPT-SR-GTH-q6<br>注意SR覆盖元素周期表大多数元素，但是每个只有2个</li>
+<ul>
+<li>MOLOPT basis sets: basis sets optimised from molecular calculations, see ‘BASIS_MOLOPT’， MOLOPT基组是由分子优化而来的</li>
+<li>‘DZVP-MOLOPT-SR-GTH’ for solids (‘SR’ denotes shorter range, i.e. less and thus less diffuse primitives)，SR基组适用于固体</li>
+<li>always check the basis set convergence (DZVP/TZVP/…)，多检查基组的收敛性</li>
+<li>do not use SZV for production run，不要使用SZV用来进行 production run</li>
+<li>more basis sets for GTH pseudos can be found in ‘BASIS_ZIJLSTRA’ and ‘GTH_BASIS_SETS’，更多GTH赝势基组的文件夹</li>
+<li>all basis set files can be found in $CP2K/cp2k/data，基组文件路径</li>
+</ul>
+<ol start="5">
+<li><pre><code>cp2k中的赝势基组和Gaussian种的全电子基组对应性关系。
+</code></pre>
+<p>CP2K All-electron (Gaussian/NWCHEM)<br>SZV STO-3G<br>DZVP 6-31G*<br>TZVP 6-311G*<br>TZV2P 6-311G(2df, 2pd)<br>SZV和DZVP适用元素范围为<code>H~Rn</code>, TZVP和TZV2P的适用性受限。<br>SZV: single-zeta valence, i.e. one contracted function per orbital，单重价电子<br>DZVP: double-zeta valence, i.e. two contracted functions per orbital plus one set of polarisation functions with l = lmax + 1，双重阶层分裂+一组极化函数<br>TZVP/TZV2P: triple-zeta valence, i.e. three contracted functions per orbital plus one/two set of polarisation functions with l = lmax + 1</p>
+</li>
+<li></li>
 </ol>
-<p>4.</p>
-<p>5.</p>
-<p>6.</p>
 <p>7.</p>
 <p>8.</p>
 <p>9.</p>
