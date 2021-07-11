@@ -300,10 +300,9 @@
 <p>局域密度近似(LDA)泛函：即泛函在空间上的能量密度只和每一点上的电子密度有关。该类泛函常用的有SVMN和SVWN5等。对于电子密度ρ(r)空间变化不大的体系而言，采用均匀电子气模型的局域密度近似(LDA)是一种很好的近似。但是对于电子<br>密度相对空间变化较大的电子气体系，应用局域密度理论去完全消除电子与其自身的相互作用时的失效而引起的这些误差被证明是比较大的。</p>
 <p>广义梯度近似（GGA）泛函：泛函在空间上的能量密度不仅与每一点上的电子密度有关，而且还与电子密度的梯度有关。常用的GGA泛函有BLYP、PBE等。除了密度梯度以外，在泛函中包含其他自变量（如动能密度或是局域自旋密度的<br>二阶导数）而得到的泛函称为基于高阶广义梯度近似的meta-GGA泛函，如M06-L、TPSS 等。而泛函中包含的信息越多，就越能正确地描述客观体系。</p>
 <p>杂化泛函: 用HF方法中交换能和DFT方法中交换能做线性组合得到计算体系的交换关联泛函。杂化泛函分为单杂化泛函和双杂化泛函。</p>
-<p>单杂化泛函：单杂化泛函大致分为全局杂化泛函和局域杂化泛函两类。</p>
-<p>全局杂化泛函：以B3LYP为主要代表，其核心思想是在交换泛函部分引入了Hertree-Fock形式的交换能，在分子体系中最为常用的泛函有B3LYP、PBE0、X3LYP、TPSSh、M06等。</p>
-<p>局域杂化泛函：局域杂化泛函是利用分区方案，将电子-电子间的相互作用部分分为短程与长程部分分别处理。分子体系中著名的有wB97X-D泛函，可以均衡的处理价键和能垒等。固体中最成功的为HSE泛函，可以更好地计算固体的带隙。</p>
+<p>单杂化泛函：单杂化泛函大致分为全局杂化泛函和局域杂化泛函两类。<br>全局杂化泛函：以B3LYP为主要代表，其核心思想是在交换泛函部分引入了Hertree-Fock形式的交换能，在分子体系中最为常用的泛函有B3LYP、PBE0、X3LYP、TPSSh、M06等。<br>局域杂化泛函：局域杂化泛函是利用分区方案，将电子-电子间的相互作用部分分为短程与长程部分分别处理。分子体系中著名的有wB97X-D泛函，可以均衡的处理价键和能垒等。固体中最成功的为HSE泛函，可以更好地计算固体的带隙。</p>
 <p>双杂化泛函：这一类泛函不仅要包含占据轨道的信息，而且要能恰当地考虑未占据轨道的信息。其核心思想是在交换部分引入部分HF形式交换能的同时，在相干泛函部分引入部分二级微扰形式MP2相关能，使得此类方法描述体系性质的误差有所降低。这一类的代表泛函有B2PLYP，mPW2PLYP和MC3BB等。</p>
+<p>基于高阶广义梯度近似的meta-GGA泛函：MO6-L<br>全局杂化泛函：B3LYP</p>
 
       
     </div>
@@ -950,6 +949,7 @@
       
         <p>团队<a href="">000</a><br>等人<a href="">000</a><br><a href="">000</a></p>
 <p>1999年J. C. G. Pereira<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp982866l">part1</a>,<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp982867d">part2</a>基于从头算开始研究硅酸盐体系中的复杂团簇。</p>
+<p>2004年英国贝尔法斯特女王大学的Anthony T. Paxton团队<a target="_blank" rel="noopener" href="https://www.nature.com/articles/nature03198">000</a>基于vasp研究了微量杂质Bi引发的铜脆化机理，论文发表在Nature上。</p>
 <p>2006年英国伦敦大学学院的Antonio  Tilocca团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp065146k">000</a>基于DL_POLY和CPMD进行45S5 生物活性硅酸盐玻璃的 Ab Initio 分子动力学研究，利用 CPMD 模拟的准确性来深入了解短程结构并分析该生物材料的振动和电子特性。该作者研究方向为生物活性玻璃从头算研究，注意关注该作者文章。</p>
 <p>2009年中国科学院地质与地球物理研究所岩石圈演化国家重点实验室的Yigang Zhang团队<a target="_blank" rel="noopener" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009GL039751">000</a>基于vasp进行了两相从头算分子动力学模拟，研究了Si和O在液态铁和硅酸盐熔体之间的分配，论文发表在Geophysical Research Letters.<br>2009年Rodolphe Vuilleumier等人<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703709004530">000</a>基于CPMD进行天然硅酸盐熔体的计算机建模：我们可以从ab initio模拟中学到什么，论文发表在Geochimica et Cosmochimica Acta期刊上。</p>
 <p>2011年Alfonso Pedone团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp110788h">000</a>基于Quantum-ESPRESSO package软件对SiO2-Na2O-P2O5-CaF2-CaO生物玻璃体系进行从头算分子动力学模拟，论文发表在JPCB上。<br>2011年英国伦敦大学的Antonio  Tilocca团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp110788h">000</a>进行了生物活性玻璃中的氟环境的ab Initio分子动力学模拟研究，论文发表在JPCB期刊上。</p>
