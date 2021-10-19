@@ -971,8 +971,15 @@
 <p>2017年德国地球科学研究中心的Sandro Jahn团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009254116305691?via=ihub#!">000</a>基于cp2k的QS模块金属和硅酸盐熔体之间的镍分配，论文发表在Chemical Geology期刊上。经典分子动力学模拟获得硅酸盐熔体初始构型，模拟温度大于2500K（低于2500K不利于Si-O键断裂和形成，不利于达到平衡）。步长0.95fs，7fs for production runs ，最后5 ps用于能量和结构分析<br>For the silicate melts, the simulation cells contained 112 atoms of M2SiO4 with different amounts of M  = Mg, Fe and Ni (see Table 1).The simulation boxes of the metal melts contained 64 atoms with varying amount of Fe and Ni (see Table 1). The temperature in the simulation (2500 K) was chosen to be relatively close to the experimental one from Thibault and Walter (1995) (2123 K). At temperatures lower than 2500 K, Si–O bonds are not sufficiently often broken or formed to reach equilibrium on the MD time scale (Spiekermann et al., 2016). A temperature of 2500 K is maintained using a Nosé-Hoover (Nosé, 1984a, Nosé, 1984b) thermostat. A time step of 0.95 fs was used for the numerical integration of the equations of motion. Initial configurations for the AIMD simulations of the silicate melts were obtained from classical molecular dynamics simulations of Mg2SiO4 melts using an advanced polarizable ion potential (Jahn and Madden, 2007). Subsequently, the metal melt was equilibrated using AIMD for 7 ps. Trajectories of production runs were collected for approximately 7 ps, of which the last 5 ps were used for structural and energetic analysis.<br>（GPW方法, PBE泛函, DZVP, GTH, 400Ry，112 atoms）</p>
 <p>2020年加州大学戴维分校的Qing-Zhu Yin团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0012821X19306260#!">000</a>基于vasp第一性原理分子动力学研究了硅酸盐熔体和铁水之间的镁分配：对地核早期热历史的影响。论文发表在Earth and Planetary Science Letters期刊上。<br>（256个原子，随机分布的原子被放置在分子动力学模拟箱中。在模拟的第一阶段，模拟箱中的原子合并成两相，一个是铁水，另一个是硅酸盐熔体。这个阶段需要大约 20,000 到 30,000 个分子动力学步骤。模拟继续进行另外 30,000 到 50,000 步以累积原子位置。金属相的组成是通过使用计算几何的方法从累积的原子位置计算出来的，然后可以推导出硅酸盐相的组成，因为整体组成是已知的。）</p>
 <p>2021年南京大学的Hai-Zhen Wei团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009254120305696#!">000</a>研究了硼配位和 B/Si 排序控制矿物、熔体和流体之间的平衡硼同位素分馏，论文发表在Chemical Geology，这篇论文中对同位素的平衡分馏以及从头算模拟进行了大量的综述，注意检索。</p>
+<h3 id="山东大学"><a href="#山东大学" class="headerlink" title="山东大学"></a>山东大学</h3><ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 <p><a href=""></a><br><a href=""></a></p>
 <p><a href=""></a><br><a href=""></a></p>
+<hr>
 <h3 id="专业名词"><a href="#专业名词" class="headerlink" title="专业名词"></a>专业名词</h3><p>interatomic potential molecular dynamics (IPMD)</p>
 <h3 id="cp2k相关高被引"><a href="#cp2k相关高被引" class="headerlink" title="cp2k相关高被引"></a>cp2k相关高被引</h3><ul>
 <li>1984年加拿大国家研究委员会化学部的S. Nosé在JCP上发表论文：恒温分子动力学方法的统一表述，A unified formulation of the constant temperature molecular dynamics methods。与后者共同构成了后来著名的nose-hoover thermostat热浴方法。</li>
@@ -1013,6 +1020,7 @@
 <li><p>2021_vaspkit，<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0010465521001454">VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code</a></p>
 </li>
 </ul>
+<hr>
 <h3 id="常看的重要论文"><a href="#常看的重要论文" class="headerlink" title="常看的重要论文"></a>常看的重要论文</h3><p>2006年英国伦敦大学学院的Antonio  Tilocca团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp065146k">000</a>基于DL_POLY和CPMD进行45S5 生物活性硅酸盐玻璃的 Ab Initio 分子动力学研究，利用 CPMD 模拟的准确性来深入了解短程结构并分析该生物材料的振动和电子特性。该作者研究方向为生物活性玻璃从头算研究，注意关注该作者文章。</p>
 <hr>
 <p>2014年日本同步辐射研究所的Shinji Kohara团队<a target="_blank" rel="noopener" href="https://www.nature.com/articles/ncomms6892">000</a>基于高能 X 射线衍射测量和基于cp2k的DF-MD 模拟研究了极易碎液体的原子和电子结构，论文发表在nature communication上。（ZrO2体系，GTH赝势，BASIS_MOLOPT基组，PBE泛函，400Ry截断）； 初始原子配置是通过反向蒙特卡罗 (RMC) 模拟创建的，该模拟具有 18.98 Å 立方体中 501 个原子的高能 X 射线衍射数据（实验密度，每 Å3 为 0.0733 个原子）。使用了 RMC++ 程序代码。 Born-Oppenheimer MD 模拟是使用 Nóse-Hoover 恒温器进行的，时间步长为 2 fs（初始化）和 1 fs（数据收集）。 该系统在 3,100 K（—2,800 °C）下模拟，总共 30 ps，其中最后 10 ps 用于数据收集。相应的原子均方位移清楚地显示出液体行为（扩散）。</p>
@@ -1098,7 +1106,7 @@
 <p><a href=""></a><br><a href=""></a><br><a href=""></a></p>
 <p>年份和姓名(能够避免重复)，链接，拟合方法，体系，势函数，特征成分，研究内容，特点</p>
 <p>1990年van Beest BW<a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/Force-fields-for-silicas-and-aluminophosphates-on-vanBeest-Kramer/933fa5b33c8584bcaf64a1346dbf75127cde8f10">023</a>基于实验数据和从头算分子模拟拟合了SiO2-Al2O3-P2O5体系的BMH势参数，O的原子电荷为-1.2。</p>
-<p>1992年出版的Molecular Dynamics Simulations Proceedings of the 13th Taniguchi Symposium Kashikojima, Japan, November 6–9, 1990<a target="_blank" rel="noopener" href="https://www.springer.com/gp/book/9783642847158">000</a>一书中包含Interatomic potential models for molecular dynamics simulations of multi-component oxides一文，其中含有日本人K. Kawamura提出的多组分氧化物势模型。</p>
+<p>1992年出版的Molecular Dynamics Simulations Proceedings of the 13th Taniguchi Symposium Kashikojima, Japan, November 6–9, 1990<a target="_blank" rel="noopener" href="https://www.springer.com/gp/book/9783642847158">000</a>一书中包含Interatomic potential models for molecular dynamics simulations of multi-component oxides一文，其中含有日本人K. Kawamura提出的多组分氧化物势模型。<br>1992年美国科罗拉多州立大学的A. K. Rappe等人<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/ja00051a040">000</a>提出了通用力场，应用于经典分子动力学模拟，论文发表在JACS期刊上。</p>
 <p>1997年J.M Delaye<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309396006047">000</a>使用BMH势函数模拟氧化物玻璃组分对结构的影响，体系为SiO2-B2O3-Na2O-Al2O3-ZrO2。</p>
 <p>1998年俄罗斯的G. G. Boiko<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309398006930?via=ihub#BIB6">000</a>基于没有色散项的BMH势函数计算了2ZnO·P2O5–2Na2O·P2O5 体系的结构。<br>1998年俄罗斯的David K. Belashchenko<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational1989/38/7/38_7_673/_article">000</a>基于没有色散项的BMH势函数计算了CaO-CaF2稀溶液体系中的MeO和MeF2, 元素包含Ca-Me-O-F(Me=Mg，Fe，Sr和 Ba)。</p>
 <p>2001年A.N.Cormack<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309301008316">014</a>基于BMH势函数模拟了Na2O–CaO–SiO2玻璃体系，论文发表在JNonCrySolids。</p>
