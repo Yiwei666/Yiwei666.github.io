@@ -71,6 +71,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-从 Python 入门编程_3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_3/" class="article-date">
+  <time class="dt-published" datetime="2021-04-14T07:37:12.215Z" itemprop="datePublished">2021-04-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_3/">解决场景问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="解决场景问题"><a href="#解决场景问题" class="headerlink" title="解决场景问题"></a>解决场景问题</h1><p>现在我们来看一个具体场景下的 Python 代码编写。</p>
+<p>在上一章节中，我们编写了一段这样的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;你好，%s 岁的%s!&quot;</span> % (age, name))</span><br></pre></td></tr></table></figure>
+
+<p>执行这段代码时，程序将获取我们输入的名字和岁数，并且按照某种形式打印出来。</p>
+<h1 id="场景问题"><a href="#场景问题" class="headerlink" title="场景问题"></a><strong>场景问题</strong></h1><p>假设，现在有这么一种场景：某娱乐场所的前台登记系统，需要用户输入自己的姓名和年龄，系统将判断用户是否成年，如果成年则欢迎并放行，否则让用户回家。我们该如何用 Python 来实现这个需求呢？</p>
+<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a><strong>条件语句</strong></h2><p>很显然，我们需要对用户输入的年龄进行判断，这就要有请判断语句：<code>if</code> 和 <code>else</code> 出场了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>: <span class="comment"># 当 age 大于等于 18 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;成年&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>: <span class="comment"># 其它情况时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;未成年&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>#</code> 表示注释，Python 中只有单行注释，即与 <code>#</code> 在同一行并在它后面的都是注释，程序在执行时将忽略掉注释，注释的存在是便于程序的编写者和阅读者理解代码的含义与用途。</p>
+<p>上面的代码将判断 <code>age</code> 变量的值是否大于等于 18，如果是则打印“成年”，否则打印“未成年”，不要漏掉那个冒号 <code>:</code>。</p>
+<p>Python 的一大特点是用缩进表示语句块，建议使用四个空格缩进而不是按 <code>tab</code> 键，出于方便，我们可以把 <code>tab</code> 替换成四个空格：</p>
+<p><img src="http://ww1.sinaimg.cn/large/007SsSVTgy1gctn4dwqzqj30us0gwx6p.jpg" alt="img"></p>
+<p>通常情况下这就是默认配置</p>
+<p>现在我们再利用判断语句将之前的代码改进一下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>之所以 <code>input(&quot;请输入你的年龄:&quot;)</code> 被 <code>int()</code> 包裹，是因为 <code>input()</code> 在这里实际上是获取到一个字符串，所以用 <code>int()</code> 强制转换为数字，方便我们下面的判断。我们测试一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; 输入你的姓名：谭小蝶</span><br><span class="line">&gt; 请输入你的年龄：18</span><br><span class="line">欢迎您的到来，里面请！</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&gt; 输入你的姓名：莉莉</span><br><span class="line">&gt; 请输入你的年龄：8</span><br><span class="line">小孩子回家玩去</span><br></pre></td></tr></table></figure>
+
+<p>可以看到成功了，非常棒。如果这个时候，又有新需求，考虑到身体健康问题，大于 60 岁的用户就不再放行。我们可以改写成这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt; <span class="number">60</span>: <span class="comment"># 当 age 大于 60 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;大爷先回家歇歇吧！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">18</span>: <span class="comment"># 当 age 小于等于 60 并且 大于等于 18 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>: <span class="comment"># 其余情况</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>elif</code> 是 <code>else if</code> 的简写，顾名思义，表示“否则，如果……”，程序会自上而下的依次判断是否符合条件，如果遇到条件符合时，将执行相应的语句，并不再判断接下来的条件，所以先判断的条件要放到更上面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 输入你的姓名：谭小蝶</span><br><span class="line">&gt; 请输入你的年龄：18</span><br><span class="line">欢迎您的到来，里面请！</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&gt; 输入你的姓名：莉莉</span><br><span class="line">&gt; 请输入你的年龄：8</span><br><span class="line">小孩子回家玩去</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&gt; 输入你的姓名：王大爷</span><br><span class="line">&gt; 请输入你的年龄：80</span><br><span class="line">大爷先回家歇歇吧！</span><br></pre></td></tr></table></figure>
+
+<p>测试了一下，符合我们的预期，非常棒哈。</p>
+<p>但是，在程序就有非常有名的一句话： 永远不要相信用户的输入 ，万一上面的这个登记系统，用户傻傻的把名字和年龄填反了怎么办？如果遇见捣蛋鬼存心乱填怎么办？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 请输入你的年龄: 莉莉</span><br><span class="line">&gt; 请输入你的年龄: 二十八岁</span><br><span class="line">&gt; 请输入你的年龄: 不便透露</span><br><span class="line">&gt; 请输入你的年龄: bilibili</span><br></pre></td></tr></table></figure>
+
+<h2 id="合法性验证"><a href="#合法性验证" class="headerlink" title="合法性验证"></a><strong>合法性验证</strong></h2><p>事实上，仅凭之前的代码，根本无法应对这些情况，所以，我们需要对用户的输入合法性（合理性）也进行判断，改进后的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age.isdigit(): <span class="comment"># 当 age 由纯数字构成时</span></span><br><span class="line">    age = <span class="built_in">int</span>(age)</span><br><span class="line">    <span class="keyword">if</span> age &gt; <span class="number">60</span>: <span class="comment"># 当 age 大于 60 时</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;大爷先回家歇歇吧！&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> age &gt;= <span class="number">18</span>: <span class="comment"># 当 age 小于等于 60 并且 大于等于 18 时</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>: <span class="comment"># 其余情况</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你丫的输入了个啥？&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们对新代码逐一分析，首先在第二行中，我们去掉了 <code>int()</code> ，因为在这里我们还无法判断用户输入的是否为纯数字，如果不是纯数字却执行 <code>int()</code> 可能会报错。</p>
+<p>虽然用户也有可能输入诸如 <code>-10</code> 或者 <code>2333</code> 这种显然不可能存在的岁数，不过程序不会报错，而且反正也通不过我们原有的判断，所以暂时不做处理。</p>
+<p><code>age.isdigit()</code> 用于获取是否 <code>age</code> 是否为纯数字，如果是返回 <code>True</code>，否者返回 <code>False</code>，<code>True</code> 和 <code>False</code> 都属于“布尔值(Boolean)“数据类型，用于表示真假；理解了布尔值的概念后，我们回过头再去看看 <code>if</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="string">&quot;18&quot;</span></span><br><span class="line"><span class="keyword">if</span> (age.isdigit()): <span class="built_in">print</span>(<span class="string">&quot;执行啦&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> (<span class="number">5</span> &gt; <span class="number">4</span>): <span class="built_in">print</span>(<span class="string">&quot;执行啦&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="literal">True</span>: <span class="built_in">print</span>(<span class="string">&quot;执行啦&quot;</span>)</span><br><span class="line"><span class="comment"># 以上都为真，都会执行冒号后面的语句</span></span><br><span class="line"></span><br><span class="line">name = <span class="string">&quot;王小二&quot;</span></span><br><span class="line"><span class="keyword">if</span> (name.isdigit()): <span class="built_in">print</span>(<span class="string">&quot;我永远不会被调用，哭唧唧&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> (<span class="number">4</span> &gt; <span class="number">5</span>): <span class="built_in">print</span>(<span class="string">&quot;我永远不会被调用，哭唧唧&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="literal">False</span>: <span class="built_in">print</span>(<span class="string">&quot;我永远不会被调用，哭唧唧&quot;</span>)</span><br><span class="line"><span class="comment"># 以上都为假，都看不到它们哭唧唧</span></span><br></pre></td></tr></table></figure>
+
+<p>实际上，<code>if</code> 和 <code>:</code> 之间的语句被程序判断，返回一个布尔值，最终等价于 <code>if True:</code> 或 <code>if False</code>，前者会执行之后的语句。</p>
+<p>另外，在计算机中我们常常用 1 表示”真“，0 表示 ”假“，所以 <code>True</code> 也等于 <code>1</code>，相应的 <code>False</code> 也等于 <code>0</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span> == <span class="number">1</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span> == <span class="number">0</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>正如你所注意的，在代码中通常用两个等号 <code>==</code> 表示通常意义上的”相等“，这是避免和一个等号 <code>=</code> 表示的赋值相冲突。</p>
+<p>回到之前的前台登记需求，现在我们已经能安全的判断用户输入的年龄，符合我们准入规则的才放行。现在，又有新情况：老板 40 岁生日，他大手一挥，宣布今天跟他同岁的顾客统统免单，并且他年仅 8 岁的小女儿莉莉也允许进入。</p>
+<p>还能咋办？有需求咱就改呗：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;请输入你的姓名：&quot;</span>)</span><br><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;请输入你的年龄:&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age.isdigit(): <span class="comment"># 当 age 由纯数字构成时</span></span><br><span class="line">    age = <span class="built_in">int</span>(age)</span><br><span class="line"><span class="keyword">if</span> name == <span class="string">&quot;莉莉&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小姐里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt; <span class="number">60</span>: <span class="comment"># 当 age 大于 60 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;大爷先回家歇歇吧！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age == <span class="number">40</span>:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">&quot;贡献您，今日消费全免，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">18</span>: <span class="comment"># 当 age 小于等于 60 并且 大于等于 18 时</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;欢迎您的到来，里面请！&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>: <span class="comment"># 其余情况</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;小孩子回家玩去&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你丫的输入了个啥？&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>由于 <code>if</code>……<code>elif</code>……<code>else</code>…… 自上而下判断，所以我们需要根据情况合理的调整判断顺序，然后测试一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; 请输入你的姓名：莉莉</span><br><span class="line">&gt; 请输入你的年龄：8</span><br><span class="line">小姐里面请！</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">&gt; 请输入你的姓名：葛蛋蛋</span><br><span class="line">&gt; 请输入你的年龄：40</span><br><span class="line">恭喜您，今日消费全面，里面请！</span><br></pre></td></tr></table></figure>
+
+<p>非常好，实现了需求。</p>
+<h1 id="更多的思考"><a href="#更多的思考" class="headerlink" title="更多的思考"></a><strong>更多的思考</strong></h1><p>老板满意的看着你，表示你可以下班回家休息了。你心满意足的回到家，洗澡的时候脑子里突然冒出了今天写的代码，你突然觉得大段的 <code>if</code>……<code>elif</code>……<code>else</code>…… 看起来啰嗦累赘，还一不小心没理清逻辑就写错条件。</p>
+<p>继而你接着想到，给用户输入的机会只有一次，要是用户一不小心输错了，就直接被拒之门外了，这样的用户体验也不好。并且如果有人输小姐的名字假冒她，也被直接放进来了，这显然不行；再者，直接让用户输年龄，不排除有人谎报的，应该用更严谨的方式确定年龄。</p>
+<p>该怎么改进上面的问题呢，将在下一章娓娓道来。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_3/" data-id="ckotp9tu20003nctj7xda6wn7" data-title="解决场景问题" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-从 Python 入门编程_2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/14/%E4%BB%8E%20Python%20%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B_2/" class="article-date">
@@ -540,6 +632,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/20/wechat/">wechat</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/13/soberva/">soberva</a>
           </li>
         
@@ -553,10 +649,6 @@
         
           <li>
             <a href="/2021/07/16/Matlab-and-Python/">Matlab and Python</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/18/Experiment-and-Other-Modeling/">Experiment and Other Modeling</a>
           </li>
         
       </ul>
