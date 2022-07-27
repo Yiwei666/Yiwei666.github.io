@@ -71,6 +71,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-专业名词" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" class="article-date">
+  <time class="dt-published" datetime="2021-06-16T10:51:43.000Z" itemprop="datePublished">2021-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/basic-concept/">basic concept</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/">专业名词</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hohenberg-Kohn 定理：Hohenberg-Kohn定理指出，多粒子系统的所有基态性质都是密度泛函的唯一泛函，即总能可以通过求解最有利的基态电子密度分布函数得到。因此系统的总能量可表达为：T[n]代表无相互作用的粒子的动能，U[n]代表一般的库仑能，Exc[n]代表多体效应的交换-关联能之和。Hohenberg-Kohn定理还未能解决，即如何确定粒子数密度函数ρ(r)，动能泛函T[ρ]和交换关联能泛函[ρ]xcE 。</p>
+<p>Kohn-Sham 方程：利用变分原理，将能量密度针对电子密度进行变分，可以得到Kohn-Sham方程。Kohn-Sham 近似的核心思想：<br>(1) 动能的大部分通过相同电子密度的无相互作用体系来计算<br>(2) 电子相互作用中库仑作用占据了主要部分，而交换相关是相对次要的<br>(3) 非经典的交换和相关作用，动能校正项，自相互作用折入交换相关泛中</p>
+<p>交换关联泛函：在求解Kohn-Sham 方程时必须要知道Vxc(r) 的准确解和便于表达的解析形式才能求解该方程。由于交换相关项包含许多非经典项,至今仍没有准确的函数描述。一般把交换相关项分为两个部分,即交换部分Ex 和相关部分Ec。 此外，对于动能的近似也被归并到交换相关项中。交换项和相关项的比重分别为90%和10%，即交换项起着更重要的作用。交换相关泛函包括局域密度近似泛函，广义梯度近似泛函和杂化泛函。</p>
+<p>局域密度近似(LDA)泛函：即泛函在空间上的能量密度只和每一点上的电子密度有关。该类泛函常用的有SVMN和SVWN5等。对于电子密度ρ(r)空间变化不大的体系而言，采用均匀电子气模型的局域密度近似(LDA)是一种很好的近似。但是对于电子<br>密度相对空间变化较大的电子气体系，应用局域密度理论去完全消除电子与其自身的相互作用时的失效而引起的这些误差被证明是比较大的。</p>
+<p>广义梯度近似（GGA）泛函：泛函在空间上的能量密度不仅与每一点上的电子密度有关，而且还与电子密度的梯度有关。常用的GGA泛函有BLYP、PBE等。除了密度梯度以外，在泛函中包含其他自变量（如动能密度或是局域自旋密度的<br>二阶导数）而得到的泛函称为基于高阶广义梯度近似的meta-GGA泛函，如M06-L、TPSS 等。而泛函中包含的信息越多，就越能正确地描述客观体系。</p>
+<p>杂化泛函: 用HF方法中交换能和DFT方法中交换能做线性组合得到计算体系的交换关联泛函。杂化泛函分为单杂化泛函和双杂化泛函。</p>
+<p>单杂化泛函：单杂化泛函大致分为全局杂化泛函和局域杂化泛函两类。<br>全局杂化泛函：以B3LYP为主要代表，其核心思想是在交换泛函部分引入了Hertree-Fock形式的交换能，在分子体系中最为常用的泛函有B3LYP、PBE0、X3LYP、TPSSh、M06等。<br>局域杂化泛函：局域杂化泛函是利用分区方案，将电子-电子间的相互作用部分分为短程与长程部分分别处理。分子体系中著名的有wB97X-D泛函，可以均衡的处理价键和能垒等。固体中最成功的为HSE泛函，可以更好地计算固体的带隙。</p>
+<p>双杂化泛函：这一类泛函不仅要包含占据轨道的信息，而且要能恰当地考虑未占据轨道的信息。其核心思想是在交换部分引入部分HF形式交换能的同时，在相干泛函部分引入部分二级微扰形式MP2相关能，使得此类方法描述体系性质的误差有所降低。这一类的代表泛函有B2PLYP，mPW2PLYP和MC3BB等。</p>
+<p>基于高阶广义梯度近似的meta-GGA泛函：MO6-L<br>全局杂化泛函：B3LYP</p>
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p>有CP2K使用常识的人都知道，在做杂化泛函计算之前应当先做纯泛函计算，以其收敛的波函数作为杂化泛函计算的初猜波函数。额外做的纯泛函计算耗时只占杂化泛函计算的一个零头，却能令杂化泛函容易收敛得多得多得多，并因此巨幅节约耗时。为实现这个目的，先用Multiwfn产生一个PBE泛函的输入文件PBE.inp并进行计算（基组和PBE0计算时相同），算完后会得到PBE-RESTART.wfn文件，然后在PBE0的输入文件里把#   WFN_RESTART_FILE_NAME to_be_specified这一行改为WFN_RESTART_FILE_NAME PBE-RESTART.wfn，然后把#     SCF_GUESS RESTART这一行的#去掉。这样PBE0计算开始时就会把PBE-RESTART.wfn里的PBE波函数当初猜了。</p>
+<h3 id="每天读点密度泛函理论-（David-S-Sholl著，李健译）"><a href="#每天读点密度泛函理论-（David-S-Sholl著，李健译）" class="headerlink" title="每天读点密度泛函理论 （David S. Sholl著，李健译）"></a>每天读点密度泛函理论 （David S. Sholl著，李健译）</h3><p>微量杂质引发的金属脆化<br>相比于纯金属所具有的晶体结构,晶粒之间的接触区域存在有大量复杂结构。这些接触区域存在于所有多晶体材料中,称为晶界。<br>早在100年前,人们就已经知道:在铜中加入少量的某种杂质,可以将其从塑性状态变成脆性断裂方式(断裂之前没有塑性变形)。例如,当在铜(Cu)中铋(Bi)的含量低于100ug/g时,铜就会发生脆化。对于铅(Pb)和汞(Hg)杂质,也观察到类似的效果。<br>当杂质元素Bi的含量很低时就会发生脆化现象,这并不是什么难以置信的事情,其原因在于Bi几乎不溶于体相Cu中。也就是说,Bi原子更有可能偏聚在晶界处,而不是存在于晶粒内部,因此晶界上Bi的浓度要比该材料整体的平均浓度高得多。<br>研究者们已经给出了几种不同的解释。其中:第一类解释把发生这一现象的原因归结于电荷作用。例如,Bi原子与邻近Cu原子形成键合作用,使这些Cu原子要比纯Cu更硬,从而降低了Cu晶格平滑变形的能力。第二类解释是紧邻晶界的杂质原子可能改变了晶界处原子的电子结构,从而弱化晶界处原本的成键。第三种解释则归因于尺寸效应,认为Bi原子比Cu原子大得多,如果Bi原子存在于晶界处,则会分离界面两侧的Cu原子,使二者之间的自然间距增大。被拉大的键长将会弱化这些原子键,并使晶界处更容易断裂。第二和第三种解释都涉及到了晶界附近原子键的弱化,但对弱化给出了不同的根本原因。直接采用实验方法区分和辨别这些可能的原因机理是非常困难的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/06/16/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" data-id="ckpzdh84m0000f8tj6rgoc7qt" data-title="专业名词" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D%E8%BE%A8%E6%9E%90/" rel="tag">专业名词辨析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-电子结构方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/06/09/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95/" class="article-date">
@@ -1711,294 +1766,6 @@
 
 
   
-    <article id="post-sobereva" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/11/sobereva/" class="article-date">
-  <time class="dt-published" datetime="2021-05-11T01:28:21.000Z" itemprop="datePublished">2021-05-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Gaussian/">Gaussian</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/11/sobereva/">思想家公社的门口</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2017/11/30/gaussian-tutorial-basis-set.html">Gaussian教程 | 使用基组和赝势</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/363177076">基组的简要介绍及选择建议</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/61">解决SCF不收敛问题的方法</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/115">AMBER程序支持的力场一览</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：cp2k"><a href="#关键词：cp2k" class="headerlink" title="关键词：cp2k"></a>关键词：cp2k</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/421">将Gaussian与Grimme的xtb程序联用搜索过渡态、产生IRC、做振动分析</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/587">使用Multiwfn非常便利地创建CP2K程序的输入文件</a>，→ 3.5 用GFN1-xTB方法跑含有216个水的盒子的动力学</p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：泛函"><a href="#关键词：泛函" class="headerlink" title="关键词：泛函"></a>关键词：泛函</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/272">简谈量子化学计算中DFT泛函的选择</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/415">量子化学研究中切换泛函应当注意的问题</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/282">不同DFT泛函的HF成份一览</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/344">Gaussian中非内置的理论方法和泛函的用法</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：基组"><a href="#关键词：基组" class="headerlink" title="关键词：基组"></a>关键词：基组</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/336">谈谈量子化学中基组的选择</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/387">浅谈为什么优化和振动分析不需要用大基组</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/309">在线基组和赝势数据库一览</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/119">谈谈弥散函数和“月份”基组</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/60">详解Gaussian中混合基组、自定义基组和赝势基组的输入</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/340">给ahlrichs的def2系列基组加弥散的方法</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/373">谈谈赝势基组的选用</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：弱相互作用、B3LYP泛函、DFT-D3色散矫正"><a href="#关键词：弱相互作用、B3LYP泛函、DFT-D3色散矫正" class="headerlink" title="关键词：弱相互作用、B3LYP泛函、DFT-D3色散矫正"></a>关键词：弱相互作用、B3LYP泛函、DFT-D3色散矫正</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/557">谈谈量子化学研究中什么时候用B3LYP泛函优化几何结构是适当的</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/413">谈谈“计算时是否需要加DFT-D3色散校正？”</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/210">DFT-D色散校正的使用</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/83">乱谈DFT-D</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：基组重叠误差、BSSE"><a href="#关键词：基组重叠误差、BSSE" class="headerlink" title="关键词：基组重叠误差、BSSE"></a>关键词：基组重叠误差、BSSE</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/46">谈谈BSSE校正与Gaussian对它的处理</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/381">计算化学键键能时考虑BSSE不仅是多余的甚至是有害的</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2019/11/25/gaussian-hydrogen-bond-x-bond-bsse.html">Gaussian教程 | 氢键与卤键的计算以及BSSE校正</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="关键词：Multiwfn"><a href="#关键词：Multiwfn" class="headerlink" title="关键词：Multiwfn"></a>关键词：Multiwfn</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/184">Multiwfn波函数分析程序的意义、功能与用途</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/452">Multiwfn FAQ</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/414">谈谈原子间是否成键的判断问题</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/269">使用Multiwfn观看分子轨道</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/278">Gaussian中几何优化收敛后Freq时出现NO或虚频的原因和解决方法</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/471">Multiwfn支持的分析化学键的方法一览</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/200">通过键级曲线和ELF/LOL/RDG等值面动画研究化学反应过程</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/86">制作动画分析电子结构特征</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/224">使用Multiwfn绘制红外、拉曼、UV-Vis、ECD、VCD和ROA光谱图</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/113">使用Multiwfn作电子密度差图</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/353">谈谈自旋密度、自旋布居以及在Multiwfn中的绘制和计算</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://bbs.keinsci.com/thread-21742-1-1.html">使用Multiwfn结合CP2K通过NCI和IGM方法图形化考察固体和表面的弱相互作用</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/587">使用Multiwfn非常便利地创建CP2K程序的输入文件</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/55">高斯fch文件与wfn波函数文件的介绍及转换方法</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/388">盘点Grimme迄今对理论化学的贡献</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/492">适合理论、计算化学投稿的期刊及其2018年影响因子（2019年公布）</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI5NDUwNjE4OQ==&mid=2247500069&idx=1&sn=25e0ee250adff2a0946fd24950f56909&chksm=ec635a87db14d391e91ec7f8309b45c2ae215c06d5b05a1bf602e677a7641b65f4dabcbe5154&scene=21#wechat_redirect">378本化学期刊影响因子</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/420">2018年度计算化学公社杯最常用的量子化学程序和DFT泛函投票结果统计</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://sobereva.com/599">2021年计算化学公社论坛“你最常用的计算化学程序和DFT泛函”投票结果统计</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h4 id="关于Gaussian的一些教程"><a href="#关于Gaussian的一些教程" class="headerlink" title="关于Gaussian的一些教程"></a>关于Gaussian的一些教程</h4><ul>
-<li><p><a target="_blank" rel="noopener" href="http://www.molcalx.com.cn/">墨灵格官网</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2016/05/12/linux-command.html">Linux命令极简教程</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2021/01/09/spin-density.html">Gaussian教程 | 绘制分子自旋密度图</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2017/12/15/gaussian-tutorial-open-shell-system.html">Gaussian教程 | 模拟开壳层体系</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2018/12/19/gaussian-esp.html">Gaussian教程 | 绘制分子表面静电势</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2016/05/13/gaussian_input.html">Gaussian 09的作业文件</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2016/08/24/gaussian-tutorial-density-difference.html">Gaussian教程–GaussView绘制电子密度差图</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2017/11/27/gaussian-tutorial-how-to-plot-molecular-orbitals.html">Gaussian教程 | 绘制分子轨道</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/2017/10/10/gaussian-solvation-energy-tutorial.html">Gaussian教程 | 溶剂化自由能的计算</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.emoltech.com/?p=43&a=view&r=67">教程（十五）GaussView使用技巧-如何同时显示HOMO-LUMO轨道</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
-<li><a target="_blank" rel="noopener" href="http://sobereva.com/197">在VMD中显示原子序号的方法</a></li>
-<li><a target="_blank" rel="noopener" href="http://sobereva.com/504">VMD里原子选择语句的语法和例子</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ul>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/05/11/sobereva/" data-id="ckoqy52w1000ts0tj9mhth7xt" data-title="思想家公社的门口" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -2056,6 +1823,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/27/DFT-based-%E9%99%8D%E6%B8%A9%E7%A8%8B%E5%BA%8F/">DFT based 降温程序</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/26/citable-data/">citable data</a>
           </li>
         
@@ -2069,10 +1840,6 @@
         
           <li>
             <a href="/2022/07/13/soberva/">soberva</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/13/%E5%A2%A8%E7%81%B5%E6%A0%BC/">墨灵格</a>
           </li>
         
       </ul>
