@@ -71,6 +71,588 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-python-exercises" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/15/python-exercises/" class="article-date">
+  <time class="dt-published" datetime="2021-05-15T12:27:01.000Z" itemprop="datePublished">2021-05-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PYTHON/">PYTHON</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/05/15/python-exercises/">python exercises</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/python/python_strings.asp"><strong>Python 字符串</strong></a><br><a target="_blank" rel="noopener" href="http://blog.sciencenet.cn/home.php?mod=space&uid=3445569&do=blog&classid=178203&view=me&from=space"><strong>科学网博客python</strong></a></p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><strong><a href="#1">Python 变量</a><br><a href="#2">Python 数据类型</a><br><a href="#3">Python 数字</a><br><a href="#4">Python 字符串</a><br><a href="#5">高被引</a></strong></p>
+<p><strong><a name="1">Python 变量</a></strong></p>
+<h3 id="创建变量"><a href="#创建变量" class="headerlink" title="创建变量"></a>创建变量</h3><p>变量是存放数据值的容器。<br>与其他编程语言不同，Python 没有声明变量的命令。<br>首次为其赋值时，才会创建变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 5 # x is of type int</span><br><span class="line">x &#x3D; &quot;Steve&quot; # x is now of type str</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+<p>字符串变量可以使用单引号或双引号进行声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;Bill&quot;</span><br><span class="line"># is the same as</span><br><span class="line">x &#x3D; &#39;Bill&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h3><p>变量可以使用短名称（如 x 和 y）或更具描述性的名称（age、carname、total_volume）。<br>Python 变量命名规则：<br>变量名必须以字母或下划线字符开头<br>变量名称不能以数字开头<br>变量名只能包含字母数字字符和下划线(A-z、0-9和_)<br>变量名称区分大小写（age、Age 和 AGE 是三个不同的变量）<br>请记住，变量名称区分大小写</p>
+<h3 id="向多个变量赋值"><a href="#向多个变量赋值" class="headerlink" title="向多个变量赋值"></a>向多个变量赋值</h3><p>Python 允许您在一行中为多个变量赋值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x, y, z &#x3D; &quot;Orange&quot;, &quot;Banana&quot;, &quot;Cherry&quot;</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br><span class="line">print(z)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>您可以在一行中为多个变量分配相同的值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; y &#x3D; z &#x3D; &quot;Orange&quot;</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br><span class="line">print(z)</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出变量"><a href="#输出变量" class="headerlink" title="输出变量"></a>输出变量</h3><p>Python 的 print 语句通常用于输出变量。<br>如需结合文本和变量，Python 使用 + 字符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
+<p>您还可以使用 + 字符将变量与另一个变量相加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;Python is &quot;</span><br><span class="line">y &#x3D; &quot;awesome&quot;</span><br><span class="line">z &#x3D;  x + y</span><br><span class="line">print(z)</span><br></pre></td></tr></table></figure>
+<p>对于数字，+ 字符用作数学运算符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 5</span><br><span class="line">y &#x3D; 10</span><br><span class="line">print(x + y)</span><br></pre></td></tr></table></figure>
+<p>如果您尝试组合字符串和数字，Python 会给出错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">y &#x3D; &quot;Bill&quot;</span><br><span class="line">print(x + y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>在函数外部创建的变量（如上述所有实例所示）称为全局变量。<br>全局变量可以被函数内部和外部的每个人使用。<br>实例<br>在函数外部创建变量，并在函数内部使用它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  print(&quot;Python is &quot; + x)</span><br><span class="line"></span><br><span class="line">myfunc()</span><br></pre></td></tr></table></figure>
+<p>如果在函数内部创建具有相同名称的变量，则该变量将是局部变量，并且只能在函数内部使用。具有相同名称的全局变量将保留原样，并拥有原始值。<br>实例<br>在函数内部创建一个与全局变量同名的变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line">  print(&quot;Python is &quot; + x)</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
+
+<h3 id="global-关键字"><a href="#global-关键字" class="headerlink" title="global 关键字"></a>global 关键字</h3><p>通常，在函数内部创建变量时，该变量是局部变量，只能在该函数内部使用。<br>要在函数内部创建全局变量，您可以使用 global 关键字。<br>实例<br>如果您用了 global 关键字，则该变量属于全局范围：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def myfunc():</span><br><span class="line">  global x</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
+<p>另外，如果要在函数内部更改全局变量，请使用 global 关键字。<br>实例<br>要在函数内部更改全局变量的值，请使用 global 关键字引用该变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; &quot;awesome&quot;</span><br><span class="line"></span><br><span class="line">def myfunc():</span><br><span class="line">  global x</span><br><span class="line">  x &#x3D; &quot;fantastic&quot;</span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(&quot;Python is &quot; + x)</span><br></pre></td></tr></table></figure>
+
+<p><strong><a name="2">Python 数据类型</a></strong></p>
+<h3 id="内置数据类型"><a href="#内置数据类型" class="headerlink" title="内置数据类型"></a>内置数据类型</h3><p>在编程中，数据类型是一个重要的概念。<br>变量可以存储不同类型的数据，并且不同类型可以执行不同的操作。<br>在这些类别中，Python 默认拥有以下内置数据类型：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">capitalize()</td>
+<td align="center">把首字符转换为大写。</td>
+</tr>
+<tr>
+<td align="center">文本类型</td>
+<td align="center">str</td>
+</tr>
+<tr>
+<td align="center">数值类型</td>
+<td align="center">int, float, complex</td>
+</tr>
+<tr>
+<td align="center">序列类型</td>
+<td align="center">list, tuple, range</td>
+</tr>
+<tr>
+<td align="center">映射类型</td>
+<td align="center">dict</td>
+</tr>
+<tr>
+<td align="center">集合类型</td>
+<td align="center">set, frozenset</td>
+</tr>
+<tr>
+<td align="center">布尔类型</td>
+<td align="center">bool</td>
+</tr>
+<tr>
+<td align="center">二进制类型</td>
+<td align="center">bytes, bytearray, memoryview</td>
+</tr>
+</tbody></table>
+<h3 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h3><p>您可以使用 type() 函数获取任何对象的数据类型：<br>实例<br>打印变量 x 的数据类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">print(type(x))</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置数据类型"><a href="#设置数据类型" class="headerlink" title="设置数据类型"></a>设置数据类型</h3><p>在 Python 中，当您为变量赋值时，会设置数据类型：</p>
+<table>
+<thead>
+<tr>
+<th align="center">实例</th>
+<th align="center">数据类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x = “Hello World”</td>
+<td align="center">str</td>
+</tr>
+<tr>
+<td align="center">x = 29</td>
+<td align="center">int</td>
+</tr>
+<tr>
+<td align="center">x = 29.5</td>
+<td align="center">float</td>
+</tr>
+<tr>
+<td align="center">x = 1j</td>
+<td align="center">complex</td>
+</tr>
+<tr>
+<td align="center">x = [“apple”, “banana”, “cherry”]</td>
+<td align="center">list</td>
+</tr>
+<tr>
+<td align="center">x = (“apple”, “banana”, “cherry”)</td>
+<td align="center">tuple</td>
+</tr>
+<tr>
+<td align="center">x = range(6)</td>
+<td align="center">range</td>
+</tr>
+<tr>
+<td align="center">x = {“name” : “Bill”, “age” : 63}</td>
+<td align="center">dict</td>
+</tr>
+<tr>
+<td align="center">x = {“apple”, “banana”, “cherry”}</td>
+<td align="center">set</td>
+</tr>
+<tr>
+<td align="center">x = frozenset({“apple”, “banana”, “cherry”})</td>
+<td align="center">frozenset</td>
+</tr>
+<tr>
+<td align="center">x = True</td>
+<td align="center">bool</td>
+</tr>
+<tr>
+<td align="center">x = b”Hello”</td>
+<td align="center">bytes</td>
+</tr>
+<tr>
+<td align="center">x = bytearray(5)</td>
+<td align="center">bytearray</td>
+</tr>
+<tr>
+<td align="center">x = memoryview(bytes(5))</td>
+<td align="center">memoryview</td>
+</tr>
+</tbody></table>
+<h3 id="设定特定的数据类型"><a href="#设定特定的数据类型" class="headerlink" title="设定特定的数据类型"></a>设定特定的数据类型</h3><p>如果希望指定数据类型，则您可以使用以下构造函数：</p>
+<table>
+<thead>
+<tr>
+<th align="center">实例</th>
+<th align="center">数据类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x = str(“Hello World”)</td>
+<td align="center">str</td>
+</tr>
+<tr>
+<td align="center">x = int(29)</td>
+<td align="center">int</td>
+</tr>
+<tr>
+<td align="center">x = float(29.5)</td>
+<td align="center">float</td>
+</tr>
+<tr>
+<td align="center">x = complex(1j)</td>
+<td align="center">complex</td>
+</tr>
+<tr>
+<td align="center">x = list((“apple”, “banana”, “cherry”))</td>
+<td align="center">list</td>
+</tr>
+<tr>
+<td align="center">x = tuple((“apple”, “banana”, “cherry”))</td>
+<td align="center">tuple</td>
+</tr>
+<tr>
+<td align="center">x = range(6)</td>
+<td align="center">range</td>
+</tr>
+<tr>
+<td align="center">x = dict(name=”Bill”, age=36)</td>
+<td align="center">dict</td>
+</tr>
+<tr>
+<td align="center">x = set((“apple”, “banana”, “cherry”))</td>
+<td align="center">set</td>
+</tr>
+<tr>
+<td align="center">x = frozenset((“apple”, “banana”, “cherry”))</td>
+<td align="center">frozenset</td>
+</tr>
+<tr>
+<td align="center">x = bool(5)</td>
+<td align="center">bool</td>
+</tr>
+<tr>
+<td align="center">x = bytes(5)</td>
+<td align="center">bytes</td>
+</tr>
+<tr>
+<td align="center">x = bytearray(5)</td>
+<td align="center">bytearray</td>
+</tr>
+<tr>
+<td align="center">x = memoryview(bytes(5))</td>
+<td align="center">memoryview</td>
+</tr>
+</tbody></table>
+<p><strong><a name="3">Python 数字</a></strong></p>
+<h3 id="Python-数字"><a href="#Python-数字" class="headerlink" title="Python 数字"></a>Python 数字</h3><p>Python 中有三种数字类型：<br>int<br>float<br>complex<br>为变量赋值时，将创建数值类型的变量：<br>实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10    # int</span><br><span class="line">y &#x3D; 6.3  # float</span><br><span class="line">z &#x3D; 2j   # complex</span><br></pre></td></tr></table></figure>
+<p>如需验证 Python 中任何对象的类型，请使用 type() 函数：<br>实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h3><p>Int 或整数是完整的数字，正数或负数，没有小数，长度不限。<br>实例<br>整数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10</span><br><span class="line">y &#x3D; 37216654545182186317</span><br><span class="line">z &#x3D; -465167846</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><p>浮动或“浮点数”是包含小数的正数或负数。<br>实例<br>浮点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 3.50</span><br><span class="line">y &#x3D; 2.0</span><br><span class="line">z &#x3D; -63.78</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
+<p>浮点数也可以是带有“e”的科学数字，表示 10 的幂。<br>实例<br>浮点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 27e4</span><br><span class="line">y &#x3D; 15E2</span><br><span class="line">z &#x3D; -49.8e100</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
+
+<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>复数用 “j” 作为虚部编写：<br>实例<br>复数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 2+3j</span><br><span class="line">y &#x3D; 7j</span><br><span class="line">z &#x3D; -7j</span><br><span class="line"></span><br><span class="line">print(type(x))</span><br><span class="line">print(type(y))</span><br><span class="line">print(type(z))</span><br></pre></td></tr></table></figure>
+
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>您可以使用 int()、float() 和 complex() 方法从一种类型转换为另一种类型：<br>实例<br>从一种类型转换为另一种类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; 10 # int</span><br><span class="line">y &#x3D; 6.3 # float</span><br><span class="line">z &#x3D; 1j # complex</span><br><span class="line"></span><br><span class="line"># 把整数转换为浮点数</span><br><span class="line"></span><br><span class="line">a &#x3D; float(x)</span><br><span class="line"></span><br><span class="line"># 把浮点数转换为整数</span><br><span class="line"></span><br><span class="line">b &#x3D; int(y)</span><br><span class="line"></span><br><span class="line"># 把整数转换为复数：</span><br><span class="line"></span><br><span class="line">c &#x3D; complex(x)</span><br><span class="line"></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line">print(type(a))</span><br><span class="line">print(type(b))</span><br><span class="line">print(type(c))</span><br></pre></td></tr></table></figure>
+<p>注释：您无法将复数转换为其他数字类型</p>
+<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><p>Python 没有 random() 函数来创建随机数，但 Python 有一个名为 random 的内置模块，可用于生成随机数：<br>实例<br>导入 random 模块，并显示 1 到 9 之间的随机数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">print(random.randrange(1,10))</span><br></pre></td></tr></table></figure>
+
+<h3 id="指定变量类型"><a href="#指定变量类型" class="headerlink" title="指定变量类型"></a>指定变量类型</h3><p>有时您可能需要为变量指定类型。这可以通过 casting 来完成。 Python 是一门面向对象的语言，因此它使用类来定义数据类型，包括其原始类型。<br>因此，使用构造函数完成在 python 中的转换：<br>int() - 用整数字面量、浮点字面量构造整数（通过对数进行下舍入），或者用表示完整数字的字符串字面量<br>float() - 用整数字面量、浮点字面量，或字符串字面量构造浮点数（提供表示浮点数或整数的字符串）<br>str() - 用各种数据类型构造字符串，包括字符串，整数字面量和浮点字面量<br>实例<br>整数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; int(1)   # x 将是 1</span><br><span class="line">y &#x3D; int(2.5) # y 将是 2</span><br><span class="line">z &#x3D; int(&quot;3&quot;) # z 将是 3</span><br></pre></td></tr></table></figure>
+<p>浮点数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; float(1)     # x 将是 1.0</span><br><span class="line">y &#x3D; float(2.5)   # y 将是 2.5</span><br><span class="line">z &#x3D; float(&quot;3&quot;)   # z 将是 3.0</span><br><span class="line">w &#x3D; float(&quot;4.6&quot;) # w 将是 4.6</span><br></pre></td></tr></table></figure>
+<p>字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; str(&quot;S2&quot;) # x 将是 &#39;S2&#39;</span><br><span class="line">y &#x3D; str(3)    # y 将是 &#39;3&#39;</span><br><span class="line">z &#x3D; str(4.0)  # z 将是 &#39;4.0&#39;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a name="4">Python 字符串</a></strong></p>
+<h3 id="字符串字面量"><a href="#字符串字面量" class="headerlink" title="字符串字面量"></a>字符串字面量</h3><p>python 中的字符串字面量由单引号或双引号括起。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;Hello&quot;)</span><br><span class="line">print(&#39;Hello&#39;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="用字符串向变量赋值"><a href="#用字符串向变量赋值" class="headerlink" title="用字符串向变量赋值"></a>用字符串向变量赋值</h3><p>通过使用变量名称后跟等号和字符串，可以把字符串赋值给变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<h3 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h3><p>您可以使用三个引号将多行字符串赋值给变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;&quot;&quot;Python is a widely used general-purpose, high level programming language. </span><br><span class="line">It was initially designed by Guido van Rossum in 1991 </span><br><span class="line">and developed by Python Software Foundation. </span><br><span class="line">It was mainly developed for emphasis on code readability, </span><br><span class="line">and its syntax allows programmers to express concepts in fewer lines of code.&quot;&quot;&quot;</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<p>或三个单引号：</p>
+<h3 id="字符串是数组"><a href="#字符串是数组" class="headerlink" title="字符串是数组"></a>字符串是数组</h3><p>像许多其他流行的编程语言一样，Python 中的字符串是表示 unicode 字符的字节数组。<br>但是，Python 没有字符数据类型，单个字符就是长度为 1 的字符串。<br>方括号可用于访问字符串的元素。<br>实例<br>获取位置 1 处的字符（请记住第一个字符的位置为 0）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a[1])</span><br></pre></td></tr></table></figure>
+
+<h3 id="裁切"><a href="#裁切" class="headerlink" title="裁切"></a>裁切</h3><p>您可以使用裁切语法返回一定范围的字符。<br>指定开始索引和结束索引，以冒号分隔，以返回字符串的一部分。<br>实例<br>获取从位置 2 到位置 5（不包括）的字符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(b[2:5])</span><br></pre></td></tr></table></figure>
+
+<h3 id="负的索引"><a href="#负的索引" class="headerlink" title="负的索引"></a>负的索引</h3><p>使用负索引从字符串末尾开始切片：<br>实例<br>获取从位置 5 到位置 1 的字符，从字符串末尾开始计数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(b[-5:-2])</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h3><p>如需获取字符串的长度，请使用 len() 函数。<br>实例<br>len() 函数返回字符串的长度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(len(a))</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><p>Python 有一组可用于字符串的内置方法。<br>实例<br>strip() 方法删除开头和结尾的空白字符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot; Hello, World! &quot;</span><br><span class="line">print(a.strip()) # returns &quot;Hello, World!&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>lower() 返回小写的字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.lower())</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>upper() 方法返回大写的字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.upper())</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>replace() 用另一段字符串来替换字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.replace(&quot;World&quot;, &quot;Kitty&quot;))</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><p>split() 方法在找到分隔符的实例时将字符串拆分为子字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello, World!&quot;</span><br><span class="line">print(a.split(&quot;,&quot;)) # returns [&#39;Hello&#39;, &#39; World!&#39;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查字符串"><a href="#检查字符串" class="headerlink" title="检查字符串"></a>检查字符串</h3><p>如需检查字符串中是否存在特定短语或字符，我们可以使用 in 或 not in 关键字。<br>实例<br>检查以下文本中是否存在短语 “ina”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">txt &#x3D; &quot;China is a great country&quot;</span><br><span class="line">x &#x3D; &quot;ina&quot; in txt</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串级联（串联）"><a href="#字符串级联（串联）" class="headerlink" title="字符串级联（串联）"></a>字符串级联（串联）</h3><p>如需串联或组合两个字符串，您可以使用 + 运算符。<br>实例<br>将变量 a 与变量 b 合并到变量 c 中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">b &#x3D; &quot;World&quot;</span><br><span class="line">c &#x3D; a + b</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+<p>实例<br>在它们之间添加一个空格：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &quot;Hello&quot;</span><br><span class="line">b &#x3D; &quot;World&quot;</span><br><span class="line">c &#x3D; a + &quot; &quot; + b</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串格式"><a href="#字符串格式" class="headerlink" title="字符串格式"></a>字符串格式</h3><p>正如在 Python 变量一章中所学到的，我们不能像这样组合字符串和数字：<br>实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age &#x3D; 63</span><br><span class="line">txt &#x3D; &quot;My name is Bill, I am &quot; + age</span><br><span class="line">print(txt)</span><br></pre></td></tr></table></figure>
+<p>但是我们可以使用 format() 方法组合字符串和数字！<br>format() 方法接受传递的参数，格式化它们，并将它们放在占位符 {} 所在的字符串中：<br>实例<br>使用 format() 方法将数字插入字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age &#x3D; 63</span><br><span class="line">txt &#x3D; &quot;My name is Bill, and I am &#123;&#125;&quot;</span><br><span class="line">print(txt.format(age))</span><br></pre></td></tr></table></figure>
+<p>format() 方法接受不限数量的参数，并放在各自的占位符中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">quantity &#x3D; 3</span><br><span class="line">itemno &#x3D; 567</span><br><span class="line">price &#x3D; 49.95</span><br><span class="line">myorder &#x3D; &quot;I want &#123;&#125; pieces of item &#123;&#125; for &#123;&#125; dollars.&quot;</span><br><span class="line">print(myorder.format(quantity, itemno, price))</span><br></pre></td></tr></table></figure>
+<p>您可以使用索引号 {0} 来确保参数被放在正确的占位符中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">quantity &#x3D; 3</span><br><span class="line">itemno &#x3D; 567</span><br><span class="line">price &#x3D; 49.95</span><br><span class="line">myorder &#x3D; &quot;I want to pay &#123;2&#125; dollars for &#123;0&#125; pieces of item &#123;1&#125;.&quot;</span><br><span class="line">print(myorder.format(quantity, itemno, price))</span><br></pre></td></tr></table></figure>
+<h3 id="字符串方法-1"><a href="#字符串方法-1" class="headerlink" title="字符串方法"></a>字符串方法</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">capitalize()</td>
+<td align="center">把首字符转换为大写。</td>
+</tr>
+<tr>
+<td align="center">casefold()</td>
+<td align="center">把字符串转换为小写。</td>
+</tr>
+<tr>
+<td align="center">center()</td>
+<td align="center">返回居中的字符串。</td>
+</tr>
+<tr>
+<td align="center">count()</td>
+<td align="center">返回指定值在字符串中出现的次数。</td>
+</tr>
+<tr>
+<td align="center">encode()</td>
+<td align="center">返回字符串的编码版本。</td>
+</tr>
+<tr>
+<td align="center">endswith()</td>
+<td align="center">如果字符串以指定值结尾，则返回 true。</td>
+</tr>
+<tr>
+<td align="center">expandtabs()</td>
+<td align="center">设置字符串的 tab 尺寸。</td>
+</tr>
+<tr>
+<td align="center">find()</td>
+<td align="center">在字符串中搜索指定的值并返回它被找到的位置。</td>
+</tr>
+<tr>
+<td align="center">format()</td>
+<td align="center">格式化字符串中的指定值。</td>
+</tr>
+<tr>
+<td align="center">format_map()</td>
+<td align="center">格式化字符串中的指定值。</td>
+</tr>
+<tr>
+<td align="center">index()</td>
+<td align="center">在字符串中搜索指定的值并返回它被找到的位置。</td>
+</tr>
+<tr>
+<td align="center">isalnum()</td>
+<td align="center">如果字符串中的所有字符都是字母数字，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isalpha()</td>
+<td align="center">如果字符串中的所有字符都在字母表中，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isdecimal()</td>
+<td align="center">如果字符串中的所有字符都是小数，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isdigit()</td>
+<td align="center">如果字符串中的所有字符都是数字，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isidentifier()</td>
+<td align="center">如果字符串是标识符，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">islower()</td>
+<td align="center">如果字符串中的所有字符都是小写，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isnumeric()</td>
+<td align="center">如果字符串中的所有字符都是数，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isprintable()</td>
+<td align="center">如果字符串中的所有字符都是可打印的，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isspace()</td>
+<td align="center">如果字符串中的所有字符都是空白字符，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">istitle()</td>
+<td align="center">如果字符串遵循标题规则，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">isupper()</td>
+<td align="center">如果字符串中的所有字符都是大写，则返回 True。</td>
+</tr>
+<tr>
+<td align="center">join()</td>
+<td align="center">把可迭代对象的元素连接到字符串的末尾。</td>
+</tr>
+<tr>
+<td align="center">ljust()</td>
+<td align="center">返回字符串的左对齐版本。</td>
+</tr>
+<tr>
+<td align="center">lower()</td>
+<td align="center">把字符串转换为小写。</td>
+</tr>
+<tr>
+<td align="center">lstrip()</td>
+<td align="center">返回字符串的左修剪版本。</td>
+</tr>
+<tr>
+<td align="center">maketrans()</td>
+<td align="center">返回在转换中使用的转换表。</td>
+</tr>
+<tr>
+<td align="center">partition()</td>
+<td align="center">返回元组，其中的字符串被分为三部分。</td>
+</tr>
+<tr>
+<td align="center">replace()</td>
+<td align="center">返回字符串，其中指定的值被替换为指定的值。</td>
+</tr>
+<tr>
+<td align="center">rfind()</td>
+<td align="center">在字符串中搜索指定的值，并返回它被找到的最后位置。</td>
+</tr>
+<tr>
+<td align="center">rindex()</td>
+<td align="center">在字符串中搜索指定的值，并返回它被找到的最后位置。</td>
+</tr>
+<tr>
+<td align="center">rjust()</td>
+<td align="center">返回字符串的右对齐版本。</td>
+</tr>
+<tr>
+<td align="center">rpartition()</td>
+<td align="center">返回元组，其中字符串分为三部分。</td>
+</tr>
+<tr>
+<td align="center">rsplit()</td>
+<td align="center">在指定的分隔符处拆分字符串，并返回列表。</td>
+</tr>
+<tr>
+<td align="center">rstrip()</td>
+<td align="center">返回字符串的右边修剪版本。</td>
+</tr>
+<tr>
+<td align="center">split()</td>
+<td align="center">在指定的分隔符处拆分字符串，并返回列表。</td>
+</tr>
+<tr>
+<td align="center">splitlines()</td>
+<td align="center">在换行符处拆分字符串并返回列表。</td>
+</tr>
+<tr>
+<td align="center">startswith()</td>
+<td align="center">如果以指定值开头的字符串，则返回 true。</td>
+</tr>
+<tr>
+<td align="center">strip()</td>
+<td align="center">返回字符串的剪裁版本。</td>
+</tr>
+<tr>
+<td align="center">swapcase()</td>
+<td align="center">切换大小写，小写成为大写，反之亦然。</td>
+</tr>
+<tr>
+<td align="center">title()</td>
+<td align="center">把每个单词的首字符转换为大写。</td>
+</tr>
+<tr>
+<td align="center">translate()</td>
+<td align="center">返回被转换的字符串。</td>
+</tr>
+<tr>
+<td align="center">upper()</td>
+<td align="center">把字符串转换为大写。</td>
+</tr>
+<tr>
+<td align="center">zfill()</td>
+<td align="center">在字符串的开头填充指定数量的 0 值。</td>
+</tr>
+</tbody></table>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-3"><a href="#-3" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-4"><a href="#-4" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-5"><a href="#-5" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-6"><a href="#-6" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-7"><a href="#-7" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-8"><a href="#-8" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-9"><a href="#-9" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-10"><a href="#-10" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-11"><a href="#-11" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-12"><a href="#-12" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-13"><a href="#-13" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-14"><a href="#-14" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-15"><a href="#-15" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-16"><a href="#-16" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-17"><a href="#-17" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-18"><a href="#-18" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-19"><a href="#-19" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-20"><a href="#-20" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-21"><a href="#-21" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-22"><a href="#-22" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-23"><a href="#-23" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-24"><a href="#-24" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-25"><a href="#-25" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-26"><a href="#-26" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-27"><a href="#-27" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-28"><a href="#-28" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-29"><a href="#-29" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-30"><a href="#-30" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="-31"><a href="#-31" class="headerlink" title=""></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/05/15/python-exercises/" data-id="ckoqy52vz000ms0tj1l7of1nh" data-title="python exercises" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-sobereva" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/05/11/sobereva/" class="article-date">
@@ -1595,91 +2177,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
 
 
   
-    <article id="post-Main-Page" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/16/Main-Page/" class="article-date">
-  <time class="dt-published" datetime="2021-04-16T03:23:34.000Z" itemprop="datePublished">2021-04-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/16/Main-Page/">Main Page</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong><a target="_blank" rel="noopener" href="https://www.google.com.hk/?hl=zh-cn">谷歌</a>—-<a target="_blank" rel="noopener" href="https://www.bing.com/?ensearch=1&FORM=BEHPTB&mkt=zh-CN">必应</a>—-<a target="_blank" rel="noopener" href="https://www.zhihu.com/hot">知乎</a>—-<a target="_blank" rel="noopener" href="https://www.sogou.com/">搜狗</a>—-<a target="_blank" rel="noopener" href="https://weixin.sogou.com/">搜狗微信</a>—-<a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a>—-<a target="_blank" rel="noopener" href="https://www.toutiao.com/?wid=1658212960899">今日头条</a>—-<a target="_blank" rel="noopener" href="https://yandex.com/">Yandex</a>—-<a target="_blank" rel="noopener" href="https://search.yahoo.com/">Yahoo</a>—-<a target="_blank" rel="noopener" href="https://duckduckgo.com/">Duckduckgo</a>—-<a target="_blank" rel="noopener" href="https://www.deepl.com/translator">DeepL翻译</a>—-<a target="_blank" rel="noopener" href="https://translate.google.cn/?sl=en&tl=zh-CN&text=%0A&op=translate">谷歌翻译</a>—-<a target="_blank" rel="noopener" href="https://fanyi.baidu.com/">百度翻译</a>—-<a target="_blank" rel="noopener" href="https://fanyi.youdao.com/">有道翻译</a>—-<a target="_blank" rel="noopener" href="https://www.bing.com/Translator">必应翻译</a>—-<a target="_blank" rel="noopener" href="http://www.ucdrs.superlib.net/">全国图书馆参考咨询联盟</a>—-<a target="_blank" rel="noopener" href="http://www.ccelib.com/">长春数字图书馆</a>—-<a target="_blank" rel="noopener" href="https://books.google.com/">谷歌图书</a>—-<a target="_blank" rel="noopener" href="http://www.paizhaofanyi.net/">拍照翻译精灵</a>—-<a target="_blank" rel="noopener" href="https://dict.cnki.net/index">cnki学术翻译助手</a>—-<a target="_blank" rel="noopener" href="http://www.letpub.com.cn/index.php?journalid=5032&page=journalapp&view=detail">letpub期刊查询</a>—-<a target="_blank" rel="noopener" href="https://publish.acs.org/publish/dashboard">ACS Publishing Center</a>—-<a target="_blank" rel="noopener" href="https://materialsproject.org/">Materials Project</a>—-<a target="_blank" rel="noopener" href="https://www.editorialmanager.com/molliq/default1.aspx">journal of molecular liquids</a>—-<a target="_blank" rel="noopener" href="https://aweill.github.io/">aweill_homepage</a></strong></p>
-<p><a target="_blank" rel="noopener" href="https://products.aspose.app/barcode/zh-hans/generate/isbn">ISBN生成</a>—-<a target="_blank" rel="noopener" href="https://www.paypal.com/myaccount/summary">paypal</a>——–<a target="_blank" rel="noopener" href="https://www.jd.com/">京东</a><br><a target="_blank" rel="noopener" href="https://quillbot.com/">quillbot</a>—-<a target="_blank" rel="noopener" href="https://www.wordtune.com/">句子改写wordtune</a>—-<a target="_blank" rel="noopener" href="https://www.freethesaurus.com/">freethesaurus</a>—-<a target="_blank" rel="noopener" href="http://turnitin.cnkizu.com/?pm=turnitin%EF%BF%BD%EF%BF%BD%EF%BF%BD&cl2&bd_vid=11017039498182751077">turnitin</a>—-<a target="_blank" rel="noopener" href="http://tool.ooopn.com/Tools/Journal/">期刊缩写</a>—-<a target="_blank" rel="noopener" href="https://www.liwenbianji.cn/user">迅捷</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.angstromsciences.com/density-elements-chart">单质密度</a>—-<a target="_blank" rel="noopener" href="https://cccbdb.nist.gov/diatomicexpbondx.asp">双原子键长</a></p>
-<p><strong><a target="_blank" rel="noopener" href="https://scholar.google.com.hk/?hl=zh-CN">谷歌学术</a>—-<a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>—-<a target="_blank" rel="noopener" href="https://tool.yovisun.com/scihub/">科研通</a>—-<a target="_blank" rel="noopener" href="https://drugx.cn/">药研导航</a>—-<a target="_blank" rel="noopener" href="https://en.yaodeyo.com:92/">iData谷歌学术</a>—-<a target="_blank" rel="noopener" href="https://www.bing.com/academic?mkt=zh-CN">必应学术</a>—-<a target="_blank" rel="noopener" href="https://www.semanticscholar.org/">Semantic学术</a>—-<a target="_blank" rel="noopener" href="https://www.x-mol.com/">X-mol</a>—-<a target="_blank" rel="noopener" href="https://xueshu.baidu.com/">百度学术</a>—-<a target="_blank" rel="noopener" href="https://www.researchgate.net/search">ResearchGate</a>—-<a target="_blank" rel="noopener" href="https://www.proquest.com/">proquest</a>—-<a target="_blank" rel="noopener" href="https://orcid.org/">ORCiD</a>—-<a target="_blank" rel="noopener" href="http://lackar.com/aa/">AA</a>—-<a target="_blank" rel="noopener" href="https://scholar.chongbuluo.com/">学术搜索</a>—-<a target="_blank" rel="noopener" href="http://www.guhes.com/simple.php">谷禾信息</a>—-<a target="_blank" rel="noopener" href="https://pdf.maitube.com/pdf/%E4%B8%AD%E5%8D%8E.php">MaiPDF</a>—-<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/">微信公众平台</a>—-<a target="_blank" rel="noopener" href="https://www.koushare.com/lives/room/439399">寇享直播</a>—-<a target="_blank" rel="noopener" href="https://wx.qq.com/">微信网页版</a>—-<a target="_blank" rel="noopener" href="https://smallpdf.com/merge-pdf">pdf合并_smallpdf</a>—-<a target="_blank" rel="noopener" href="https://web.baimiaoapp.com/image-to-excel">图片转Excel</a></strong></p>
-<p><a target="_blank" rel="noopener" href="https://link.springer.com/journal/11663/volumes-and-issues">MMTB检索</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2022/02/19/Read/">Read</a></p>
-<p><strong><a target="_blank" rel="noopener" href="http://blog.sciencenet.cn/home.php?mod=space&uid=3445569&do=blog&view=me&from=space">科学网博客</a>—-<a target="_blank" rel="noopener" href="https://github.com/Yiwei666/Yiwei666.github.io">github网站</a>—-<a target="_blank" rel="noopener" href="https://gitee.com/sun-yiwei">Gitee</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/04/18/Main-Page-(2)/">Study</a>—-<a target="_blank" rel="noopener" href="https://minhaskamal.github.io/DownGit/#/home?url=">DownGit</a>—-<a target="_blank" rel="noopener" href="https://github.com/aweill">aweill_github</a>—-<a target="_blank" rel="noopener" href="https://github.com/fxcoudert">Fx Coudert</a></strong><br><strong><a target="_blank" rel="noopener" href="https://app.gitbook.com/@3159894647/spaces">gitbook网站</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.gitbook.io/test2/">gitbook_home</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.gitbook.io/github/">gitbook_github</a>—-<a target="_blank" rel="noopener" href="https://github.com/Yiwei666/gitbook">github</a>—-<a target="_blank" rel="noopener" href="https://www.weiyun.com/disk">腾讯微云</a>—-<a target="_blank" rel="noopener" href="https://docs.qq.com/desktop/?fromsrc=homepage">腾讯文档</a>—-<a target="_blank" rel="noopener" href="https://cloud.blsc.cn/">北京超算</a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://fishc.com.cn/forum.php">鱼C论坛</a>—-<a target="_blank" rel="noopener" href="https://mp.csdn.net/mp_blog/manage/article?spm=1000.2115.3001.5448">CSDN社区</a>—-<a target="_blank" rel="noopener" href="https://stackoverflow.com/">Stackoverflow</a>—-<a target="_blank" rel="noopener" href="https://www.oschina.net/">OSCHINA社区</a>—-<a target="_blank" rel="noopener" href="https://segmentfault.com/questions">Segmentfault社区</a>—-<a target="_blank" rel="noopener" href="http://localhost:5555/random">Docker端口IP</a>—-<a target="_blank" rel="noopener" href="https://hub.docker.com/search?q=">Dockerhub</a>—-<a target="_blank" rel="noopener" href="https://pypi.org/">Python包索引</a>—-<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/index.html">python3文档</a>—-<a target="_blank" rel="noopener" href="https://www.lddgo.net/string/pythonregex">正则表达式在线测试</a>—-<a target="_blank" rel="noopener" href="https://www.yescaptcha.com/dashboard.html">yescaptcha</a>—-<a target="_blank" rel="noopener" href="https://www.ipip.net/">ipip查询</a>—-<a target="_blank" rel="noopener" href="https://www.bejson.com/">bejson</a>—-<a target="_blank" rel="noopener" href="https://h.wandouip.com/member/index">豌豆代理</a>—-<a target="_blank" rel="noopener" href="https://www.beesproxy.com/free">蜜蜂代理</a>—-<a target="_blank" rel="noopener" href="https://cuiqingcai.com/categories/">崔庆才博客</a>—-<a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/discover/">Pexels</a>—-<a target="_blank" rel="noopener" href="https://free.kuaidaili.com/free/inha/1/">开放代理</a>—-<a target="_blank" rel="noopener" href="https://github.com/Python3WebSpider/ProxyPool">崔庆才代理池</a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://minsu.dianping.com/">美团民宿</a>—-<a target="_blank" rel="noopener" href="https://ebooking.ctrip.com/">携程民宿</a>—-<a href=""></a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/05/08/Paper-sentence-accumulation/">Sentences</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/04/27/important-paper-online/">Papers</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/06/02/Summary-of-Potential/">MD-Note</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/06/08/AIMD-Summary/">AIMD-Note</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/06/08/Machine-Learning-Summary/">Machine Learning-Note</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/06/09/Gaussian-Summary/">Gaussian-Note</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/05/11/sobereva/">思想家</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/06/17/%E5%AD%A6%E8%80%85%E4%B8%8E%E6%96%B9%E5%90%91/">学者方向</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/archives/">Archives</a></strong></p>
-<p><strong><a target="_blank" rel="noopener" href="https://sci-hub.se/">SCIHUB_1</a>  <a target="_blank" rel="noopener" href="https://sci-hub.st/">2</a>  <a target="_blank" rel="noopener" href="https://sci-hub.ren/">3</a>  <a target="_blank" rel="noopener" href="https://sci-hub.ru/">4</a>—-<a target="_blank" rel="noopener" href="https://www.cn-ki.net/">iData</a>—-<a target="_blank" rel="noopener" href="https://www.cnki.net/old">知网</a>—-<a target="_blank" rel="noopener" href="https://tra.oversea.cnki.net/index/">知网海外版</a>—<a target="_blank" rel="noopener" href="https://www.drugfuture.com/cnpat/cn_patent.asp">专利下载</a>—-<a target="_blank" rel="noopener" href="http://www.4243.net/">大木虫</a>—-<a target="_blank" rel="noopener" href="http://www.sci-hub.ac.cn/">sci-hub</a>—-<a target="_blank" rel="noopener" href="http://libgen.rs/">Library Genesis</a>—-<a target="_blank" rel="noopener" href="https://libgen.fun/">libgen.fun</a>—-<a target="_blank" rel="noopener" href="https://zh.1lib.tw/">Z-Library</a>—-<a target="_blank" rel="noopener" href="https://zh.booksc.org/s/">Z-Lib+30</a>—-<a target="_blank" rel="noopener" href="https://www.duxiu.com/#">读秀</a>—-<a target="_blank" rel="noopener" href="http://www.zjelib.cn/">浙江图书馆</a>—-<a target="_blank" rel="noopener" href="http://www.gxlib.org.cn/">广西图书馆</a>—-<a target="_blank" rel="noopener" href="https://www.clcn.net.cn/">首都图书馆</a>—-<a target="_blank" rel="noopener" href="https://res.gxlib.org.cn/ermsLogin/view.do">广图电子资源</a>—-<a target="_blank" rel="noopener" href="http://www.ebook3000.com/">E-book</a>—-<a target="_blank" rel="noopener" href="http://shu.ziyuandi.cn/">资源帝</a>—-<a target="_blank" rel="noopener" href="https://www.luomapan.com/#/">罗马盘</a></strong><br><a target="_blank" rel="noopener" href="http://www.rufengsou.cc/">如风搜</a>—-<a target="_blank" rel="noopener" href="https://www.jiumodiary.com/">鸠摩搜书</a><br><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/">ScienceDirect</a>—-<a target="_blank" rel="noopener" href="https://pubs.acs.org/">ACS</a>—-<a target="_blank" rel="noopener" href="https://link.springer.com/">Springer</a>—-<a target="_blank" rel="noopener" href="https://pubs.rsc.org/">RSC</a>—-<a target="_blank" rel="noopener" href="https://www.onlinelibrary.wiley.com/">Wliey</a>—-<a target="_blank" rel="noopener" href="https://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&search_mode=GeneralSearch&SID=7CWKtib5fZ4a9SZL2rB&preferencesSaved=">Web of Science</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.nature.com/">Nature</a>—-<a target="_blank" rel="noopener" href="https://www.sciencemag.org/">Science</a>—-<a target="_blank" rel="noopener" href="https://pubs.acs.org/journal/jacsat">JACS</a>—-<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/journal/15213773">Angewandte</a>—-<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/">PRL</a>—-<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/separation-and-purification-technology">Separation and Purification Technology</a>—-</p>
-<p><a target="_blank" rel="noopener" href="https://www.coudert.name/">法国-Fx Coudert</a>—-<a target="_blank" rel="noopener" href="https://www.chemie.uni-bonn.de/pctc/mulliken-center/grimme/publications">德国-Prof. Dr. Stefan Grimme</a>—-<a target="_blank" rel="noopener" href="https://www.su.se/english/profiles/eden-1.187322">瑞典-Mattias Edén</a>—-<a target="_blank" rel="noopener" href="http://www.lab-paris.com/?page_id=326">美国-Mathieu Bauchy</a>—-<a target="_blank" rel="noopener" href="https://glasssimulations.unt.edu/publications">美国-Jincheng Du</a>—-<a target="_blank" rel="noopener" href="https://people.csiro.au/M/Y/Yuan-Mei">澳大利亚-Yuan-Mei</a>—-<a target="_blank" rel="noopener" href="http://home.agh.edu.pl/~pstoch/">波兰-Paweł Stoch</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/resources-policy/vol/76/suppl/C">Resources Policy</a>—-<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/the-extractive-industries-and-society/vol/8/issue/4">The Extractive Industries and Society</a>—-<a target="_blank" rel="noopener" href="https://www.tandfonline.com/journals/casr20">Asian Studies Review</a>—-<a href=""></a>—-<a href=""></a>—-<a href=""></a></p>
-<p><a target="_blank" rel="noopener" href="https://www.tsinghua.edu.cn/yxsz.htm">清华大学</a>—-<a target="_blank" rel="noopener" href="https://www.pku.edu.cn/department.html">北京大学</a>—-<a target="_blank" rel="noopener" href="http://quwei.bjtzh.gov.cn/quwei/c101191/202202/1512516.shtml">北京市通州区委</a>—-<a target="_blank" rel="noopener" href="https://www.nobelprize.org/prizes/">诺贝尔奖官网</a>—-<a target="_blank" rel="noopener" href="https://www.cas.cn/">中国科学院</a>—-<a target="_blank" rel="noopener" href="http://www.nsfc.gov.cn/publish/portal0/tab434/module1150/more.htm">国家自然科学基金委</a>—-<a target="_blank" rel="noopener" href="https://www.chemsoc.org.cn/">中国化学会</a>—-<a target="_blank" rel="noopener" href="http://www.c-mrs.org.cn/cn/index.asp">中国材料研究学会</a>—-<a target="_blank" rel="noopener" href="http://www.csm.org.cn//index.html">中国金属学会</a>—-<a target="_blank" rel="noopener" href="https://huanqiukexue.com/">环球科学</a>—-<a target="_blank" rel="noopener" href="https://www.linkresearcher.com/">领研网</a>—-<a target="_blank" rel="noopener" href="https://onestop.ucas.edu.cn/">国科大信息网</a>—-<a target="_blank" rel="noopener" href="https://catalog.ustc.edu.cn/plan">中科大教务处</a>—-<a target="_blank" rel="noopener" href="http://www.ipe.cas.cn/">过程所</a>—-<a target="_blank" rel="noopener" href="http://sep.ucas.ac.cn/">国科大教育云系统</a>—-<a target="_blank" rel="noopener" href="http://www.igg.cas.cn/">中科院地质与地球物理研究所</a>—-<a target="_blank" rel="noopener" href="https://mail.cstnet.cn/">中科院邮件系统</a>—-<a target="_blank" rel="noopener" href="https://mail.163.com/">网易邮箱</a>—-<a target="_blank" rel="noopener" href="https://account.microsoft.com/profile">Microsoft账户</a>—-<a target="_blank" rel="noopener" href="https://outlook.live.com/mail/0/inbox">outlook邮件</a>—-<a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/#inbox">gmail</a>—-<a target="_blank" rel="noopener" href="https://mail.yahoo.com/d/folders/1">yahoo邮箱</a>—-<a target="_blank" rel="noopener" href="https://24timezones.com/map_zh.php#/map">世界时间</a>—-<a target="_blank" rel="noopener" href="https://www.google.com/maps/@44.3705796,163.3369999,3z?hl=zh-cn">谷歌地图</a>—-<a target="_blank" rel="noopener" href="https://onedrive.live.com/?id=root&cid=B92E3EF14CBF9364">onedrive</a></p>
-<p><a target="_blank" rel="noopener" href="http://bbs.keinsci.com/forum.php">计算化学公社</a>—-<a target="_blank" rel="noopener" href="http://sobereva.com/">思想家公社的门口</a>—-<a target="_blank" rel="noopener" href="http://sobereva.com/multiwfn/">Multiwfn</a>—-<a target="_blank" rel="noopener" href="https://gaussian.com/">Gaussian</a>—-<a target="_blank" rel="noopener" href="http://expchem3.com/">expchem3</a>—-<a target="_blank" rel="noopener" href="http://blog.molcalx.com.cn/archives-page">墨灵格</a><br><a target="_blank" rel="noopener" href="https://www.vasp.at/">VASP官网</a>—-<a target="_blank" rel="noopener" href="http://www.tri-ibiotech.com/vasp/product_17.html">VASP国内代理源资科技</a>—-<a target="_blank" rel="noopener" href="https://www.vasp.at/wiki/index.php/The_VASP_Manual">VASP manual</a>—-<a target="_blank" rel="noopener" href="https://tamaswells.github.io/VASPKIT_manual/manual0.73/vaspkit-manual-0.73.html">vaspkit中文手册</a>—-</p>
-<p><strong><a target="_blank" rel="noopener" href="https://www.cp2k.org/">cp2k官网</a>—-<a target="_blank" rel="noopener" href="https://groups.google.com/g/cp2k?pli=1">cp2k谷歌论坛</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/04/23/cp2k-summer-school/">cp2k Exercises</a>—-<a target="_blank" rel="noopener" href="https://manual.cp2k.org/">cp2k关键词</a>—-<a target="_blank" rel="noopener" href="https://yiwei666.github.io/2021/04/25/Calculate-Energy-and-Forces/">单点能计算</a>—-<a target="_blank" rel="noopener" href="https://github.com/Yiwei666/cp2k/tree/master/tests/Fist">cp2k/Fist</a>—-<a target="_blank" rel="noopener" href="https://github.com/Yiwei666/cp2k/tree/master/tests/QS">cp2k/QS</a>—-<a target="_blank" rel="noopener" href="https://github.com/Yiwei666/cp2k/tree/master/tests/QMMM">cp2k/QMMM</a>—-<a target="_blank" rel="noopener" href="https://www.cp2k.org/science">cp2k官网论文</a>—-<a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1397213286614630400">知乎cp2k入门</a></strong></p>
-<p><a target="_blank" rel="noopener" href="https://lammps.sandia.gov/">lammps</a>—-<a target="_blank" rel="noopener" href="http://www.isimuly.cn/">模拟小窝</a>—-<a target="_blank" rel="noopener" href="https://www.ctcms.nist.gov/potentials/">Interatomic Potentials Repository</a>—-<a target="_blank" rel="noopener" href="https://www.engr.psu.edu/adri/">ReaxFF_Dr.Adri</a>—-<a target="_blank" rel="noopener" href="http://t066v5.coding-pages.com/">哲●科●文Jerkwin_李继存</a></p>
-<p><a target="_blank" rel="noopener" href="http://www.quantum-espresso.org/">Quantum-Espresso官网</a>—-<a target="_blank" rel="noopener" href="http://qe2019.ijs.si/">2019-Summer-School</a>—-<a target="_blank" rel="noopener" href="http://www.quantum-espresso.org/resources/tutorials">TUTORIALS</a>—-<a target="_blank" rel="noopener" href="http://indico.ictp.it/event/9616#">ICTP官网</a>—-</p>
-<p><a target="_blank" rel="noopener" href="http://www.factsage.com/FactSageEdu_Info.htm">Factsage官网</a>—-<a target="_blank" rel="noopener" href="http://www.compsci.cn/?app_category=domain">科学计算软件网</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cpmd.org/wordpress/index.php/tutorial/exercise-1-electron-structure-and-geometry-optimization/">CPMD官网</a>—-<a target="_blank" rel="noopener" href="https://www.x-mol.com/groups/cpu1604/events/14079">CPMD介绍</a>—-<a href=""></a></p>
-<p><a target="_blank" rel="noopener" href="http://blog.wangruixing.cn/">世事如棋</a>—-<a target="_blank" rel="noopener" href="https://yxli8023.github.io/archive.html">归档</a>—-<a target="_blank" rel="noopener" href="https://www.bigbrosci.com/tags/">Learn Vasp the Hard Way</a>—-<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html">开发者文档</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.skylinewebcams.com/zh">全球高清摄像头</a>—-<a target="_blank" rel="noopener" href="https://www.douyin.com/">抖音</a>—-<a target="_blank" rel="noopener" href="https://www.bilibili.com/">B站</a>—-<a target="_blank" rel="noopener" href="https://www.youtube.com/">Youtube</a>—-<a target="_blank" rel="noopener" href="https://www.ted.com/">TED</a>—-<a target="_blank" rel="noopener" href="https://ted2srt.org/">TED下载</a>—-<a target="_blank" rel="noopener" href="https://y.qq.com/">qq音乐</a>—-<a target="_blank" rel="noopener" href="https://music.163.com/">网易云音乐</a>—-<a target="_blank" rel="noopener" href="https://www.musicenc.com/">MP3音乐下载</a>—-<a target="_blank" rel="noopener" href="http://www.kekenet.com/">可可英语</a>—-<a target="_blank" rel="noopener" href="http://angdm.com/">ANG动漫</a>—-<a target="_blank" rel="noopener" href="https://weibo.com/">微博</a>—-<a target="_blank" rel="noopener" href="https://v.qq.com/">腾讯视频</a>—-<a target="_blank" rel="noopener" href="https://www.88hd.com/search/">88影视</a>—-<a target="_blank" rel="noopener" href="https://www.douban.com/">豆瓣</a>—-<a target="_blank" rel="noopener" href="https://www.amap.com/">高德地图</a>—-<a target="_blank" rel="noopener" href="https://map.qq.com/">腾讯地图</a></p>
-<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/disk/home">百度云</a>—-<a target="_blank" rel="noopener" href="https://pc.woozooo.com/mydisk.php">蓝奏云</a><br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">维基百科</a>—-<a target="_blank" rel="noopener" href="https://twitter.com/">twitter</a>—-<a target="_blank" rel="noopener" href="https://www.facebook.com/">facebook</a>—-<a target="_blank" rel="noopener" href="https://www.quora.com/">Quora</a>—-<a target="_blank" rel="noopener" href="https://www.pinterest.com/">Pinterest</a>—-<a target="_blank" rel="noopener" href="https://web.telegram.org/#/login">telegram</a>—-<a target="_blank" rel="noopener" href="https://www.tumblr.com/">tumblr</a>—-<a target="_blank" rel="noopener" href="https://www.reddit.com/">Reddit</a></p>
-<p><a target="_blank" rel="noopener" href="http://cn.linux.vbird.org/linux_basic/0320bash.php">鸟哥的Linux私房菜</a>—-<a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/liaoxuefeng-git-2020/bea9104a1d1bccc3.md">git教程</a>—-<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-shell.html">Shell教程</a>—-<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/">MarkDown语法</a>—-<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/python/python_examples.asp">W3school-Python语法</a>—-<a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-inputoutput.html">RUNOOB-Python3教程</a>—-<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/matlab/matlab-bufy28gd.html">matlab语法</a>—-<a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/search.html?c%5B%5D=entire_site&q=%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%85%A5&page=1">Mathworks中国官网</a>—-<a target="_blank" rel="noopener" href="https://python3-cookbook.readthedocs.io/zh_CN/latest/preface.html#">《Python Cookbook》3rd Edition</a>—-<a target="_blank" rel="noopener" href="https://www.twle.cn/">简单教程</a>—-<a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/">scikit-learn</a>—-<a target="_blank" rel="noopener" href="https://pymlovelyq.github.io/">计算机书单：小资源栈</a>—-<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-command-manual.html">Linux命令大全</a>—-<a target="_blank" rel="noopener" href="https://www.ituring.com.cn/book">图灵社区</a>—-<a target="_blank" rel="noopener" href="https://www.epubit.com/">异步社区</a>—-<a target="_blank" rel="noopener" href="https://nostarch.com/catalog/python">NoStarch</a>—-<a target="_blank" rel="noopener" href="https://www.oreilly.com/animals.csp?x-search=python&x-sort=animal">O’Reilly</a>—-<a target="_blank" rel="noopener" href="http://www.mobiletrain.org/book/index.html?type=1">千锋教育</a></p>
-<p><a target="_blank" rel="noopener" href="https://wiki.fysik.dtu.dk/ase/">ASE</a>—-<a target="_blank" rel="noopener" href="http://www.moltemplate.org/">moltemplate</a>—-<a target="_blank" rel="noopener" href="http://www.gnuplot.info/">Gnuplot</a>—-<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/isaacs/">ISAACS</a>—-<a target="_blank" rel="noopener" href="http://wiki.jmol.org/index.php/Main_Page">Jmol</a>—-<a target="_blank" rel="noopener" href="http://www.jp-minerals.org/vesta/en/download.html">VESTA</a>—-<a target="_blank" rel="noopener" href="https://www.ovito.org/docs/current/">OVITO</a>—-<a target="_blank" rel="noopener" href="https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD">VMD</a>—-<a target="_blank" rel="noopener" href="https://www.cgl.ucsf.edu/chimerax/index.html">Chrimerax</a>—-<a target="_blank" rel="noopener" href="http://leandro.iqm.unicamp.br/m3g/packmol/home.shtml">Packmol</a>—-<a target="_blank" rel="noopener" href="http://www.zhjun-sci.com/software-abcluster-download.php">ABCluster</a>—-<a target="_blank" rel="noopener" href="https://www.ccdc.cam.ac.uk/solutions/csd-core/components/mercury/">Mercury</a>—-<a target="_blank" rel="noopener" href="https://www.zhiyunwenxian.cn/">知云翻译</a>—-<a target="_blank" rel="noopener" href="https://automeris.io/WebPlotDigitizer/index.html">WebPlotDigitizer</a>—-<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual-d#Downloads">Anaconda</a>—-<a target="_blank" rel="noopener" href="https://uspex-team.org/en/uspex/overview">USPEX结构预测</a>—-<a target="_blank" rel="noopener" href="https://mdtraj.org/1.9.4/installation.html">MDtraj</a>—-<a href=""></a>—-<a target="_blank" rel="noopener" href="https://www.mdanalysis.org/">MD Analysis</a>—-<a target="_blank" rel="noopener" href="https://pymol.org/2/">Pymol</a>—-<a target="_blank" rel="noopener" href="http://jmol.sourceforge.net/jscolors/">Jmol-manual</a>—-<a target="_blank" rel="noopener" href="http://easygui.sourceforge.net/">esaygui模块</a>—-<a target="_blank" rel="noopener" href="https://processing.org/download">Processing</a>—-<a target="_blank" rel="noopener" href="https://www.telerik.com/download/fiddler">Fiddler4</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.sublimetext.com/">Sublime Text</a>—-<a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/">Notepad++</a>—-<a target="_blank" rel="noopener" href="https://brehm-research.de/travis.php">TRAVIS</a>—-<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/isaacs/">ISAACS</a><br><a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>—-<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a>—-<a target="_blank" rel="noopener" href="https://typora.io/">Typora</a>—-<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VS Code</a>—-<a target="_blank" rel="noopener" href="https://www.opera.com/zh-cn">Opera浏览器</a>—-<a target="_blank" rel="noopener" href="http://www.firefox.com.cn/">火狐浏览器</a>—-<a target="_blank" rel="noopener" href="https://www.autoahk.com/archives/35147">KMCounter键盘统计</a></p>
-<p><a target="_blank" rel="noopener" href="http://rruff.geo.arizona.edu/AMS/amcsd.php">美国矿物学家晶体结构数据库</a>—-<a target="_blank" rel="noopener" href="http://www.crystallography.net/cod/search.html">Crystallography Open Database</a>—-<a target="_blank" rel="noopener" href="https://www.fermitech.com.cn/wiki/doku.php?id=adf:groundstateofatoms">美国国家标准与技术研究院</a></p>
-<p><a target="_blank" rel="noopener" href="https://toefl.neea.edu.cn/login">TOEFL官网</a>—-<a target="_blank" rel="noopener" href="http://www.weitui666.com/">微推</a></p>
-<p><a target="_blank" rel="noopener" href="https://a.wjsq.info/">W</a>—-<a target="_blank" rel="noopener" href="https://github.com/getlantern/lantern">lantern</a>—-<a target="_blank" rel="noopener" href="https://kingfast.info/index.php/buy/index/">kingfast</a>—-<a target="_blank" rel="noopener" href="https://pandavpnpro.com/">panda</a>—-<a target="_blank" rel="noopener" href="https://www.leiting66.com/">leiting</a>—-<a target="_blank" rel="noopener" href="https://b.antss.me/">蚂蚁</a>—-<a target="_blank" rel="noopener" href="https://order.yizhihongxing.network/index.php">一支红杏</a>—-<a target="_blank" rel="noopener" href="https://dukou.dev/buy/shop">dukou</a>—-<a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases">clash for windows</a>—-<a target="_blank" rel="noopener" href="https://xiashivpn.com/shadowsocks/index.html">夏时国际加速器</a>—-<a target="_blank" rel="noopener" href="https://www.quickq.io/">quickq</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.gushiwen.cn/">古诗文网</a>—-<a target="_blank" rel="noopener" href="https://www.zhixi.com/space">思维导图模板</a>—-<a href=""></a>—-</p>
-<p><a target="_blank" rel="noopener" href="https://bruno-simon.com/">3D小车</a>—-<a href=""></a>—-<a href=""></a>—-</p>
-<p><a target="_blank" rel="noopener" href="https://zxsq.ucas.ac.cn/login/index/ti">中科院科创计划</a>—-<a target="_blank" rel="noopener" href="https://www.asklib.com/view/50928dc7af02.html">实验室安全问答库</a>—-<a target="_blank" rel="noopener" href="https://struchem.nankai.edu.cn/">南开大学结构化学课</a>—-<a target="_blank" rel="noopener" href="http://fund.sciencenet.cn/">基金查询</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.basissetexchange.org/">BSE基组数据库</a>—-<a target="_blank" rel="noopener" href="http://www.cosmologic-services.de/basis-sets/basissets.php">Turbomole程序的基组库</a>—-<a target="_blank" rel="noopener" href="https://gaussian.com/basissets/">Gaussian基组</a></p>
-<p><a target="_blank" rel="noopener" href="https://cm.xmu.edu.cn/2016/1128/c12305a377414/page.htm">黄柳青</a>—-<a target="_blank" rel="noopener" href="https://joshuagoings.com/publications/">Joshua Goings</a></p>
-<h3 id="课题组"><a href="#课题组" class="headerlink" title="课题组"></a>课题组</h3><p>—-<a target="_blank" rel="noopener" href="https://www.x-mol.com/groups/cpu1604/research">天然产物研究与开发课题组</a>，中国药科大学天然药物化学系，王小兵<br>—-<a target="_blank" rel="noopener" href="http://staff.ustc.edu.cn/~zyli/pub.html">计算分子与材料科学课题组</a>，合肥微尺度物质科学国家研究中心，李震宇，化学反应和物理过程（特别是成核和生长）的机理，功能材料的理论设计和计算表征，以及电子结构计算和分子模拟的方法<br>—-<a target="_blank" rel="noopener" href="http://sourcedb.igg.cas.cn/cn/zjrck/200907/t20090713_2065484.html">地质与地球物理研究所行星内部物质成分与性质组</a>，张毅刚，地球早期核幔分异过程元素配分的第一原理分子动力学研究<br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a><br>—-<a href=""></a></p>
-<p>沧海桑田<br>路虽远行则将至，事虽难做则必成<br>真正的英雄主义只有一种，那就是在认清生活真相之后依然热爱生活。–罗曼 罗兰<br>不思，故有惑；不求，故无得；不问，故不知。 ——曾国藩<br>盛年不重来，一日难再晨，及时当勉励，岁月不待人。 ——陶渊明<br>古人不见今时月 今月曾经照古人。</p>
-<p>惊喜，热爱，努力，快乐</p>
-<p>人有逆天之时，天无绝人之路。 ——冯梦龙《醒世恒言》<br>不是一番寒彻骨，怎得梅花扑鼻香。——冯梦龙《醒世恒言》<br>无论什么事，如果不断收集材料，积之十年，总可成一学者。——鲁迅</p>
-<p>生活会有望穿秋水的等待，也会有意想不到的惊喜。<br>学以致用才是学知识的真正目的<br>无论何人无论何时，人们总要在乌云周围寻索着浪漫的微光活下去。–村上春树</p>
-<p>如果要用的知识量是一定的话，会的越多，不会的就越少，人生应该是越来越容易的。<br>失败越多，离成功就越近，你所要做的就是从失败中学习，然后加快脚步。</p>
-<p>创建一个元组很简单，只要在（ ）中添加元素，并使用（ ）隔开即可。（括号，逗号）<br>可以直接使用一对（ ）创建一个空元祖。（小括号）<br>元组与字符串类似，下标索引从（ ）开始，可以进行截取，组合等。（ 0 ）<br>元组中的元素是不可变的，当修改元组的元素时会抛出（ ）异常。（ TypeError ）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/04/16/Main-Page/" data-id="ckoqy52vt0005s0tjb3f0dfty" data-title="Main Page" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -1724,7 +2221,7 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
     </div>
   </div>
 
@@ -1735,6 +2232,10 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/08/15/disk-directory/">disk directory</a>
+          </li>
         
           <li>
             <a href="/2022/07/27/DFT-based-%E9%99%8D%E6%B8%A9%E7%A8%8B%E5%BA%8F/">DFT based 降温程序</a>
@@ -1750,10 +2251,6 @@ and the final free energy extrapolated for TS→0 is given by:<figure class="hig
         
           <li>
             <a href="/2022/07/20/wechat/">wechat</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/13/soberva/">soberva</a>
           </li>
         
       </ul>
