@@ -71,6 +71,117 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Summary-of-Potential" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/02/Summary-of-Potential/" class="article-date">
+  <time class="dt-published" datetime="2021-06-02T11:08:21.000Z" itemprop="datePublished">2021-06-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Paper-Review/">Paper Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/02/Summary-of-Potential/">Summary of  Emperical Potential</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>分子动力学模拟这种方法最大的缺陷在于必须知道模拟体系中每对原子之间的势参数才能够精确模拟整个体系的结构和性质，而对于复杂的多元体系，往往缺少势参数。<br>2019年北科大的Kejiang Li<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/08927022.2019.1698739">001</a>等人讨论了CMAS(CaO-MgO-Al2O3-SiO2)体系四种势参数的可移植性问题，论文中对比了Matsui<a target="_blank" rel="noopener" href="https://xueshu.baidu.com/usercenter/paper/show?paperid=f27a425f51287bd1178aa6129c3b3920&site=xueshu_se">007</a>, Kawamura<a href="">3</a>, Miyake<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/minerj/20/4/20_4_189/_article/-char/ja/">015</a>, Guillot<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703706021971">011</a>等人提出的势函数，其中Matsui最早于1994年通过拟合26种晶体的结构和体模量实验数据确定了CMAS体系的势参数，这组参数也被称为CMAS94，Matsui采用的势参数包含了库伦作用力项、范德华作用力项和排斥项。1996年，Matsui<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF00199500">016</a>基于CMAS94M模型计算了27种晶体的对称性、晶格参数、配位数等结构数据，与实验观测值吻合。<br> Kawamura《Material design using personal computer》一书中将CMAS94势参数扩展到了包含SiO2,Al2O3,CaO,MgO,K2O和Na2O在内的多组分硅酸盐晶体、液体和玻璃体系中。<br> Miyake通过添加Morse项来优化Matsui和Kawamura等人的势参数，使其应用于SiO2-Al2O3-CaO-MgO-K2O-Na2O六元体系。<br> 2007年Guillot使用BMH势函数在CMAS94模型的基础上发展出了一种适用于K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2九元体系的势参数，并将该组势参数用于硅酸盐熔体在低压(011)和高压状态(018)下结构性质的模拟。<br> 虽然上面的四种势参数都是通过对比固体的结构和性质拟合得到的，但是这些参数也被频繁的用于熔体结构和性质模拟。</p>
+<p>2017年Mitchell Leibowitz创建的<a target="_blank" rel="noopener" href="https://interatomic-potentials.readthedocs.io/en/latest/">interatomic-potentials</a>这个网站介绍了Born Mayer Huggins、Tersoff、Stilinger-Weber、Lennard Jones、Morse、Buckingham等在内的各种势函数。</p>
+<p><a href=""></a><br><a href=""></a><br><a href=""></a></p>
+<p>年份和姓名(能够避免重复)，链接，拟合方法，体系，势函数，特征成分，研究内容，特点</p>
+<p>1990年van Beest BW<a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/Force-fields-for-silicas-and-aluminophosphates-on-vanBeest-Kramer/933fa5b33c8584bcaf64a1346dbf75127cde8f10">023</a>基于实验数据和从头算分子模拟拟合了SiO2-Al2O3-P2O5体系的BMH势参数，O的原子电荷为-1.2。</p>
+<p>1992年出版的Molecular Dynamics Simulations Proceedings of the 13th Taniguchi Symposium Kashikojima, Japan, November 6–9, 1990<a target="_blank" rel="noopener" href="https://www.springer.com/gp/book/9783642847158">000</a>一书中包含Interatomic potential models for molecular dynamics simulations of multi-component oxides一文，其中含有日本人K. Kawamura提出的多组分氧化物势模型。<br>1992年美国科罗拉多州立大学的A. K. Rappe等人<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/ja00051a040">000</a>提出了通用力场，应用于经典分子动力学模拟，论文发表在JACS期刊上。</p>
+<p>1997年J.M Delaye<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309396006047">000</a>使用BMH势函数模拟氧化物玻璃组分对结构的影响，体系为SiO2-B2O3-Na2O-Al2O3-ZrO2。</p>
+<p>1998年俄罗斯的G. G. Boiko<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309398006930?via=ihub#BIB6">000</a>基于没有色散项的BMH势函数计算了2ZnO·P2O5–2Na2O·P2O5 体系的结构。<br>1998年俄罗斯的David K. Belashchenko<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational1989/38/7/38_7_673/_article">000</a>基于没有色散项的BMH势函数计算了CaO-CaF2稀溶液体系中的MeO和MeF2, 元素包含Ca-Me-O-F(Me=Mg，Fe，Sr和 Ba)。</p>
+<p>2001年A.N.Cormack<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309301008316">014</a>基于BMH势函数模拟了Na2O–CaO–SiO2玻璃体系，论文发表在JNonCrySolids。</p>
+<p>2002年俄罗斯的D. K. Belashchenko<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1023%2FA%3A1014065127380">043</a>基于Born–Mayer势计算了CaO-P2O5体系，文中列举出了势参数。<br>2002年A. N. Cormack和J. Du<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2002/cp/b201721k#cit4">000</a>基于分子动力学模拟探究了Na2O–SiO2玻璃体系中碱金属离子的迁移机制，使用的参数源于(D. M.Teter, personal communication),但已经无法查到，论文发表在PCCP上，这是一篇高被引的论文。</p>
+<p>2003年俄罗斯的G. G. Boiko<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1023%2FA%3A1022305709219">029</a> 基于BMH势函数研究了Na2O–ZnO–P2O5熔体中的离子扩散机制。<br>2003年日本的Yasushi Sasaki<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational1989/43/12/43_12_1897/_article/-char/en">000</a>基于简化的BMH势函数使用MXDORTHO程序研究了Na2O-NaF-SiO2熔融硅酸盐体系，论文发表在ISIJ上。<br>2003年A.N. Cormack<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309303002801">000</a>使用分子动力学模拟研究了Na2O–SiO2二元玻璃中Na离子的迁移机制。</p>
+<p>2004年Anke Winkler和Jürgen Horbach<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.1630562">000</a>基于分子模拟研究了铝硅酸盐体系(Al2O3)2(SiO2) 中的结构和扩散。</p>
+<p>2005年俄罗斯的<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007%2Fs10720-005-0036-6">030</a>基于简化的BMH势函数计算了偏硅酸盐熔体中Me2O⋅SiO2(Me=Li,Na,K,Cs)的缺陷与氧扩散。<br>2005年日本东京大学的Won-Gap Seo<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/matertrans/46/3/46_3_643/_article">000</a>基于没有色散项的BMH势函数计算了CaO-CaF2, BaO-CaO and BaO-CaF2体系的热力学性质和相图。<br>2005年美国和德国的J. A. Tossell和J. Horbach<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp0454873#">000</a>基于分子模拟和量化计算研究了(Al2O3)2(SiO2)玻璃体系中的氧团簇。</p>
+<p>2006年Robert N. Mead<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/jp0628939">000</a>基于BMH势模拟了(CaO)x(SiO2)1-x体系玻璃的原子结构，势参数用的是2001年A.N.Cormack[014]提出的，论文发表在JPyhsChemB。<br>2006年Alfonso Pedone<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp0611018">000</a>等人发展了一种新的势，论文发表在JPCB上，其中含有大量的二元势参数。</p>
+<p>2007年越南的Vo Van Hoang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0375960107006019?via=ihub#bib022">000</a>研究了Al2O3-SiO2熔体中氧得局域环境。<br>2007年日本东北大学的Yasushi Sasaki<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/47/5/47_5_638/_article/-char/ja/">026</a>基于简化的BMH势函数使用MXDORTHO程序研究了CaO–CaF2–Na2O–SiO2熔融硅酸盐体系。<br>2007年日本新日铁的Keiji SHIMODA and Koji SAITO等人<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/47/9/47_9_1275/_article/-char/ja/">000</a>基于Morse-Coulomb–Buckingham势研究了CaO–MgO–Al2O3–SiO2渣系，注意LJ势与范德华项的区别。论文发表在ISIJ上。</p>
+<p>2008年G. Lusvardi<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp803031z">027</a>使用Buckingham势函数研究了Na2O-CaO-P2O5−SiO2-CaF2体系，论文发表在JPCB上，模拟使用GULP程序进行优化，DL_POLY程序进行分子动力学模拟，势参数在论文中已被直接列出且未添加高温校正项，势参数参考的是2002年Cormack引用的、经Teter提出的势参数，该论文中的含氟势参数后被Du等人在2016年的JPCC论文中使用。<br>2008年日本早稻田大学的Tsuyoshi Asada<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/48/1/48_1_120/_article/-char/ja/">000</a>基于简化的BMH势函数计算了CaO–CaF2–SiO2熔融体系的结构和性质。</p>
+<p>2009年日本的Hiroshi Sakuma和Katsuyuki Kawamura<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703709002932#!">000</a>基于分子动力学使用其早先开发的一种势函数研究了矿物(KAl2(OH)2(AlSi3)O10) 白云母表面水的结构与动力学，论文发表在Geochimica et Cosmochimica Acta期刊上，该势函数也被其用于之后的研究。<br>2009年Yasushi Sasaki<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/49/4/49_4_602/_article">000</a>基于简化的BMH势函数使用MXDORTHO程序研究了CaO–CaF2–MgO–SiO2体系中Mg和Ca原子周围F的配位数。<br>2009年Rodolphe Vuilleumier<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703709004530#bib71">000</a>分别采用从头算和经验力场模拟了K2O–Na2O–CaO–MgO–Al2O3–SiO2体系，经验力场参数源于Guillot的论文。<br>2009年Antonio Tilocca<a target="_blank" rel="noopener" href="https://royalsocietypublishing.org/doi/10.1098/rspa.2008.0462">000</a>发表综述“基于分子动力学模拟的生物活性玻璃结构模型”，提出了玻璃的结构模型，启发我提出熔渣体相和界面结构模型。<br>2009年Alfonso Pedone<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp904131t">000</a>基于Buckingham、Three-Body Potential、Core−Shell三种势分别模拟了CaO/MgO对磷酸盐基SiO2-Na2O-CaO-P2O5-MgO生物玻璃体系的结构影响，论文发表在JPCC上。</p>
+<p><a href="">000</a><br><a href="">000</a></p>
+<p>2010年英国的Antonio Tilocca<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2010/JM/c0jm01081b#!divAbstract">000</a>在Journal of Materials Chemistry期刊上发表综述：“生物玻璃的结构、动力学和反应性模型综述”</p>
+<p>2011年Le-Hai Kieu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931100384X">012</a>发展了SiO2–B2O3–Na2O玻璃体系中的BMH势参数，首次引入了B2O3这一组元。<br>2011年Jincheng Du<a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/j.1551-2916.2011.04514.x">041</a>等人基于Buckingham势函数模拟了Al2O3-P2O5-SiO2-CeO2，论文中直接列出了势参数。<br>2011年法国皮埃尔和玛丽·居里大学凝聚态理论物理实验室的Bertrand Guillot团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703711000068#!">000</a>基于分子模拟计算了硅酸盐熔体中的二氧化碳的溶解度，论文发表在Geochimica et Cosmochimica Acta期刊上。</p>
+<p>2012年日本的Fumiya Noritake<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309312005066#!">000</a>基于分子动力学模拟研究了高压Na2O•3SiO2熔体中结构和性质间的关系，使用的势函数比较复杂。<br>2012年Jincheng Du<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309312000877?via=ihub#bb0185">038</a>基于Buckingham势使用DL_POLY软件模拟了SiO2-Na2O-CaO-P2O5-SrO玻璃体系，并在势函数中添加了高温 排斥项，论文中列出了势参数。除此之外，作者还对玻璃体系中分子模拟的势参数发展和演变作了综述。</p>
+<p>2013年M. Bouhadja<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.4809523">020</a> 等人基于从头算针对CaO–Al2O3–SiO2 (CAS)熔体提出了更加精确的BMH势参数。<br>2013年瑞士斯德哥尔摩大学的Kirill Okhotnikov<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2013/cp/c3cp51726h#!divAbstract">000</a>针对稀土铝酸盐玻璃(RE=La,Y,Lu,Sc)RE2O3–Al2O3–SiO2，开发了新的经验势场及参数，论文发表在PCCP上。<br>2013年G. Malavasi<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10971-011-2453-4">000</a>基于分子动力学模拟对SiO2–CaO–P2O5体系进行了计算，论文中列出了势参数。<br>2013年美国的Leslie C.Dewan<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022311512006630">000</a>结合偶极极化效应的分子动力学模拟研究了处于共晶成分的熔融LiF-ThF4的局部结构和传输特性，这种可极化的相互作用势是从第一性原理计算中参数化的。论文发表在Journal of Nuclear Materials。</p>
+<p>2014年重庆大学的Shengfu Zhang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314002725#!">000</a> 基于简化的BMH势函数研究了CaO–SiO2–Al2O3–MgO–TiO2体系结构和粘度间的关系。<br>2014年MahaRai<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309313006558#bb0045">013</a>使用BMH势模拟了BaO–SiO2玻璃的结构。</p>
+<p>2015年重庆大学的Jiang Diao团队<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/matertrans/56/5/56_M2014363/_article">042</a>基于BMH势函数计算了P2O5/SiO2比例对CaO-P2O5-SiO2渣体系结构的影响，论文发表在ISIJ上。<br>2015年重庆大学的Yanhui Liu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2214785315001327#!">000</a> 基于BMH势函数研究了CaO-SiO2-MgO-Al2O3体系中Al2O3对熔渣结构的影响。<br>2015年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931400670X#bb0090">021</a>使用BMH势函数分别研究了CaO–SiO2和CaO–Al2O3体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。<br>2015年重庆大学的Shengping He团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007%2Fs11663-015-0354-6">000</a>研究了CaO-Al2O3-SiO2-CaF2熔渣体系，使用的势参数源于Kawamura: Materials Design Using Personal Computer一书，论文发表在MMTB上。<br>2015年Pawel Stoch<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314006693#bb0200">022</a>研究了加入Cs的硼硅酸盐体系玻璃，使用的是BMH势，研究体系为SiO2–B2O3–Al2O3–CaO–Na2O–Cs2O。<br>2015年日本的Katsuyuki KAWAMURA团队<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/jccj/14/4/14_2015-0017/_html/-char/en">000</a>针对Li2O-B2O3熔体/玻璃发展了一种新的势函数。<br>2015年Jincheng Du等人<a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007%2F978-3-319-15675-0?page=1#toc">040</a>出版Molecular Dynamics Simulations of Disordered Materials一书，书中对成核的亚稳动力学模拟、第一性原理计算方法、硅酸盐玻璃结构和性质之间的量化关系、多组分氧化物玻璃分子动力学模拟的挑战、势参数的拟合、含过渡金属氧化物玻璃结构的分子动力学模拟、玻璃表面、玻璃中的环等做了全面的介绍，在第160页有部分势参数。<br>2015年华东理工大学的Jia Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732215301598#!">000</a>基于BMH势函数研究了熔融二元体系(Li, Na)Cl、(Li, K)Cl和(Na, K)Cl输运性质和局部结构，论文发表在Journal of Molecular Liquids上。<br>2015年哈工大的Fuyi Cui团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0169433215022540#!">000</a>基于lammps进行了扩散限制聚集过程中小纳米颗粒之间界面相互作用的分子动力学模拟，论文发表在Applied Surface Science期刊上。</p>
+<p>团队<a href="">000</a><br><a href="">000</a><br><a href="">000</a><br><a href="">000</a></p>
+<p>2016年重庆大学的Jiang Diao<a target="_blank" rel="noopener" href="https://www.degruyter.com/document/doi/10.1515/htmp-2016-0054/html">000</a>基于BMH势函数研究了CaO–SiO2–P2O5–FeO体系的结构和性质，势参数源于Material Design Using Personal Computer。<br>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316302885">010</a>使用LJ势和BMH势模拟了CaO-SiO2-Al2O3-FeO熔渣体系的结构和粘度。<br>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931530301X#!">000</a> 使用BMH势函数分别研究了 Na2O–Al2O3, K2O–Al2O3, MgO–Al2O3, and CaO–Al2O3， Al2O3基二元体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。<br>2016年美国的Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316304070#bb0160">033</a>基于Buckingham势拟合了Na2O-Al2O3-B2O3-SiO2硼铝硅酸盐体系的势参数，论文发表在Journal of Non-Crystalline Solids期刊上。<br>2016年Lehlohonolo Mongalo<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316303751">000</a> 使用BMH+Morse势研究了CaO–MgO–Al2O3–SiO2体系的熔体结构和导电性。<br>2016年意大利的Alfonso Pedone<a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007%2F978-3-319-44249-5_5">000</a>在Biocompatible Glasses期刊上发表综述：“从生物玻璃得分子模拟中我们可以学到什么？”<br>2016年Jincheng Du团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.6b05796">000</a>在JPCC上发文“氟硅酸盐玻璃从相分离到纳米化：高发光微晶玻璃的结构设计”，基于Buckingham+高温排斥项研究了氧氟硅酸盐SiO2-Al2O3-BaO-BaF2玻璃体系，势参数和校正参数并未直接列出，而是给出了参考文献，如势参数源于Du在2002年、2004年和论文数据以及2008年G. Lusvardi[027]发表的势参数。<br>2016年湖南大学的Hui Luo<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0927025615006333#!">000</a>基于Born–Mayer势函数使用DL_POLY软件进行了液态氟化锂扩散和粘度的分子动力学模拟，论文发表在Computational Materials Science期刊上。<br>2016年美国罗格斯大学的Stephen H. Garofalini<a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/jace.14565">000</a>基于BMH势函数研究了SiO2-Al2O3-B2O3-CaO-Na2O钠钙铝硼硅酸盐玻璃中网络改性剂与网络形成剂的局部结构，论文发表在Journal of the American Ceramic Society期刊上。</p>
+<p>2017年重庆大学的Xiao-Ping Liang<a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007%2F978-3-319-51340-9_73">000</a>基于简化的BMH势函数计算了B2O3/SiO2比例对CaO–SiO2–B2O3体系结构和性质的影响，是一篇会议论文。<br>2017年北京化工大学的Yangxu Hu<a target="_blank" rel="noopener" href="https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.15636">000</a>基于分子动力学模拟了液液界面的萃取过程，并修正了双膜理论，论文发表在化工顶刊AIChE上。<br>2017年Jincheng Du<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309317304799?via=ihub">000</a>基于分子动力学模拟研究了硼硅酸钠和硼铝硅酸盐核废料玻璃的体积、表面结构和性能。<br>2017年Jincheng Du团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10853-017-0836-9">037</a>基于Buckingham势模拟了B2O3-SiO2-Na2O-CaO-SrO-P2O5体系玻璃，论文发表在Journal of Materials Science，使用的模拟软件为DL_POLY,注意同一套势参数应用于DL_POLY、Lammps等不同模拟软件时单位、格式等写法上的区别。注意到该论文中提到为了解决高温问题（当两个原子在高温下非常接近时，势能值可能迅速下降到负无穷大），加入了排斥项（V（r）=Brn+Dr2）来修正。 在初期的模拟中暂不考虑该问题。论文中还提到对于B-O相互作用，Aij的值随着成分而变化，论文中针对三个组分分别取了三个值。部分势参数来源于2012年Jincheng Du<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309312000877?via=ihub#bb0185">038</a>SiO2-Na2O-CaO-P2O5-SrO体系。<br>2017年中山大学的Weilong Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2211285517304330#!">000</a>团队基于BMH势函数进行了”聚光太阳能用二元碱金属氯化物局部结构和输运特性的理论预测”，论文发表在Nano Energy期刊上。<br>2017年华东理工大学的Jia Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732216320244#!">000</a>基于BMH势函数研究了四种二元系统LiCl-RbCl、LiCl-CsCl、NaCl-RbCl和NaCl-CsCl熔融碱金属氯化物输运性质和局部结构，论文发表在Journal of Molecular Liquids期刊上。<br>2017年上海交通大学Jun Wang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732216325132#!">000</a>基于BMH势函数研究了熔融 NaCl-KCl-LiCl 混合物物理性质和局部结构的温度和浓度依赖性，论文发表在Journal of Molecular Liquids期刊上。<br>2017年北科大Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S138589471631573X">000</a>基于Miyake势研究了碱化过程中影响焦灰流动性的因素，论文发表在Chemical Engineering Journal期刊上。<br>2017年北科大Kejiang Li团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.energyfuels.7b02795">000</a>基于Miyake势进行了高炉高温区焦灰行为的分子动力学研究：碱的影响，论文发表在Energy &amp; Fuels。<br>2017年南方科技大学的张作泰团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-017-0924-x">000</a>基于使用Buckingham势的分子模拟结合X射线光电子能谱和拉曼光谱技术进行了CaO-SiO2-P2O5三元玻璃中磷的结构研究，论文发表在MMTB上。<br>2017年英国的Gavin  Mountjoy团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.7b02986">000</a>基于GULP软件模拟CaO-SiO2-CaCl2含氯硅酸盐玻璃中相分离的开始，论文发表在JPCB上。</p>
+<p>2018年北科ChunheJiang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318303892">000</a>基于Coulomb–Buckingham势研究了MgO/Al2O3比例对SiO2-Al2O3-CaO-MgO熔渣结构和性质的影响，论文发表在Journal of Non-Crystalline Solids期刊上。<br>2018年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773221833157X#!">000</a>基于CMAS94模型参数进行了CaO(MgO)对硅铝酸盐体系结构和性能的分子动力学模拟研究，论文发表在Journal of Molecular Liquids期刊上。<br>2018年Jincheng Du<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2018/CP/C7CP08358K#!divAbstract">000</a>团队基于分子动力学模拟研究了B2O3/SiO2取代对Na2O-CaO-SrO-P2O5-SiO2生物活性玻璃结构和性能的影响，论文发表在PCCP上，论文中并未直接列出势参数，参考的是2017年Du[037]发表在Journal of Materials Science上的势参数。<br>2018年Jincheng Du<a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/jace.16082">032</a>团队针对Li2O, K2O, P2O5, Al2O3, CaO, MgO, SrO硅酸盐玻璃体系发展除了新的BMH势参数，该论文发表JAmCeramSoc后又进行了更正，注意更正。<br>2018年Mengyi Wang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318302643">017</a>在Guilliot提出的K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2体系BMH势参数的基础上拟合了B2O3这一组元势参数，并重点考察了Na2O–CaO–SiO2-B2O3这一四元玻璃体系的结构和性质。<br>2018年Alfonso Pedone<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.8b00547?ref=recommended">046</a>在JPCB上发表论文“含卤化物磷硅酸盐生物活性玻璃的分子动力学研究”，研究的体系为SiO2-CaO-P2O5-CaF2-CaCl2，作者采用了Buckingham势、Three body势和core−shell spring势。<br>2018年瑞典斯德哥尔摩大学Mattias Edén团队<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2018/CP/C7CP08593A#!divAbstract">000</a>基于改进的B-O和P-O力场通过DLPOLY4.08软件对Na2O–CaO–B2O3–SiO2–P2O5多组分硼硅酸盐玻璃体系进行分子动力学模拟，论文发表在PCCP上。</p>
+<p>2019年重庆大学的Shengping He(第一兼通讯)<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-019-01547-7">025</a>在使用BMH势函数研究了CaO-SiO2-CaF2渣体系的结构和性质，势函数来源为Kawamura 《Material design using personal computer》，论文发表在MMTB上。<br>2019年韩国的Hyunsik Park团队<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41598-019-53961-1#Bib1">000</a>利用分子动力学模拟估算节能钛铁矿冶炼过程中TiO2-FeO-Na2O渣粘度，使用的是经Guillot提出的BMH势参数，论文发表在scientific reports上。<br>2019年巴西的Maziar Montazerian<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/09506608.2019.1694779">035</a>等人在International Materials Reviews期刊上发表综述“生物活性玻璃的模型驱动设计：从分子动力学到机器学习”<br>2019年法国的Mohammed Bouhadja<a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1361-648X/ab58ea">000</a>基于BMH势函数研究了(Al2O3)x-(SiO2)1−x (AS)二元铝硅酸盐熔体的动力学性质，论文发表在Journal of Physics: Condensed Matter期刊上。<br>2019年Mathieu Bauchy团队<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.5051746">036</a>基于分子动力学模拟研究了硼硅酸盐玻璃中改性剂的聚集和回避原理，论文发表在The Journal of Chemical Physics。<br>2019年Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0955221919304571?via=ihub">000</a>基于分子动力学模拟研究了氟铝硅酸盐玻璃体系的相分离结构模型，论文模拟的体系为SiO2-Al2O3-BaF2氟铝酸盐玻璃体系，该论文发表在J.Eur.Ceram.Soc.期刊上，该工作使用DL_POLY进行模拟，使用的势参数为Buckingham势并添加了高温校正项，论文并未直接列出势参数，而是参考了Du在2002年、2004年提出的势参数，以及其在2015年出版的书Molecular Dynamics Simulations of Disordered Materials中。<br>2019年Jincheng Du团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.9b01674">000</a>在JPCB上发文“相分离SiO2–Al2O3–RF3–NaF玻璃中RF3/NaRF4纳米晶沉淀的结构起源：分子动力学模拟研究”，论文中并未直接列出使用的势函数和势参数。<br>2019年Jincheng Du团队<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/adts.201900062">000</a>在Advanced Theory and Simulation上发文“相分离氟铝硅酸盐玻璃形成 BaF2/Ba1−xRxF2 +x/RF3 纳米晶体的结构起源：分子动力学模拟研究”，论文中并未直接列出势函数和势参数。<br>2019年北科大的Kejiang Li<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/08927022.2019.1698739">001</a>等人讨论了CMAS(CaO-MgO-Al2O3-SiO2)体系四种势参数的可移植性问题，论文中对比了Matsui, Kawamura, Miyake, Guillot等人提出的势函数。<br>2019年瑞典乌普萨拉大学的David van der Spoel团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.9b07756">000</a>基于GROMACS进行LiCl-KCl混合物熔盐中结构、动力学和热力学之间的直接联系研究，论文发表在JPCC期刊上。<br>2019年德国Sudheer Ganisetti等人<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2019/CP/C9CP04332B">000</a>基于Miyake和Pedone等人提出的势函数基于分子动力学模拟阐明碱土铝硅酸盐玻璃中 Al-NBO 键、Al-O-Al 键和簇的形成，论文发表在PCCP上。</p>
+<p><a href="">000</a><br><a href="">000</a></p>
+<p>2020年加拿大西安大略大学地球科学系的H. Wayne Nesbitt团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009254120303570#!">000</a>进行了亲核取代反应机制：硅酸盐熔体中化学形态和传输特性的原子分子视角，论文发表在Chemical Geology期刊上。这篇论文比较重要，因为开始从原子尺度上讨论硅酸盐熔体中的反应。<br>2020年安徽工业大学的Shama Sadaf<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/10.1002/srin.202000531">024</a>基于BMH势函数研究了B2O3对CaO–SiO2-B2O3体系结构和粘度的影响，论文发表在steel research上,势参数源于Materials Design using Personal Computer一书。<br>2020年西安建筑科技大学的Jiantao Ju(一作兼通讯)<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41598-020-69283-6?utm_source=other&utm_medium=other&utm_content=null&utm_campaign=JRCN_2_LW01_CN_SCIREP_article_paid_XMOL">000</a>通过实验研究了CaF2–CaO–Al2O3–MgO–TiO2–(Li2O)电渣体系中氟化物的挥发，论文发表在scientific reports上。<br>2020年东北大学的Xiaobo Zhang<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/60/10/60_ISIJINT-2020-002/_article/-char/ja/">028</a>基于Buckingham势函数研究了CaO–SiO2–CaF2和CaO–Al2O3–CaF2体系中氟对熔体结构的影响，论文发表在ISIJ上，论文中未对势参数的来源进行说明。<br>2020年Charlie Ma<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009250919309546?via=ihub">000</a>基于BMH+Morse势采用多元分析计算了CaO-K2O-SiO2体系中结构和粘度之间的关系，势参数用的是Miyake发展的，论文发表在Chemical Engineering Science上。<br>2020年越南的P.K. Hung<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220328993#!">000</a>使用分子动力学模拟研究了低钠Na2O.4SiO2硅酸盐体系中Na的跳跃扩散机制，使用的势函数是其之前提出的一种不常用的势，该论文发表在Journal of Molecular Liquids上。<br>2020年法国的Noël Jakse团队<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.5141841">000</a>基于BMH势函数研究了CaO的结构和热力学性质，论文发表在The Journal of Chemical Physics期刊上。<br>2020年浙江大学的Liu Yong团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309319306052?via=ihub#!">000</a>基于BMH势函数研究了Na2O–Al2O3–SiO2体系的离子自扩散。<br>2020年宾大的John C. Mauro团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309319306076#!">000</a>评价了经典势函数应用于硼硅酸盐玻璃的分子动力学模拟，论文发表在Journal of Non-Crystalline Solids期刊上。<br>2020年Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309319306428#!">000</a>基于BMH势进行钙铝硅酸盐玻璃定量构效关系分析。<br>2020年Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304919?via=ihub">039</a>对含氟硅酸铝低活性核废料玻璃结构进行了分子动力学模拟研究，在这篇论文中，作者提到由于势函数的限制，分子模拟以往很少在在含氟玻璃上进行，但随着混合阴离子体系的发展，MD模拟方法将研究扩展到氟硅酸盐玻璃，并证明它能够捕捉均匀混合阴离子玻璃和纳米氟化物相分离玻璃的结构特征。论文中并未直接列出势参数，而是参考其在2016年和在2019年分别发表在JPCC和J.Eur.Ceram.Soc论文中的势参数，而其2016年的数据的数据实则是2008年G. Lusvardi[027]发表的势参数。<br>2020年比利时鲁汶大学的Christina Siakati<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309319306416#!">000</a>基于Buckingham势揭示玻璃状CaO-FeO-SiO2渣的纳米结构，论文发表在Journal of Non-Crystalline Solids。<br>2020年美国的Siddharth Sundararaman等人<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.5142605">048</a>针对含有两种网络形成体的硼铝硅酸盐玻璃体系开发了新的势参数，论文发表在The Journal of Chemical Physics（JCP）期刊上。<br>2020年荷兰的Sergio E. Ruiz-Hernandez<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304440#!">000</a>基于DL_POLY和cp2k进行了水扩散到生物活性磷酸盐基玻璃表面对其溶解行为影响的分子动力学研究，论文发表在Journal of Non-Crystalline Solids期刊上。</p>
+<p>2021年Young jae Kim<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304890#!">019</a>基于BMH势函数模拟了MgF2-LiF-MgO体系的粘度和结构，论文中引用的势参数是参考以往文献组合起来的。<br>2021年北科Zhisheng Bi<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230932030524X#bib0027">049</a>基于BMH势函数研究了B2O3-SiO2-CaO-Al2O3体系中B2O3对熔渣结构的影响，论文对势参数的来源并未进行说明。<br>2021年北科Zhisheng Bi<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309321000466?via=ihub#bib0027">000</a>基于BMH势函数分别研究了SiO2-CaO-Al2O3和SiO2-CaO-B2O3体系中Al2O3和B2O3对SiO2-CaO基熔体结构和性质的影响。<br>2021年Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320305251?via=ihub">031</a>发展了SiO2-Na2O-B2O3–Al2O3硼酸盐体系的Buckingham势参数，主要参考对比的是2011年的Kieu[012]势，2016年Du[033]势，2018年的Bauchy[017]势以及2018年的Du[032]势，这些势主要都是用来模拟硼硅酸盐玻璃的。<br>2021年山西煤化所的Longfei Gao<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009250920308174?via=ihub#!">000</a>基于BMH势函数和环统计研究了不同CaO/Na2O比例下SiO2–Al2O3–CaO–Na2O煤灰渣的结构和流动性。<br>2021年日本的Fumiya Noritake<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320306220#!">000</a>基于分子动力学模拟并使用一个复杂的势函数研究了硅酸盐体系中网络形成体元素的扩散机制，研究的体系为Na2O·SiO2。<br>2021年越南的To Ba Van<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320305688#!">000</a>基于BMH势函数研究了SiO2-Al2O3液相体系中畴结构、微观偏析和动力学不均匀性。<br>2021年Marco Bertani<a target="_blank" rel="noopener" href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.5.045602">034</a>发展修正了多组分氧化物玻璃体系中PMMCS力场参数，论文发表在美国物理学会的PHYSICAL REVIEW MATERIALS期刊上。<br>2021年浙江大学Yong Liu团队<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2021/RA/D0RA10810C#!divAbstract">047</a>基于分子动力学模拟修正了P2O5-Na2O-Al2O3-SiO2玻璃体系的随机网络模型，论文发表在RSC Advances上。<br>2021年重庆大学的Zhe Wang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220369397#!">000</a>通过将分子动力学模拟和机器学习结合起来，研究了CaO-SiO2-Al2O3三元渣系结构和性质间的关系，并进行了热导率预测，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220373487#!">000</a>基于分子动力学模拟研究了CaO和FeO对硅铝酸盐体系结构和性能的影响，研究体系为SiO2-Al2O3-CaO(FeO) ，使用的是函数为Buckingham势，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773222101028X#!">000</a>基于分子动力学模拟研究了不同碱度条件下MnO含量对渣结构和性质的影响，研究体系为CaO-SiO2-Al2O3-MnO，使用了Buckingham力场和LJ力场，势参数源于CMAS94和UFF通用力场参数，论文发表在Journal of Molecular Liquids期刊上。<br>2021年江西理工大学的Helin Fan等人<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220374687#!">000</a>基于Buckingham力场研究了TiO2-SiO2-MgO-CaO体系中结构和传输性质间的关系，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kexin Jiao团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732221003287#!">000</a>采用COMPASS力场研究了碳含量和温度对铁水粘度的影响，论文发表在Journal of Molecular Liquids期刊上。<br>2021年生态环境部南京环境科学研究所Hongling Zhang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220374857#!">000</a>采用Materials Studio软件Forcite 模块中的UFF力场进行MD模拟，结合Gaussian09中B3lyp泛函+<code>6-31G*</code>基组进行结构优化，进行了苏氨酸-蒙脱石复合物与Pb2+或Cu2+的相互作用及机理研究，论文发表在Journal of Molecular Liquids期刊上。<br>2021年挪威科技大学的Jafar Safarian团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-021-02232-4">000</a>基于lammps模拟和实验研究了La2O3添加到CaO-SiO2渣中的影响：Si-Sn合金的结构演化和杂质分离，即含稀土熔渣精炼除B、P，论文发表在MMTB上。<br>2021年重庆大学Shuheng Huang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009250921003389#!">000</a>基于Buckingham势函数研究了CaO-SiO2-Al2O3-Na2O-F (CSANF)体系，全面了解硅酸盐熔体中氟的微观结构和挥发机理，论文通过通过PLS分析，建立了氟的微观结构与扩散系数之间的关系。势参数源于Kawamura 《Material design using personal computer》，论文发表在Chemical Engineering Science期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0272884221000961#!">000</a>基于BMH势函数研究了SiO2–CaO–Al2O3–B2O3体系中两性氧化物（Al2O3和B2O3）的酸性向碱性转变机制：分子动力学研究，所用的势参数是重庆大学两篇文章中拼凑起来的，论文发表在Ceramics International期刊上。<br>2021年俄罗斯科学院乌拉尔分院固体化学研究所的Ilya S. Popov团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0927025621004535#!">000</a>基于分子动力学模拟研究了硫化镉纳米颗粒和硅酸盐玻璃复合材料内的相平衡：原子观，论文发表在Computational Materials Science期刊上。<br>2021年江西理工大学的Helin Fan团队<a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jmrt.2021.08.032">000</a>采用lammps软件基于BMH势函数研究了B2O3对钛渣熔体结构和性能的影响。论文发表在Journal of Materials Research and Technology期刊上。</p>
+<h1 id="分子动力学模拟Si熔体及相关合金熔体"><a href="#分子动力学模拟Si熔体及相关合金熔体" class="headerlink" title="分子动力学模拟Si熔体及相关合金熔体"></a>分子动力学模拟Si熔体及相关合金熔体</h1><p>2018年清华大学的黄秀松<a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.commatsci.2018.07.001">000</a>开发了新的势函数用于Si熔体的lammps分子动力学模拟，论文发表在Computational Materials Science期刊上。</p>
+<p>2019年清华大学的黄秀松<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318305751#!">000</a>基于lammp分子动力学模拟研究了Al-Si合金熔体的液态结构，论文发表在Journal of Non-Crystalline Solids期刊上。</p>
+<p>2021年深圳大学的黄秀松<a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.matdes.2021.109560">000</a>使用lammps基于新开发的势函数对HfNbTaZr高熵合金化学短程有序进行了原子模拟，论文发表在Materials &amp; Design期刊上。</p>
+<p><a href="">000</a><br><a href="">000</a><br><a href=""></a><br><a href=""></a><br>团队<a href="">000</a><br>等人<a href="">000</a></p>
+<h3 id="北京科技大学"><a href="#北京科技大学" class="headerlink" title="北京科技大学"></a>北京科技大学</h3><p>2017年北科大Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S138589471631573X">000</a>基于Miyake势研究了碱化过程中影响焦灰流动性的因素，论文发表在Chemical Engineering Journal期刊上。<br>2017年北科大Kejiang Li团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.energyfuels.7b02795">000</a>基于Miyake势进行了高炉高温区焦灰行为的分子动力学研究：碱的影响，论文发表在Energy &amp; Fuels。</p>
+<p>2018年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773221833157X#!">000</a>基于CMAS94模型参数进行了CaO(MgO)对硅铝酸盐体系结构和性能的分子动力学模拟研究，论文发表在Journal of Molecular Liquids期刊上。</p>
+<p>2019年北科大的Kejiang Li<a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/08927022.2019.1698739">001</a>等人讨论了CMAS(CaO-MgO-Al2O3-SiO2)体系四种势参数的可移植性问题，论文中对比了Matsui, Kawamura, Miyake, Guillot等人提出的势函数。</p>
+<p>2021年北科Zhisheng Bi<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230932030524X#bib0027">000</a>基于BMH势函数研究了B2O3-SiO2-CaO-Al2O3体系中B2O3对熔渣结构的影响，论文对势参数的来源并未进行说明。<br>2021年北科Zhisheng Bi<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309321000466?via=ihub#bib0027">000</a>基于BMH势函数分别研究了SiO2-CaO-Al2O3和SiO2-CaO-B2O3体系中Al2O3和B2O3对SiO2-CaO基熔体结构和性质的影响。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220373487#!">000</a>基于分子动力学模拟研究了CaO和FeO对硅铝酸盐体系结构和性能的影响，研究体系为SiO2-Al2O3-CaO(FeO) ，使用的是函数为Buckingham势，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773222101028X#!">000</a>基于分子动力学模拟研究了不同碱度条件下MnO含量对渣结构和性质的影响，研究体系为CaO-SiO2-Al2O3-MnO，使用了Buckingham力场和LJ力场，势参数源于CMAS94和UFF通用力场参数，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kexin Jiao团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732221003287#!">000</a>采用COMPASS力场研究了碳含量和温度对铁水粘度的影响，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0272884221000961#!">000</a>基于BMH势函数研究了SiO2–CaO–Al2O3–B2O3体系中两性氧化物（Al2O3和B2O3）的酸性向碱性转变机制：分子动力学研究，所用的势参数是重庆大学两篇文章中拼凑起来的，论文发表在Ceramics International期刊上。</p>
+<h3 id="重庆大学"><a href="#重庆大学" class="headerlink" title="重庆大学"></a>重庆大学</h3><p>2014年重庆大学的Shengfu Zhang<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309314002725#!">000</a> 基于简化的BMH势函数研究了CaO–SiO2–Al2O3–MgO–TiO2体系结构和粘度间的关系。</p>
+<p>2015年重庆大学的Yanhui Liu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2214785315001327#!">000</a> 基于BMH势函数研究了CaO-SiO2-MgO-Al2O3体系中Al2O3对熔渣结构的影响。<br>2015年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931400670X#bb0090">021</a>使用BMH势函数分别研究了CaO–SiO2和CaO–Al2O3体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。<br>2015年重庆大学的Shengping He团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007%2Fs11663-015-0354-6">000</a>研究了CaO-Al2O3-SiO2-CaF2熔渣体系，使用的势参数源于Kawamura: Materials Design Using Personal Computer一书。<br>2015年重庆大学的Jiang Diao团队<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/matertrans/56/5/56_M2014363/_article">042</a>基于BMH势函数计算了P2O5/SiO2比例对CaO-P2O5-SiO2渣体系结构的影响，论文发表在ISIJ上。其中CaO-SiO2的参数源于Material Design Using Personal Computer一书，P2O5的参数源于另外一篇文献2002[043]。</p>
+<p>2016年重庆大学的Jiang Diao<a target="_blank" rel="noopener" href="https://www.degruyter.com/document/doi/10.1515/htmp-2016-0054/html">000</a>基于BMH势函数研究了CaO–SiO2–P2O5–FeO体系的结构和性质，势参数源于Material Design Using Personal Computer。<br>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309316302885">010</a>使用LJ势和BMH势模拟了CaO-SiO2-Al2O3-FeO熔渣体系的结构和粘度。<br>2016年重庆大学的Ting Wu<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931530301X#!">000</a> 使用BMH势函数分别研究了 Na2O–Al2O3, K2O–Al2O3, MgO–Al2O3, and CaO–Al2O3， Al2O3基二元体系的结构和性质，使用的势参数源于Kawamura 《Material design using personal computer》一书。</p>
+<p>2017年重庆大学的Xiao-Ping Liang<a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007%2F978-3-319-51340-9_73">000</a>基于简化的BMH势函数计算了B2O3/SiO2比例对CaO–SiO2–B2O3体系结构和性质的影响，是一篇会议论文。</p>
+<p>2019年重庆大学的Shengping He(第一兼通讯)<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-019-01547-7">025</a>在使用BMH势函数研究了CaO-SiO2-CaF2渣体系的结构和性质，势函数来源为Kawamura 《Material design using personal computer》，论文发表在MMTB上。</p>
+<p>2021年重庆大学Shuheng Huang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009250921003389#!">000</a>基于Buckingham势函数研究了CaO-SiO2-Al2O3-Na2O-F (CSANF)体系，全面了解硅酸盐熔体中氟的微观结构和挥发机理，论文通过通过PLS分析，建立了氟的微观结构与扩散系数之间的关系。势参数源于Kawamura 《Material design using personal computer》，论文发表在Chemical Engineering Science期刊上。</p>
+<h3 id="Journal-of-Molecular-Liquids期刊分子模拟论文"><a href="#Journal-of-Molecular-Liquids期刊分子模拟论文" class="headerlink" title="Journal of Molecular Liquids期刊分子模拟论文"></a>Journal of Molecular Liquids期刊分子模拟论文</h3><p>2017年上海交通大学Jun Wang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732216325132#!">000</a>基于BMH势函数研究了熔融 NaCl-KCl-LiCl 混合物物理性质和局部结构的温度和浓度依赖性，论文发表在Journal of Molecular Liquids期刊上。</p>
+<p>2018年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773221833157X#!">000</a>基于CMAS94模型参数进行了CaO(MgO)对硅铝酸盐体系结构和性能的分子动力学模拟研究，论文发表在Journal of Molecular Liquids期刊上。</p>
+<p>2021年重庆大学的Zhe Wang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220369397#!">000</a>通过将分子动力学模拟和机器学习结合起来，研究了CaO-SiO2-Al2O3三元渣系结构和性质间的关系，并进行了热导率预测，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220373487#!">000</a>基于分子动力学模拟研究了CaO和FeO对硅铝酸盐体系结构和性能的影响，研究体系为SiO2-Al2O3-CaO(FeO) ，使用的是函数为Buckingham势，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kejiang Li团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773222101028X#!">000</a>基于分子动力学模拟研究了不同碱度条件下MnO含量对渣结构和性质的影响，研究体系为CaO-SiO2-Al2O3-MnO，使用了Buckingham力场和LJ力场，势参数源于CMAS94和UFF通用力场参数，论文发表在Journal of Molecular Liquids期刊上。<br>2021年江西理工大学的Helin Fan等人<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220374687#!">000</a>基于Buckingham力场研究了TiO2-SiO2-MgO-CaO体系中结构和传输性质间的关系，论文发表在Journal of Molecular Liquids期刊上。<br>2021年北科Kexin Jiao团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732221003287#!">000</a>采用COMPASS力场研究了碳含量和温度对铁水粘度的影响，论文发表在Journal of Molecular Liquids期刊上。<br>2021年生态环境部南京环境科学研究所Hongling Zhang团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220374857#!">000</a>采用Materials Studio软件Forcite 模块中的UFF力场进行MD模拟，结合Gaussian09中B3lyp泛函+<code>6-31G*</code>基组进行结构优化，进行了苏氨酸-蒙脱石复合物与Pb2+或Cu2+的相互作用及机理研究，论文发表在Journal of Molecular Liquids期刊上。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在使用这些参数之前注意对比这些参数的单位与以往的是否一致。</p>
+<p>2017年Jincheng Du团队<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10853-017-0836-9">037</a>在氧化硼取代对含SrO生物活性玻璃结构和生物活性的影响一文中，基于Buckingham势模拟了B2O3-SiO2-Na2O-CaO-SrO-P2O5体系玻璃，该体系组分距离目标组分只差CaF2，势函数中还添加了排斥项来修正高温下的问题（当两个原子在高温下非常接近时，势能值可能迅速下降到负无穷大），高温问题在许多论文中都未考虑，其势参数为<br>Table 1 The atomic charges and the Buckingham potential parameters: A ij , ρij, Cij (<em>B–O Aij is for the 25B composition)<br>Pairs           A ij (eV)       ρ ij (Å)        C ij (eV·Å6)<br>Si2.4–O−1.2     13702.905       0.193817        54.681<br>P3.0–O−1.2      26655.472       0.181968        86.856<br>B1.8–O−1.2      12962.4964</em>     0.1240          35.0019<br>O−1.2–O−1.2     2029.2204       0.343645        192.58<br>Na0.6–O−1.2     4383.7555       0.243838        30.70<br>Ca1.2–O−1.2     7747.1834       0.252623        93.109<br>Sr1.2–O−1.2     14566.637       0.245015        81.773</p>
+<p>2012年Jincheng Du<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309312000877?via=ihub#bb0185">038</a>基于Buckingham势使用DL_POLY软件模拟了SiO2-Na2O-CaO-P2O5-SrO玻璃体系，并在势函数中添加了高温 排斥项。2017年的势参数是在2012年的基础上发展出来的，现在需要做的就是基于谷歌学术被引文献和Semantic学术查找在此基础上是否有CaF2的势参数。<br>Table 1. Buckingham potential parameters.<br>Pairs           A (eV)      ρ (Å)       C (eV.Å6)<br>Si2.4―O− 1.2    13702.905   0.193817    54.681<br>P3.0―O− 1.2     26655.472   0.181968    86.856<br>O− 1.2―O− 1.2   2029.2204   0.343645    192.58<br>Na0.6―O− 1.2    4383.7555   0.243838    30.70<br>Ca1.2―O− 1.2    7747.1834   0.252623    93.109<br>Sr1.2―O− 1.2    14566.637   0.245015    81.773</p>
+<p>2008年G. Lusvardi<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp803031z">027</a>使用Buckingham势函数研究了Na2O-CaO-P2O5−SiO2-CaF2体系，论文发表在JPCB上，模拟使用GULP程序进行优化，DL_POLY程序进行分子动力学模拟，势参数在论文中已被直接列出且未添加高温校正项，势参数参考的是2002年Cormack引用的、经Teter提出的势参数，该论文中的含氟势参数后被Du等人在2016年的JPCC论文中使用。<br>Table 2. Potential Parameters used for Molecular Dynamics Simulations<br>                Aij [eV]    ρij [Å] Cij [eV·Å6]<br>Si+2.4−O−1.2    13702.905   0.193817    54.681<br>P+3.0−O−1.2     26655.472   0.181968    86.856<br>Na+0.6−O−1.2    4383.75555  0.243838    30.700<br>Ca+1.2−O−1.2    7747.1834   0.252623    93.109<br>O−1.2−O−1.2     1844.7458   0.343645    192.58<br>Si+2.4−F−0.6    53193.487   0.146851    5.0196<br>Na+0.6−F−0.6    58286.140   0.169113    4.1555<br>Ca+1.2−F−0.6    976421.09   0.147304    12.163<br>F−0.6−F−0.6     11510.594   0.225005    29.257<br>O−1.2−F−0.6     1863.6049   0.328812    141.27</p>
+<p>2016年Jincheng Du团队<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.6b05796">000</a>在JPCC上发文“氟硅酸盐玻璃从相分离到纳米化：高发光微晶玻璃的结构设计”，基于Buckingham+高温排斥项研究了氧氟硅酸盐SiO2-Al2O3-BaO-BaF2玻璃体系，势参数和校正参数并未直接列出，而是给出了参考文献，如势参数源于Du在2002年、2004年论文数据以及2008年G. Lusvardi[027]发表的势参数。</p>
+<p>2020年Jincheng Du团队<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304919?via=ihub">039</a>对含氟硅酸铝低活性核废料玻璃结构进行了分子动力学模拟研究，在这篇论文中，作者提到由于势函数的限制，分子模拟以往很少在在含氟玻璃上进行，但随着混合阴离子体系的发展，MD模拟方法将研究扩展到氟硅酸盐玻璃，并证明它能够捕捉均匀混合阴离子玻璃和纳米氟化物相分离玻璃的结构特征。论文中并未直接列出势参数，而是参考其在2016年和在2019年分别发表在JPCC和J.Eur.Ceram.Soc论文中的势参数。</p>
+<p>2015年Jincheng Du等人<a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007%2F978-3-319-15675-0?page=1#toc">040</a>出版Molecular Dynamics Simulations of Disordered Materials一书，书中对成核的亚稳动力学模拟、第一性原理计算方法、硅酸盐玻璃结构和性质之间的量化关系、多组分氧化物玻璃分子动力学模拟的挑战、势参数的拟合、含过渡金属氧化物玻璃结构的分子动力学模拟、玻璃表面、玻璃中的环等内容做了全面的介绍。下面是其第七章中的部分势参数，更多参数参见其参考文献。<br>Table 7.1 Atomic charge and Buckingham potential parameters for oxide glasses [11–21]<br>Pairs           A (eV)      ρ (Å)       C (eVÅ6)<br>O−1.2–O−1.2     2029.2204   0.343645    192.58<br>Si2.4–O−1.2     13702.905   0.193817    54.681<br>P3.0–O−1.2      26655.472   0.181968    86.856<br>Al1.8–O−1.2     12201.417   0.195628    31.997<br>Li0.6–O−1.2     41051.938   0.151160    0.0<br>Na0.6–O−1.2     4383.7555   0.243838    30.70<br>K0.6–O−1.2      20526.972   0.233708    51.489<br>Ca1.2–O−1.2     7747.1834   0.252623    93.109<br>Sr1.2–O−1.2     14566.637   0.245015    81.773<br>Y1.8–O−1.2      29526.977   0.211377    50.477<br>La1.8–O−1.2     4369.39     0.2786      60.28<br>Er1.8–O−1.2     58934.851   0.195478    47.651<br>Eu1.8–O−1.2     5950.5287   0.253669    27.818<br>Ce1.8–O−1.2     11476.9522  0.242032    46.7604<br>Ce2.4–O−1.2     31697.724   0.21836     90.659</p>
+<p>2020年东北大学的Xiaobo Zhang<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/60/10/60_ISIJINT-2020-002/_article/-char/ja/">028</a>基于Buckingham势函数研究了CaO–SiO2–CaF2和CaO–Al2O3–CaF2体系中氟对熔体结构的影响，论文发表在ISIJ上，论文中未对势参数的来源进行说明。<br>Table 1. Buckingham potential parameters of particle pairs in this study.<br>Atom 1  Atom 2   Aij/(eV)       ρij/(Å)   Cij/(eV·Å6)<br>Si Si           4 142.15        0.16    0<br>Si Ca           26 674.68       0.16    0<br>Si O            62 794.37       0.165   0<br>Si F            43 406.00       0.165   0<br>Ca Ca           329 051.6       0.16    4.355<br>Ca O            717 827.0       0.165   8.67<br>Ca F            496 191.5       0.165   8.67<br>O O             1 497 049.0     0.17    17.34<br>O F             1 046 135.4     0.17    17.34<br>F F             730 722.8       0.17    17.34<br>Al Al           4 142.149       0.16    0.0<br>Al Ca           36 918.57       0.16    0.0<br>Al O            86 057.58       0.165   0.0<br>Al F            59 481.584      0.165   0.0</p>
+<p>2019年重庆大学的Shengping He(第一兼通讯)<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-019-01547-7">025</a>在使用BMH势函数研究了CaO-SiO2-CaF2渣体系的结构和性质，势函数来源为Kawamura 《Material design using personal computer》，论文发表在MMTB上。<br>Table I Parameters for Born–Mayer–Huggins (BMH) Potential in the CaO-SiO2-CaF2 System<br>From: Molecular Dynamics Simulation of the Structure and Properties of CaO-SiO2-CaF2 Slag Systems</p>
+<p>Atom1   Atom2   Aij(eV)     Bij(1/Å)    Cij(eV·Å6)<br>O   O           1497693.5   5.88    17.34<br>O   Ca          718136      6.06    8.67<br>O   F           1046135.4   5.88    17.34<br>O   Si          62821.4     6.06    0<br>Ca  Ca          329193.3    6.25    4.34<br>Ca  F           496191.5    6.06    8.67<br>Ca  Si          26686.2     6.25    0<br>F   F           730722.8    5.88    17.34<br>F   Si          43406       6.06    0<br>Si  Si          2163.3      6.25    0</p>
+<p>2015年重庆大学的Jiang Diao团队<a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/matertrans/56/5/56_M2014363/_article">042</a>基于BMH势函数计算了P2O5/SiO2比例对CaO-P2O5-SiO2渣体系结构的影响，论文发表在ISIJ上。<br>Atom1   Atom2    Aij(eV)     Bij(1/¡)    Cij(eV·¡6)     Atom1    Atom2  Aij(eV)  Bij(1/¡)    Cij(eV·¡6)<br>Ca Ca   329171.5    6.3     4.3                         Si P        1081.6      12.5    0<br>Ca Si   26684.4     6.3     0                           Si O        62817.2     6.1     0<br>Ca P    164585.8    12.5    0                           P P         0           0.0     0<br>Ca O    718088.6    6.1     8.7                         P O         1847.7      3.5     0<br>Si Si   2163.2      6.3     0                           O O         1497594.3   5.9     17.4</p>
+<h3 id="专业名词"><a href="#专业名词" class="headerlink" title="专业名词"></a>专业名词</h3><p>Markdown语法制表记得表头首末空行</p>
+<p>Forcefield 力场，High-Throughput Molecular Dynamics Simulations 高通量分子动力学模拟  strontium 锶  fluorine 氟<br>machine learning 机器学习  potential parameters 势参数   bioactive glass生物玻璃  ilmenite 钛铁矿</p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a><br><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2021/06/02/Summary-of-Potential/" data-id="cl846gsfn003flgtjgqt41wud" data-title="Summary of  Emperical Potential" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/" rel="tag">Note</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-email-reply" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/05/26/email-reply/" class="article-date">
@@ -1584,474 +1695,6 @@
 
 
   
-    <article id="post-important-paper-online" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/04/27/important-paper-online/" class="article-date">
-  <time class="dt-published" datetime="2021-04-27T09:03:21.000Z" itemprop="datePublished">2021-04-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Paper/">Paper</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/04/27/important-paper-online/">Lammps, DFT and Gaussian Paper Online</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><strong>Table</strong></p>
-<p><strong><a href="#1">Gaussian</a><br><a href="#2">MD+AIMD</a><br><a href="#3">cp2k</a><br><a href="#4">Other</a><br><a href="#5">高被引</a><br><a href="#6">顶刊</a><br><a href="#7">Machine-Learning</a></strong></p>
-<h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.coudert.name/">François-Xavier Coudert webpage</a> François-Xavier Coudert, Senior Researcher at CNRS &amp; Professor at PSL University</li>
-</ul>
-<ol>
-<li><a name="1">Gaussian</a></li>
-</ol>
-<h2 id="Gaussian"><a href="#Gaussian" class="headerlink" title="Gaussian"></a>Gaussian</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/j100167a021">Ab initio molecular orbital calculations on the electronic structure of sodium silicate glasses</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0304389420325577">Stabilization mechanism of arsenic-sulfide slag by density functional theory calculation of arsenic-sulfide clusters</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703704006416#!">Dissolution mechanisms of water in depolymerized silicate melts: Constraints from 1H and 29Si NMR spectroscopy and ab initio calculations</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp203585p">Probing the Electronic Structure and Property of Neutral and Charged Arsenic Clusters (Asn(+1,0,–1), n ≤ 8) Using Gaussian-3 Theory</a></li>
-<li><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007%2Fs00894-013-2017-3">Probing the electronic structures and properties of neutral and charged arsenic sulfides (As n S(−1,0,+1), n = 1–7) using Gaussian-3 theory</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/00268976.2017.1333644">Thirty years of density functional theory in computational chemistry: an overview and extensive assessment of 200 density functionals</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022286019317387">Theoretical and experimental characterization of Cu-doped amorphous silicate glass</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp037575d">Structure of Silicate Glasses and Melts at High Pressure:  Quantum Chemical Calculations and Solid-State NMR</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp065146k">Ab Initio Molecular Dynamics Study of 45S5 Bioactive Silicate Glass</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703706018394">Disorder and the extent of polymerization in calcium silicate and aluminosilicate glasses: O-17 NMR results and quantum chemical molecular orbital calculations</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0927025603000570#BIB9">Towards modelling bioactive glasses: Quantum chemistry studies of the hydrolysis of some silicate structures</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022286008008296">The local structure of europium–lead-borate glass ceramics</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009261408007860">Structural role of europium ions in lead–borate glasses inferred from spectroscopic and DFT studies</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/cm801164u">B3LYP Simulation of the Full Vibrational Spectrum of 45S5 Bioactive Silicate Glass Compared to v-Silica</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.8b08632">Structure and Properties of Gallium-Rich Sodium Germano-Gallate Glasses</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0065327603420480">Chemical bonding state of sodium silicates</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="2">
-<li><a name="2">MD+AIMD</a></li>
-</ol>
-<h2 id="MD-AIMD"><a href="#MD-AIMD" class="headerlink" title="MD+AIMD"></a>MD+AIMD</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-019-01547-7">Molecular Dynamics Simulation of the Structure and Properties of CaO-SiO2-CaF2 Slag Systems</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/48/1/48_1_120/_article/-char/ja/">The Estimation of Structural Properties for Molten CaO–CaF2–SiO2 System by Molecular Dynamics Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-030-36540-0_14">Effect of Magnetic Field on CaO–SiO2–CaF2 Mould Flux: New Insight from Molecular Dynamic Simulation</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/60/10/60_ISIJINT-2020-002/_article/-char/ja/">Effect of Fluorine on Melt Structure for CaO–SiO2–CaF2 and CaO–Al2O3–CaF2 by Molecular Dynamics Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-030-05955-2_57">Determination of Effect of Li2O on the Structure of CaO-Al2O3-Based Slag by Molecular Dynamics Simulation and Raman Spectrum</a></li>
-<li><a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/srin.202000531">Effective Mechanism of B2O3 on the Structure and Viscosity of CaO–SiO2–B2O3‐based Melts</a></li>
-<li><a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/jace.16526">Effect of CaF2, B2O3 and the CaO/SiO2 mass ratio on the viscosity and structure of B2O3‐containing calcium‐silicate‐based melts</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/matertrans/56/5/56_M2014363/_article">Molecular Dynamics Analysis of the Microstructure of the CaO-P2O5-SiO2 Slag System with Varying P2O5/SiO2 Ratios</a></li>
-<li><a href=""></a></li>
-</ul>
-<hr>
-<p>以往读过的重要MD文献</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309319303357">Alumina effect on the structure and properties of calcium aluminosilicate in the percalcic region: A molecular dynamics investigation</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009250919309546">Viscosity of molten CaO-K2O-SiO2 woody biomass ash slags in relation to structural characteristics from molecular dynamics simulation</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<hr>
-<p>以下主要为势参数<br>4.Behavior and State of Boron in CaO–SiO2 Slags during Refining of Solar Grade Silicon <a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/49/6/49_6_777/_pdf/-char/en">论文</a> <a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/49/6/49_6_777/_article">链接</a><br>5.<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230932030524X">Effects of B2O3 on the structure and properties of blast furnace slag by molecular dynamics simulation</a><br>6.<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304968">First principle study of electronic structural and physical properties of CaO-SiO2-Al2O3 ternary slag system by using Ab Initio molecular and lattice dynamics</a><br>8.<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S016773221833157X">The effect ofCaO(MgO) on the structure and properties ofaluminosilicate system by molecular dynamics simulation</a><br>9.<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s11663-017-1097-3">The Importance of Slag Structure to Boron Removal from Silicon during the Refining Process: Insights from Raman and Nuclear Magnetic Resonance Spectroscopy Study</a><br>10.<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s12633-019-00111-x">Design of Refining Slag Based on Raman and NMR Spectroscopy Study for Removing Phosphorus for SoG-Si</a><br>11.<a target="_blank" rel="noopener" href="https://www.degruyter.com/document/doi/10.2138/am-1998-9-1003/html">Calculated role of aluminum in the incorporation of ferric iron into magnesium silicate perovskite</a><br>12.<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/jp0628939">A Molecular Dynamics Study of the Atomic Structure of (CaO)x(SiO2)1-x Glasses</a><br>14.<a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?start=0&hl=zh-CN&as_sdt=2005&sciodt=0,5&cites=4277756533541022111&scipsc=">谷歌学术Molecular dynamics study of the structures and bulk moduli of crystals in the system CaO-MgO-Al2O3-SiO2</a><br>15.<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931100384X">Development of empirical potentials for sodium borosilicate glass systems</a><br>16.<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.9b06823">Structural Role of Sodium in Borosilicate, Phosphosilicate, and Borophosphosilicate Glasses Unveiled by Solid-State NMR and MD Simulations</a></p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://maiimg.com/pdf/?e=agZSJn3BFh8Zwm">庚子计算-AIMD与CP2K讲义3</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2018/cp/c7cp08593a#!divAbstract">Structure–composition trends in multicomponent borosilicate-based glasses deduced from molecular dynamics simulations with improved B–O and P–O force fields</a></p>
-</li>
-<li><p><strong>势函数, 2007, Bertrand Guillot, <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703706021971?via=ihub">A computer simulation study of natural silicate melts. Part I: Low pressure properties</a>  K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2 (KNCMFATS)</strong></p>
-</li>
-<li><p><strong>势函数, 1998, Akira MIYAKE, <a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/minerj/20/4/20_4_189/_article">Interatomic potential parameters for molecular dynamics simulation of crystals in the system K2O–Na2O–CaO–MgO–Al2O3–SiO2</a></strong></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703709004530">Computer modeling of natural silicate melts: What can we learn from ab initio simulations</a></p>
-</li>
-<li><p><strong>势函数, 1994, Matsui, <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/usercenter/paper/show?paperid=f27a425f51287bd1178aa6129c3b3920&site=xueshu_se">A Transferable Interatomic Potential Model for Crystals and Melts in the System CaO-MgO-Al2O3-SiO2</a></strong></p>
-</li>
-<li><p><strong>势函数, 1996, Matsui, <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF00199500">Molecular dynamics study of the structures and bulk moduli of crystals in the system CaO-MgO-Al2O3-SiO2</a></strong></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220373487">The effects of CaO and FeO on the structure and properties of aluminosilicate system: A molecular dynamics study</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S138589471631573X">A molecular dynamic simulation on the factors influencing the fluidity of molten coke ash during alkalization with K2O and Na2O</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.energyfuels.7b02795">Molecular Dynamics Investigation on Coke Ash Behavior in the High-Temperature Zones of a Blast Furnace: Influence of Alkalis</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/full/10.1080/08927022.2019.1698739?scroll=top&needAccess=true">Transferability of interatomic potentials with insights into the structure–property relationship of SiO2–CaO–MgO–Al2O3 melts</a>—-<a target="_blank" rel="noopener" href="https://maitube.com/pdf/?e=agt6Xjqj69y8Ya">pdf论文</a></p>
-</li>
-<li><p><strong>势函数, 2011, Le-HaiKieu, <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002230931100384X#t0010">Development of empirical potentials for sodium borosilicate glass systems</a>, SiO2–B2O3–Na2O</strong></p>
-</li>
-<li><p><strong>势函数, 2018, MengyiWang, <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309318302643">A new transferable interatomic potential for molecular dynamics simulations of borosilicate glasses</a>, B2O3-K2O–Na2O–CaO–MgO–FeO–Fe2O3–Al2O3–TiO2–SiO2</strong></p>
-</li>
-<li><p><strong>势函数, 2018, Jincheng Du, <a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/jace.16082">Development of boron oxide potentials for computer simulations of multicomponent oxide glasses</a>, B-O, O‐O, Si‐O, Al‐O, Li‐O, Na‐O, K‐O, Ca‐O, P‐O, Sr‐O, and Zr‐O</strong></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.91.134201">First-principles study of a sodium borosilicate glass-former. I. The liquid state</a>    <a target="_blank" rel="noopener" href="https://maitube.com/pdf/?e=ag8S9QGrscA56a">论文</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<hr>
-<p>以下主要为分子模拟</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304890#!">Viscosity of molten MgF2-LiF-MgO system and structure investigation using classical molecular dynamics simulations</a>  Mineral Resource Research Division, Korea Institute of Geoscience and Mineral Resources (KIGAM), 124, Gwahak-ro, Yuseong-gu, Daejeon 34132, Republic of Korea</li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="3">
-<li><a name="3">cp2k</a></li>
-</ol>
-<h2 id="cp2k"><a href="#cp2k" class="headerlink" title="cp2k"></a>cp2k</h2><ul>
-<li><p><strong><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jacs.9b12073">Ab Initio Molecular Dynamics of CdSe Quantum-Dot-Doped Glasses</a></strong> Chimie ParisTech, PSL University, CNRS, Institut de Recherche de Chimie Paris, 75005 Paris, France</p>
-</li>
-<li><p>2016英国伦敦大学，<a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2016/cp/c6cp03076a/unauth#!divAbstract">Modelling the local atomic structure of molybdenum in nuclear waste glasses with ab initio molecular dynamics simulations</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s00894-019-3987-6">Graphical user interface for an easy and reliable construction of input files to CP2K</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703717301072">Trace element partitioning between silicate melts – A molecular dynamics approach</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009254116305691">Ni partitioning between metal and silicate melts: An exploratory ab initio molecular dynamics simulation study</a></p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0009254120303533">Coordination of Zr4+/Hf4+/Nb5+/Ta5+ in silicate melts: insight from first principles molecular dynamics simulations</a></strong> State Key Laboratory for Mineral Deposits Research, School of Earth Sciences and Engineering, Nanjing University, Nanjing, Jiangsu 210023, China</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167273819301560#!">Investigations of the structure of Na2S + P2S5 glassy electrolytes and its impact on Na+ ionic conductivity through ab initio molecular dynamics</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309320304440#bib0041">A molecular dynamics study of the effect of water diffusion into bio-active phosphate-based glass surfaces on their dissolution behaviour</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2014/CP/C4CP00574K#!divAbstract">On the structure of biomedical silver-doped phosphate-based glasses from molecular dynamics simulations</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10853-017-1155-x">Effect of strontium inclusion on the bioactivity of phosphate-based glasses</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0009254115000753">Carbon dioxide in silicate melts at upper mantle conditions: Insights from atomistic simulations</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.174202">Structure and luminescence of intrinsic localized states in sodium silicate glasses</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.mdpi.com/1996-1944/10/11/1290">The Structure of Liquid and Amorphous Hafnia</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0927025620304468">A DFT accurate machine learning description of molten ZnCl2 and its mixtures: 1. Potential development and properties prediction of molten ZnCl2</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0022309316302435">Periodic vs. molecular cluster approaches to resolving glass structure and properties: Anorthite a case study</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.5099015">The MgCO3–CaCO3–Li2CO3–Na2CO3–K2CO3 melts: Thermodynamics and transport properties by atomistic simulations</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1361-651X/abdc69/meta">Modelling the interactions and diffusion of NO in amorphous SiO2</a></p>
-</li>
-<li><p>2020-2021</p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0167732220321498">Ab initio molecular dynamics simulations and Raman spectra of the YbCl3-KCl and Yb2O3-YbCl3-KCl ionic melts</a></strong> Institute of High-Temperature Electrochemistry, Yekaterinburg, Russia</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0167732219344678">Study of local structure and ion dynamics in GdCl3-Gd2O3 and KCl-GdCl3-Gd2O3 melts: In situ Raman spectroscopy and ab initio molecular dynamics</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/00319104.2020.1723095">Ab initio molecular dynamics simulations of molten lead oxyhalides Pb3O2X2 (X = Cl, Br, I)</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S2210271X19300970">Local structure and vibrational properties of molten lead halides PbX2 (X = Cl, Br, I) from ab initio molecular dynamics</a></p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022311520304736#!">The structure of molten FLiNaK</a></strong> Department of Physics and Astronomy, Brigham Young University, Provo, UT, 84602, USA</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S036031992033785X#!">Carbon species solvated in molten carbonate electrolyser cell from first-principles simulations</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.0c00745">Temperature Dependence of Short and Intermediate Range Order in Molten MgCl2 and Its Mixture with KCl</a></p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlelanding/2020/CP/D0CP03672B#!divAbstract">Structure and dynamics of the molten alkali-chloride salts from an X-ray, simulation, and rate theory perspective</a></strong> Chemical Sciences Division, Oak Ridge National Laboratory, 1 Bethel Valley Rd., Oak Ridge, TN 37830, USA</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.0c07354">Complexation of Mo in FLiNaK Molten Salt: Insight from Ab Initio Molecular Dynamics</a></p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220375048#bb0215">Ab initio molecular dynamics assessment of thermodynamic and transport properties in (K,Li)Cl and (K, Na)Cl molten salt mixtures</a></strong> Pacific Northwest National Laboratory, Richland, WA 99352, United States</p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.0c10879">First-Principles Modeling of Transport Mechanisms in Carbonate–Hydroxide Electrolytes</a></strong> Department of Chemical and Biological Engineering, Princeton University, Princeton, New Jersey 08544, United States</p>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0016703720304968#!">The role of sulfur in molybdenum transport in hydrothermal fluids: Insight from in situ synchrotron XAS experiments and molecular dynamics simulations</a></strong> CSIRO Mineral Resources, Clayton, Vic 3168, Australia</p>
-</li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.inorgchem.0c02220">Chemical and Structural Variety in Sodium Thioarsenate Glasses Studied by Neutron Diffraction and Supported by First-Principles Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.1c00083">First-Principles Simulations of CuCl in High-Temperature Water Vapor</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<p><strong>cp2k经典文献</strong></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.1828433">The influence of temperature and density functional models in ab initio molecular dynamics simulation of liquid water</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/jp901990u">Isobaric−Isothermal Molecular Dynamics Simulations Utilizing Density Functional Theory: An Assessment of the Structure and Density of Water at Near-Ambient Conditions</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="4">
-<li><a name="4">Other</a></li>
-</ol>
-<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0022309310006782">Bridging, non-bridging and free (O2–) oxygen in Na2O-SiO2 glasses: An X-ray Photoelectron Spectroscopic (XPS) and Nuclear Magnetic Resonance (NMR) study</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/ja110357k">Mechanism of the Initial Stage of Silicate Oligomerization</a></li>
-<li><a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/ijag.12052">First‐Principles Study of Hydrolysis Reaction Barriers in a Sodium Borosilicate Glass</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.1c00388">Atomic Insights into the Events Governing the Borosilicate Glass–Water Interface</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/full/10.1021/jp044360a">Silicate Glass and Mineral Dissolution:  Calculated Reaction Paths and Activation Energies for Hydrolysis of a Q3 Si by H3O+ Using Ab Initio Methods</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.7b02734">Interfacial Structure and Evolution of the Water–Silica Gel System by Reactive Force-Field-Based Molecular Dynamics Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0167732220328993">About hopping mechanism for sodium diffusion in silicate liquids with low sodium concentrations: Molecular dynamics simulation</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.6b08052">A DFT-Based Aspherical Ion Model for Sodium Aluminosilicate Glasses and Melts</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.1c00309">Modeling the Structure and Dynamics of Lithium Borosilicate Glasses with Ab Initio Molecular Dynamics Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.rsc.org/en/content/articlehtml/2018/cp/c8cp00675j#cit24">Atomic-scale description of interfaces in rutile/sodium silicate glass–crystal composites</a></li>
-<li><a target="_blank" rel="noopener" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009GL039751">Partitioning of Si and O between liquid iron and silicate melt: A two‐phase ab‐initio molecular dynamics study</a></li>
-<li><a target="_blank" rel="noopener" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JB015522">Ab Initio Prediction of Potassium Partitioning Into Earth’s Core</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jstage.jst.go.jp/article/isijinternational/51/11/51_11_1788/_article/-char/ja/">Hydrogen Dissolution in the CaF2–CaO–SiO2 System</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-020-0291-z">Predicting densities and elastic moduli of SiO2-based glasses by machine learning</a></li>
-<li><a target="_blank" rel="noopener" href="https://ceramics.onlinelibrary.wiley.com/doi/full/10.1111/jace.16402">Understanding the atomic and electronic structures origin of defect luminescence of CdSe quantum dots in glass matrix</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.0c04058">Liquid Structure and Transport Properties of the Deep Eutectic Solvent Ethaline</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="5">
-<li><a name="5">高被引</a></li>
-</ol>
-<h2 id="高被引"><a href="#高被引" class="headerlink" title="高被引"></a>高被引</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=7585652766738493128&as_sdt=2005&sciodt=0,5&hl=zh-CN">Gaussian09</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0,5&cites=2542640079890340298&scipsc=">Gaussian 98</a></p>
-</li>
-<li><p><a href="">Ab initio calculation of vibrational absorption and circular dichroism spectra using density functional force fields</a>—-<a target="_blank" rel="noopener" href="https://scholar.google.com/scholar_lookup?title=Ab%20initio%20calculation%20of%20vibrational%20absorption%20and%20circular%20dichroism%20spectra%20using%20density%20functional%20force%20fields&publication_year=1994&author=P.J.%20Stephens&author=F.J.%20Devlin&author=C.F.%20Chabalowski&author=M.J.%20Frisch">谷歌学术</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/Jcc.22885">Multiwfn: a multifunctional wavefunction analyzer</a>—-<a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?cites=5147926037474353161&as_sdt=2005&sciodt=0,5&hl=zh-CN">谷歌学术</a></p>
-</li>
-<li><p>2005<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0010465505000615">Quickstep: Fast and accurate density functional calculations using a mixed Gaussian and plane waves approach</a></p>
-</li>
-<li><p>2014<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1159">cp2k: atomistic simulations of condensed matter systems</a></p>
-</li>
-<li><p>1996_GGA <a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.3865">Generalized Gradient Approximation Made Simple</a></p>
-</li>
-<li><p>1996_GTH <a target="_blank" rel="noopener" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.54.1703">Separable dual-space Gaussian pseudopotentials</a></p>
-</li>
-<li><p>2010_DFT-D <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.3382344">A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu</a></p>
-</li>
-<li><p>2007_DZVP <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.2770708">Gaussian basis sets for accurate calculations on molecular systems in gas and condensed phases</a></p>
-</li>
-<li><p>1997_GPW <a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/002689797170220">A hybrid Gaussian and plane wave density functional scheme</a></p>
-</li>
-<li><p>1994_NPT <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.467468">Constant pressure molecular dynamics algorithms</a></p>
-</li>
-<li><p>1984a_Nose <a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/00268978400101201">A molecular dynamics method for simulations in the canonical ensemble</a></p>
-</li>
-<li><p>1984b_Nose <a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/abs/10.1063/1.447334">A unified formulation of the constant temperature molecular dynamics methods</a></p>
-</li>
-<li><p>1985_Hoover <a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.31.1695">Canonical dynamics: Equilibrium phase-space distributions</a></p>
-</li>
-<li><p>2010_DL_POLY <a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/08927020290018769">DL_POLY: Application to molecular simulation</a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-<li><p><a href=""></a></p>
-</li>
-</ul>
-<ul>
-<li>1995_lammps <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002199918571039X">Fast Parallel Algorithms for Short-Range Molecular Dynamics</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=2005&sciodt=0,5&cites=3723298698184978482&scipsc=1&q=&btnG=">VESTA: a three-dimensional visualization system for electronic and structural analysis</a></li>
-<li><a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?cites=14747827721902291790&as_sdt=2005&sciodt=0,5&hl=zh-CN">QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials</a></li>
-<li>LAMMPS <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S002199918571039X?via=ihub">Fast parallel algorithms for short-range molecular dynamics</a></li>
-<li>OVITO <a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/0965-0393/18/1/015012/meta">Visualization and analysis of atomistic simulation data with OVITO–the Open Visualization Tool</a></li>
-<li><a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0,5&q=K.+Hirao+and+K.+Kawamura:%C2%A0Materials+Design+Using+Personal+Computer,%C2%A0Shokabo,+Tokyo,+1994&btnG=">K. Hirao and K. Kawamura: Materials Design Using Personal Computer, Shokabo, Tokyo</a>—-<a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0,5&q=K.+Hirao+and+K.+Kawamura:%C2%A0Materials+Design+Using+Personal+Computer,%C2%A0Shokabo,+Tokyo,+1994&btnG=">谷歌学术链接</a></li>
-<li><a target="_blank" rel="noopener" href="https://scripts.iucr.org/cgi-bin/paper?S0021889809051929">ISAACS–interactive structure analysis of amorphous and crystalline systems</a>—-<a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=2005&sciodt=0,5&cites=13346205785258077571&scipsc=">谷歌学术链接</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0927025610002363?via=ihub">Ring statistics analysis of topological networks: New approach and application to amorphous GeS2 and SiO2 systems</a>—-<a target="_blank" rel="noopener" href="http://rings-code.sourceforge.net/">软件网址</a>—-<a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?cites=14645032665020802969&as_sdt=2005&sciodt=0,5&hl=zh-CN">谷歌学术链接</a></li>
-<li><a target="_blank" rel="noopener" href="https://scholar.google.com.hk/scholar?cites=14314157259934222185&as_sdt=2005&sciodt=0,5&hl=zh-CN">PACKMOL: a package for building initial configurations for molecular dynamics simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/abs/10.1021/ci200217w">TRAVIS - A Free Analyzer and Visualizer for Monte Carlo and Molecular Dynamics Trajectories</a>—-<a target="_blank" rel="noopener" href="https://brehm-research.de/travis.php">软件链接</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="6">
-<li><a name="6">顶刊</a></li>
-</ol>
-<h2 id="顶刊"><a href="#顶刊" class="headerlink" title="顶刊"></a>顶刊</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41467-020-16372-9">Ab initio phase diagram and nucleation of gallium</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41598-017-07809-1">A metastable phase of shocked bulk single crystal copper: an atomistic simulation study</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.pnas.org/content/110/25/10129">Network topology for the formation of solvated electrons in binary CaO–Al2O3 composition glasses</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-020-00432-1">Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<ol start="7">
-<li><a name="7">Machine-Learning</a></li>
-</ol>
-<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/pssr.202000403">Structure and Dynamics of Supercooled Liquid Ge2Sb2Te5 from Machine-Learning-Driven Simulations</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0927025620304468">A DFT accurate machine learning description of molten ZnCl2 and its mixtures: 1. Potential development and properties prediction of molten ZnCl2</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2021/04/27/important-paper-online/" data-id="cl846gsfg002qlgtj6qathfb4" data-title="Lammps, DFT and Gaussian Paper Online" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -2067,7 +1710,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note/">Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/basic-concept/">basic concept</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B4%E7%90%86/">整理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AIMD-Paper-Review/">AIMD Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CP2K/">CP2K</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian/">Gaussian</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gaussian-Review/">Gaussian Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MD/">MD</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-learning-Review/">Machine learning Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note/">Note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper-Review/">Paper Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VASP/">VASP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/basic-concept/">basic concept</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/email/">email</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E7%BB%B4%E7%8B%82%E5%BE%92/">思维狂徒</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B4%E7%90%86/">整理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E7%BB%93%E6%9E%84%E6%96%B9%E6%B3%95-%E4%B8%89/">电子结构方法(三)</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%AB%99/">网站</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a></li></ul>
     </div>
   </div>
 
@@ -2077,7 +1720,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D%E8%BE%A8%E6%9E%90/" rel="tag">专业名词辨析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E8%80%85%E6%96%B9%E5%90%91/" rel="tag">学者方向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%92%8C%E5%85%B6%E4%BB%96%E6%A8%A1%E6%8B%9F%E7%B1%BB/" rel="tag">实验和其他模拟类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E9%9B%86%E9%94%A6/" rel="tag">文章集锦</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/32-H2O/" rel="tag">32 H2O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUTOFF-and-REL-CUTOFF/" rel="tag">CUTOFF and REL_CUTOFF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Liquid-Si-Standard-MD/" rel="tag">Liquid Si - Standard MD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Main-Page/" rel="tag">Main Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note2/" rel="tag">Note2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note3/" rel="tag">Note3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note4/" rel="tag">Note4</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note5/" rel="tag">Note5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Citing/" rel="tag">Paper and Citing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paper-and-Writing/" rel="tag">Paper and Writing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-example/" rel="tag">cp2k_example</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k-keywords/" rel="tag">cp2k_keywords</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" rel="tag">cp2k思维导图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picture/" rel="tag">picture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/potential-parameters/" rel="tag">potential parameters</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-grammer-and-exercise/" rel="tag">python grammer and exercise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reply/" rel="tag">reply</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/" rel="tag">website</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D%E8%BE%A8%E6%9E%90/" rel="tag">专业名词辨析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E8%80%85%E6%96%B9%E5%90%91/" rel="tag">学者方向</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%92%8C%E5%85%B6%E4%BB%96%E6%A8%A1%E6%8B%9F%E7%B1%BB/" rel="tag">实验和其他模拟类</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" rel="tag">思想家的公社</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4%E7%8B%82%E5%BE%92/" rel="tag">思维狂徒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E9%9B%86%E9%94%A6/" rel="tag">文章集锦</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
     </div>
   </div>
 
@@ -2087,7 +1730,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D%E8%BE%A8%E6%9E%90/" style="font-size: 10px;">专业名词辨析</a> <a href="/tags/%E5%AD%A6%E8%80%85%E6%96%B9%E5%90%91/" style="font-size: 10px;">学者方向</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%92%8C%E5%85%B6%E4%BB%96%E6%A8%A1%E6%8B%9F%E7%B1%BB/" style="font-size: 10px;">实验和其他模拟类</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a> <a href="/tags/%E6%96%87%E7%AB%A0%E9%9B%86%E9%94%A6/" style="font-size: 10px;">文章集锦</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+      <a href="/tags/32-H2O/" style="font-size: 10px;">32 H2O</a> <a href="/tags/CUTOFF-and-REL-CUTOFF/" style="font-size: 10px;">CUTOFF and REL_CUTOFF</a> <a href="/tags/Liquid-Si-Standard-MD/" style="font-size: 10px;">Liquid Si - Standard MD</a> <a href="/tags/Main-Page/" style="font-size: 10px;">Main Page</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/Note2/" style="font-size: 10px;">Note2</a> <a href="/tags/Note3/" style="font-size: 10px;">Note3</a> <a href="/tags/Note4/" style="font-size: 10px;">Note4</a> <a href="/tags/Note5/" style="font-size: 10px;">Note5</a> <a href="/tags/Paper-and-Citing/" style="font-size: 10px;">Paper and Citing</a> <a href="/tags/Paper-and-Writing/" style="font-size: 10px;">Paper and Writing</a> <a href="/tags/cp2k-example/" style="font-size: 10px;">cp2k_example</a> <a href="/tags/cp2k-keywords/" style="font-size: 10px;">cp2k_keywords</a> <a href="/tags/cp2k%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" style="font-size: 10px;">cp2k思维导图</a> <a href="/tags/picture/" style="font-size: 10px;">picture</a> <a href="/tags/potential-parameters/" style="font-size: 10px;">potential parameters</a> <a href="/tags/python-grammer-and-exercise/" style="font-size: 10px;">python grammer and exercise</a> <a href="/tags/reply/" style="font-size: 10px;">reply</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D%E8%BE%A8%E6%9E%90/" style="font-size: 10px;">专业名词辨析</a> <a href="/tags/%E5%AD%A6%E8%80%85%E6%96%B9%E5%90%91/" style="font-size: 10px;">学者方向</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%92%8C%E5%85%B6%E4%BB%96%E6%A8%A1%E6%8B%9F%E7%B1%BB/" style="font-size: 10px;">实验和其他模拟类</a> <a href="/tags/%E6%80%9D%E6%83%B3%E5%AE%B6%E7%9A%84%E5%85%AC%E7%A4%BE/" style="font-size: 10px;">思想家的公社</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E7%8B%82%E5%BE%92/" style="font-size: 10px;">思维狂徒</a> <a href="/tags/%E6%96%87%E7%AB%A0%E9%9B%86%E9%94%A6/" style="font-size: 10px;">文章集锦</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
     </div>
   </div>
 
@@ -2109,6 +1752,10 @@
       <ul>
         
           <li>
+            <a href="/2022/09/17/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6%E6%95%99%E7%A8%8B/">量子力学</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/16/%E7%BB%BC%E8%BF%B0/">综述</a>
           </li>
         
@@ -2122,10 +1769,6 @@
         
           <li>
             <a href="/2022/08/15/disk-directory/">disk directory</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/27/DFT-based-%E9%99%8D%E6%B8%A9%E7%A8%8B%E5%BA%8F/">DFT based 降温程序</a>
           </li>
         
       </ul>
